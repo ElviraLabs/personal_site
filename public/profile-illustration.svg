@@ -1,0 +1,46 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1200" rx="48" fill="url(#bg)"/>
+  <circle cx="234" cy="246" r="170" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <circle cx="234" cy="246" r="120" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <path d="M114 246H354M234 126V366M154 166L314 326M314 166L154 326" stroke="rgba(255,255,255,0.12)" stroke-width="2" stroke-linecap="round"/>
+  <g opacity="0.96">
+    <ellipse cx="604" cy="410" rx="174" ry="210" fill="#E7EEF5"/>
+    <path d="M456 1008C474 842 506 720 580 654C655 588 752 606 814 706C853 770 874 869 884 1008H456Z" fill="#0C2340"/>
+    <path d="M510 1008C526 888 551 815 600 768C648 722 715 727 765 792C803 842 829 912 845 1008H510Z" fill="#102D51"/>
+    <path d="M562 680C540 651 530 618 530 580C530 479 597 398 684 398C771 398 838 480 838 580C838 618 828 651 806 680C791 698 775 711 757 722C754 786 743 836 728 880H640C625 836 614 786 611 722C593 711 577 698 562 680Z" fill="#F2C8B4"/>
+    <path d="M566 563C576 454 649 374 739 374C790 374 830 398 853 435C827 353 757 296 671 296C563 296 494 397 503 516C509 601 547 664 615 707C590 669 572 619 566 563Z" fill="#121A2A"/>
+    <path d="M540 560C558 620 606 668 669 685C777 713 873 631 886 521C894 455 874 384 832 334C878 390 901 470 890 551C874 668 776 750 663 740C600 734 552 706 520 663C507 646 496 628 489 608C471 556 473 501 490 452C500 424 516 398 538 376C495 430 483 497 500 560C507 590 521 619 540 643" fill="#1B2335" opacity="0.74"/>
+    <path d="M594 458C631 431 677 416 721 416C765 416 805 427 832 451C788 361 714 314 635 334C577 348 530 404 511 474C531 468 560 460 594 458Z" fill="#1A2233"/>
+    <path d="M603 621C620 646 648 662 683 662C719 662 748 646 764 621C742 630 716 636 684 636C651 636 625 630 603 621Z" fill="#DC9D8A"/>
+    <path d="M639 543C647 543 653 537 653 529C653 521 647 515 639 515C631 515 625 521 625 529C625 537 631 543 639 543Z" fill="#1B2030"/>
+    <path d="M734 543C742 543 748 537 748 529C748 521 742 515 734 515C726 515 720 521 720 529C720 537 726 543 734 543Z" fill="#1B2030"/>
+    <path d="M611 502C630 485 655 477 679 480" stroke="#1B2030" stroke-width="8" stroke-linecap="round"/>
+    <path d="M703 481C727 476 754 483 775 501" stroke="#1B2030" stroke-width="8" stroke-linecap="round"/>
+    <path d="M675 544C671 563 671 580 680 594C684 600 692 605 701 608" stroke="#C68875" stroke-width="5" stroke-linecap="round"/>
+    <path d="M642 597C654 613 672 620 694 620C718 620 737 613 748 598" stroke="#B6685A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M553 1008C581 844 624 738 683 690C741 643 813 651 866 741C909 815 936 911 947 1008H553Z" fill="url(#blazer)"/>
+    <path d="M622 1008C635 916 656 860 694 825C731 791 781 797 820 845C848 880 867 934 878 1008H622Z" fill="#0E3A67"/>
+    <path d="M651 797L708 892L754 797L709 744L651 797Z" fill="#F7F9FC"/>
+  </g>
+  <g opacity="0.8">
+    <rect x="72" y="836" width="242" height="118" rx="24" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="108" y="884" fill="white" font-family="Arial, sans-serif" font-size="26" font-weight="700">FE Exam</text>
+    <text x="108" y="922" fill="rgba(255,255,255,0.78)" font-family="Arial, sans-serif" font-size="20">Certified engineer-in-training</text>
+  </g>
+  <g opacity="0.75">
+    <rect x="86" y="986" width="336" height="112" rx="24" fill="rgba(7,27,51,0.32)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="122" y="1032" fill="white" font-family="Arial, sans-serif" font-size="26" font-weight="700">Digital Engineering</text>
+    <text x="122" y="1070" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="20">CAD, 3D scanning, reverse engineering</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2548"/>
+      <stop offset="0.55" stop-color="#0E5970"/>
+      <stop offset="1" stop-color="#DCE9F2"/>
+    </linearGradient>
+    <linearGradient id="blazer" x1="553" y1="690" x2="947" y2="1008" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1F3C"/>
+      <stop offset="1" stop-color="#154A7F"/>
+    </linearGradient>
+  </defs>
+</svg>
