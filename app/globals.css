@@ -651,6 +651,29 @@ img {
   padding: 28px;
 }
 
+.credential-spotlight {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border: 1px solid rgba(17, 154, 149, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(17, 154, 149, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(17, 154, 149, 0.08), rgba(255, 255, 255, 0.94));
+}
+
+.credential-spotlight h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.credential-spotlight p {
+  margin: 10px 0 0;
+  color: #274764;
+  line-height: 1.68;
+}
+
 .simple-list li {
   margin-top: 10px;
 }
