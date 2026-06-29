@@ -280,11 +280,12 @@ export default function Home() {
         <div className="hero-copy">
           <SectionLabel>Systems-minded portfolio</SectionLabel>
           <h1>Engineer Intern (EI)</h1>
-          <h2>Systems Engineering, Process Improvement, and Digital Engineering</h2>
+          <h2>FE Exam Passed | Systems Engineering, Process Improvement, and Digital Engineering</h2>
           <p className="lead">
-            Applying requirements thinking, operational awareness, and technical
-            communication to improve engineering workflows and solve real-world
-            customer and process challenges.
+            FE Exam-passed engineer applying requirements thinking,
+            operational awareness, and technical communication to improve
+            engineering workflows and solve real-world customer and process
+            challenges.
           </p>
           <div className="hero-divider" />
           <p className="body-copy">
@@ -315,7 +316,7 @@ export default function Home() {
           />
           <div className="hero-badge badge-top">
             <Icon kind="spark" />
-            FE Exam Certified
+            FE Exam Passed
           </div>
           <div className="hero-badge badge-bottom">
             <Icon kind="cube" />
@@ -326,7 +327,7 @@ export default function Home() {
 
       <section className="cred-strip" aria-label="Highlights">
         <div>Castle Rock, Colorado</div>
-        <div>FE Exam</div>
+        <div>FE Exam Passed</div>
         <div>Georgia Tech Certificates</div>
         <div>Thor3D Sales Engineering</div>
         <div>Operations Coordination</div>
@@ -416,6 +417,11 @@ export default function Home() {
             mix shows up in how she approaches process gaps, stakeholder needs,
             and continuous improvement opportunities.
           </p>
+          <p>
+            Passing the FE Exam reinforces that hands-on experience with a
+            strong foundation in engineering fundamentals, analytical thinking,
+            and disciplined problem solving.
+          </p>
           <a
             className="button button-secondary"
             href="https://www.linkedin.com/in/elvira-n"
@@ -457,6 +463,14 @@ export default function Home() {
         <article className="info-card">
           <SectionLabel>Education</SectionLabel>
           <h2>Academic Background</h2>
+          <div className="credential-spotlight">
+            <p className="eyebrow">Professional Credential</p>
+            <h3>FE Exam Passed</h3>
+            <p>
+              Demonstrates validated engineering fundamentals that support
+              systems thinking, process analysis, and technical decision-making.
+            </p>
+          </div>
           <ul className="simple-list">
             {education.map((item) => (
               <li key={item}>{item}</li>
