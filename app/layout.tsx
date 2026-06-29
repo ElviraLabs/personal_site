@@ -16,18 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elvira Nurgalieva | Engineer Intern (EI)",
+  title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
   description:
-    "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
+    "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: `${sitePath}/favicon.svg`,
     shortcut: `${sitePath}/favicon.svg`,
   },
   openGraph: {
-    title: "Elvira Nurgalieva | Engineer Intern (EI)",
+    title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
     description:
-      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
+      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
     type: "website",
     url: siteUrl,
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvira Nurgalieva | Engineer Intern (EI)",
+    title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
     description:
-      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
+      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
     images: [`${sitePath}/screenshot.jpeg`],
   },
 };

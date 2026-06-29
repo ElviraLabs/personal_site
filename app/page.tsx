@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
-const illustrationSrc = `${sitePath}/profile-illustration.svg`;
+const headshotSrc = `${sitePath}/elvira-headshot.png`;
 
 const strengths = [
   {
@@ -42,25 +42,25 @@ const featuredWork = [
     title: "Customer Requirements Analysis",
     org: "The Home Depot",
     summary:
-      "Supports customers in a high-volume retail setting by clarifying project needs, comparing options, and recommending practical solutions.",
+      "Advises customers in a fast-paced environment by translating project needs into practical product, cost, and application decisions.",
     href: "#experience",
-    tag: "Operations + Customer Systems",
+    tag: "Customer-Facing Technical Support",
   },
   {
-    title: "3D Scanning & Reverse Engineering",
+    title: "Digital Engineering Solution Support",
     org: "Thor3D",
     summary:
-      "Worked across engineering and manufacturing workflows to evaluate 3D scanning, CAD, and reverse engineering solutions.",
+      "Supported engineering and manufacturing teams with 3D scanning, CAD, and reverse engineering workflows matched to real technical constraints.",
     href: "#experience",
-    tag: "Digital Engineering",
+    tag: "CAD + Reverse Engineering",
   },
   {
-    title: "Fiber Project Coordination",
+    title: "Field Operations Coordination",
     org: "MultiMedia Communications Ltd",
     summary:
-      "Coordinated schedules, crews, materials, and reporting for residential fiber laying projects with strong operational discipline.",
+      "Coordinated crews, schedules, materials, and reporting to keep residential fiber projects moving with fewer delays and clearer communication.",
     href: "#experience",
-    tag: "Workflow Coordination",
+    tag: "Operations Execution",
   },
 ] as const;
 
@@ -68,17 +68,17 @@ const timeline = [
   {
     year: "2024-Present",
     title: "Sales Associate",
-    detail: "The Home Depot | Customer support, inventory awareness, practical requirements clarification.",
+    detail: "The Home Depot | Customer advising, requirements clarification, inventory awareness, and day-to-day operational execution.",
   },
   {
     year: "2018-2022",
     title: "Sales Engineer",
-    detail: "Thor3D | Reverse engineering, CAD workflows, stakeholder communication, technical demos.",
+    detail: "Thor3D | Technical solution support, reverse engineering, CAD workflows, and stakeholder-facing demonstrations.",
   },
   {
     year: "2017-2018",
     title: "Dispatch Coordinator",
-    detail: "MultiMedia Communications Ltd | Scheduling, operations coordination, materials tracking.",
+    detail: "MultiMedia Communications Ltd | Scheduling, field coordination, materials tracking, and project reporting.",
   },
   {
     year: "2022",
@@ -117,9 +117,9 @@ const experience = [
     period: "April 2024 - Present",
     location: "Castle Rock, Colorado",
     bullets: [
-      "Support customers in a high-volume retail environment by identifying needs, clarifying requirements, and recommending appropriate products and solutions.",
-      "Translate customer requirements into practical recommendations based on function, cost, availability, and application.",
-      "Contribute to store operations through inventory awareness, merchandising discipline, and efficient replenishment support.",
+      "Advise customers in a high-volume retail environment by identifying project needs, clarifying requirements, and recommending practical products and solutions.",
+      "Translate customer questions into informed recommendations based on function, cost, availability, and installation context.",
+      "Support store operations through inventory awareness, merchandising discipline, and dependable replenishment execution.",
     ],
   },
   {
@@ -128,9 +128,9 @@ const experience = [
     period: "August 2018 - February 2022",
     location: "Moscow",
     bullets: [
-      "Conducted requirements analysis to understand customer goals, technical constraints, and workflow challenges.",
-      "Recommended 3D scanning, CAD, and reverse engineering solutions for engineering and manufacturing teams.",
-      "Built CAD models and technical demonstrations using SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, and Blender.",
+      "Conducted requirements analysis to understand customer goals, technical constraints, and workflow challenges across engineering and manufacturing use cases.",
+      "Recommended 3D scanning, CAD, and reverse engineering solutions aligned to customer workflows, technical needs, and implementation realities.",
+      "Built CAD models and technical demonstrations using SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, and Blender to support solution evaluation and stakeholder buy-in.",
     ],
   },
   {
@@ -139,9 +139,9 @@ const experience = [
     period: "December 2017 - July 2018",
     location: "Christchurch",
     bullets: [
-      "Coordinated schedules and crew deployment for residential fiber-laying projects.",
-      "Tracked materials, supplier timing, and project progress to reduce delays.",
-      "Maintained communication between field technicians, subcontractors, and project managers.",
+      "Coordinated schedules and crew deployment for residential fiber-laying projects across active field operations.",
+      "Tracked materials, supplier timing, and project progress to keep work moving and reduce avoidable delays.",
+      "Maintained communication across field technicians, subcontractors, and project managers to support smoother execution.",
     ],
   },
 ] as const;
@@ -249,7 +249,7 @@ export default function Home() {
       <header className="topbar">
         <div className="brand">
           <div className="brand-name">Elvira Nurgalieva</div>
-          <div className="brand-role">Engineer Intern (EI)</div>
+          <div className="brand-role">Systems Engineering | Operations | Digital Engineering</div>
         </div>
 
         <nav className="nav-links" aria-label="Primary">
@@ -278,25 +278,27 @@ export default function Home() {
 
       <section className="hero anchor-section" id="home">
         <div className="hero-copy">
-          <SectionLabel>Systems-minded portfolio</SectionLabel>
-          <h1>Engineer Intern (EI)</h1>
-          <h2>FE Exam Passed | Systems Engineering, Process Improvement, and Digital Engineering</h2>
+          <SectionLabel>Cross-functional engineering portfolio</SectionLabel>
+          <h1>Systems Engineering and Process Improvement Professional</h1>
+          <h2>FE Exam passed with experience across technical solution support, operations coordination, and digital engineering workflows</h2>
           <p className="lead">
-            FE Exam-passed engineer applying requirements thinking,
-            operational awareness, and technical communication to improve
-            engineering workflows and solve real-world customer and process
-            challenges.
+            Elvira brings cross-functional experience translating requirements,
+            supporting customers, and aligning technical solutions with
+            operational realities across engineering, manufacturing, and
+            field-service environments.
           </p>
           <div className="hero-divider" />
           <p className="body-copy">
-            Elvira brings experience across customer-facing operations, reverse
-            engineering, CAD-based solution work, and project coordination. Her
-            background in psychology, business, and engineering supports a
-            practical systems view that balances people, process, and technology.
+            Her background spans customer-facing operations, reverse
+            engineering, CAD-based solution work, project coordination, and
+            stakeholder communication. Combined with foundations in
+            engineering, business, and psychology, that experience supports a
+            practical systems view that balances people, process, and
+            technology.
           </p>
           <div className="cta-row">
             <a className="button button-primary" href="#projects">
-              View Experience
+              View Highlights
             </a>
             <a className="button button-secondary" href={resumeHref}>
               Resume PDF
@@ -304,12 +306,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
+        <div className="hero-visual">
           <div className="visual-backdrop" />
           <Image
-            alt=""
+            alt="Professional headshot of Elvira Nurgalieva"
             className="profile-illustration"
-            src={illustrationSrc}
+            src={headshotSrc}
             fill
             priority
             sizes="(max-width: 1120px) 100vw, 48vw"
@@ -320,7 +322,7 @@ export default function Home() {
           </div>
           <div className="hero-badge badge-bottom">
             <Icon kind="cube" />
-            CAD + Reverse Engineering
+            Technical Solutions + CAD Workflows
           </div>
         </div>
       </section>
@@ -328,8 +330,8 @@ export default function Home() {
       <section className="cred-strip" aria-label="Highlights">
         <div>Castle Rock, Colorado</div>
         <div>FE Exam Passed</div>
-        <div>Georgia Tech Certificates</div>
-        <div>Thor3D Sales Engineering</div>
+        <div>CAD + Reverse Engineering</div>
+        <div>Technical Sales Engineering</div>
         <div>Operations Coordination</div>
       </section>
 
@@ -354,8 +356,8 @@ export default function Home() {
       <section className="section-block anchor-section" id="projects">
         <div className="section-heading">
           <div>
-            <SectionLabel>Selected work</SectionLabel>
-            <h2>Featured Experience</h2>
+            <SectionLabel>Selected impact</SectionLabel>
+            <h2>Experience Highlights</h2>
           </div>
           <a className="text-link" href="#experience">
             Full experience
@@ -386,7 +388,7 @@ export default function Home() {
       <section className="section-block split-block anchor-section" id="resume">
         <div>
           <SectionLabel>Professional journey</SectionLabel>
-          <h2>Experience Timeline</h2>
+          <h2>Experience Across Engineering and Operations</h2>
           <div className="timeline">
             {timeline.map((item) => (
               <article className="timeline-item" key={`${item.year}-${item.title}`}>
@@ -402,25 +404,25 @@ export default function Home() {
         </div>
 
         <aside className="about-panel anchor-section" id="about">
-          <SectionLabel>About</SectionLabel>
-          <h2>About Elvira</h2>
+          <SectionLabel>Professional profile</SectionLabel>
+          <h2>Engineering Perspective with Operational Depth</h2>
           <p>
-            Elvira is building a career at the intersection of operations,
-            engineering technology, and human-centered problem solving. She is
-            especially interested in industrial engineering, systems
-            improvement, digital workflows, and roles where technical rigor
-            supports better decisions and smoother execution.
+            Elvira works at the intersection of operations, engineering
+            technology, and human-centered problem solving. She is especially
+            effective in roles that require technical rigor, workflow
+            awareness, and the ability to translate between stakeholders,
+            systems, and execution.
           </p>
           <p>
-            Her experience spans customer support, technical sales engineering,
-            scheduling coordination, and multidisciplinary communication. That
-            mix shows up in how she approaches process gaps, stakeholder needs,
-            and continuous improvement opportunities.
+            Her experience spans customer advising, technical sales
+            engineering, scheduling coordination, and multidisciplinary
+            communication. That mix shows up in how she approaches process
+            gaps, stakeholder needs, and continuous improvement opportunities.
           </p>
           <p>
-            Passing the FE Exam reinforces that hands-on experience with a
-            strong foundation in engineering fundamentals, analytical thinking,
-            and disciplined problem solving.
+            Passing the FE Exam reinforces that practical experience with a
+            strong foundation in engineering fundamentals, analytical
+            thinking, and disciplined problem solving.
           </p>
           <a
             className="button button-secondary"
@@ -435,7 +437,7 @@ export default function Home() {
 
       <section className="section-block experience-section anchor-section" id="experience">
         <SectionLabel>Resume detail</SectionLabel>
-        <h2>Experience</h2>
+        <h2>Professional Experience</h2>
         <div className="experience-grid">
           {experience.map((item) => (
             <article className="experience-card" key={`${item.company}-${item.role}`}>
@@ -467,8 +469,8 @@ export default function Home() {
             <p className="eyebrow">Professional Credential</p>
             <h3>FE Exam Passed</h3>
             <p>
-              Demonstrates validated engineering fundamentals that support
-              systems thinking, process analysis, and technical decision-making.
+              Validates engineering fundamentals that support systems
+              thinking, process analysis, and sound technical decision-making.
             </p>
           </div>
           <ul className="simple-list">
@@ -479,8 +481,8 @@ export default function Home() {
         </article>
 
         <article className="info-card">
-          <SectionLabel>Skills & Languages</SectionLabel>
-          <h2>Strengths</h2>
+          <SectionLabel>Capabilities</SectionLabel>
+          <h2>Technical and Professional Strengths</h2>
           <div className="skill-pills">
             {skills.map((skill) => (
               <span className="skill-pill" key={skill}>
