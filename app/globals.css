@@ -74,8 +74,9 @@ img {
 }
 
 .brand-role {
-  margin-top: 2px;
-  font-size: 0.98rem;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  line-height: 1.35;
   color: #64ddd4;
 }
 
@@ -205,10 +206,10 @@ img {
 }
 
 .hero h2 {
-  max-width: 14ch;
+  max-width: 22ch;
   margin: 18px 0 0;
-  font-size: clamp(1.55rem, 2.8vw, 2.45rem);
-  line-height: 1.08;
+  font-size: clamp(1.4rem, 2.45vw, 2.15rem);
+  line-height: 1.12;
   color: var(--teal-deep);
 }
 
@@ -259,6 +260,7 @@ img {
   min-height: 660px;
   border-radius: 30px;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
 }
 
 .visual-backdrop {
@@ -299,6 +301,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .hero-badge {
