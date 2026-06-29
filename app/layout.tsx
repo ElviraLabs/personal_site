@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
+const siteUrl = `https://elviralabs.github.io${sitePath}/`;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,20 +19,20 @@ export const metadata: Metadata = {
   title: "Elvira Nurgalieva | Engineer Intern (EI)",
   description:
     "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
-  metadataBase: new URL("https://elvira-nurgalieva-portfolio-2026.team-dason-2899.chatgpt-team.site"),
+  metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: `${sitePath}/favicon.svg`,
+    shortcut: `${sitePath}/favicon.svg`,
   },
   openGraph: {
     title: "Elvira Nurgalieva | Engineer Intern (EI)",
     description:
       "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
     type: "website",
-    url: "/",
+    url: siteUrl,
     images: [
       {
-        url: "/screenshot.jpeg",
+        url: `${sitePath}/screenshot.jpeg`,
         width: 1200,
         height: 750,
         alt: "Preview of Elvira Nurgalieva's portfolio site",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     title: "Elvira Nurgalieva | Engineer Intern (EI)",
     description:
       "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, CAD, and reverse engineering experience.",
-    images: ["/screenshot.jpeg"],
+    images: [`${sitePath}/screenshot.jpeg`],
   },
 };
 

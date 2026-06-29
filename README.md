@@ -1,19 +1,18 @@
 # Elvira Nurgalieva Portfolio
 
-Personal portfolio site for Elvira Nurgalieva, built with `vinext`, `Next.js`,
-and the OpenAI Sites deployment flow.
+Personal portfolio site for Elvira Nurgalieva, built with `Next.js` and
+deployed with GitHub Pages.
 
 ## Live Site
 
-- Production: `https://elvira-nurgalieva-portfolio-2026.team-dason-2899.chatgpt-team.site`
+- GitHub Pages: `https://elviralabs.github.io/personal_site/`
 
 ## Stack
 
 - `Next.js`
-- `vinext`
 - `React`
 - `Tailwind CSS v4`
-- OpenAI Sites hosting
+- GitHub Pages
 
 ## Local Development
 
@@ -35,11 +34,14 @@ Create a production build:
 pnpm build
 ```
 
+The static site export is generated in `out/`.
+
 ## Project Structure
 
 - `app/` - page layout, portfolio content, and styles
 - `public/` - static assets, hero illustration, resume PDF, and screenshot
-- `.openai/hosting.json` - Sites hosting configuration
+- `.github/workflows/` - GitHub Pages deployment workflow
+- `next.config.ts` - static export and repository base path configuration
 
 ## Notes
 
@@ -47,4 +49,4 @@ pnpm build
   `public/resume/Elvira-Nurgalieva-Profile.pdf`.
 - The preview image used for deployment metadata lives at
   `public/screenshot.jpeg`.
-- This repo includes OpenAI Sites metadata in `.openai/hosting.json`.
+- Production builds are exported for the `/personal_site` repository path.

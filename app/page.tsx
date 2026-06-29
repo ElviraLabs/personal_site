@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
+const illustrationSrc = `${sitePath}/profile-illustration.svg`;
+
 const strengths = [
   {
     title: "Industrial Engineering",
@@ -266,7 +270,7 @@ export default function Home() {
           >
             <Icon kind="linkedin" />
           </a>
-          <a className="button button-primary" href="/resume/Elvira-Nurgalieva-Profile.pdf">
+          <a className="button button-primary" href={resumeHref}>
             Download Resume
           </a>
         </div>
@@ -293,7 +297,7 @@ export default function Home() {
             <a className="button button-primary" href="#projects">
               View Experience
             </a>
-            <a className="button button-secondary" href="/resume/Elvira-Nurgalieva-Profile.pdf">
+            <a className="button button-secondary" href={resumeHref}>
               Resume PDF
             </a>
           </div>
@@ -304,7 +308,7 @@ export default function Home() {
           <Image
             alt=""
             className="profile-illustration"
-            src="/profile-illustration.svg"
+            src={illustrationSrc}
             fill
             priority
             sizes="(max-width: 1120px) 100vw, 48vw"
