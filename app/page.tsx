@@ -10,8 +10,8 @@ const strengths = [
     points: [
       "Process improvement",
       "Workflow analysis",
+      "Root cause analysis",
       "Operational efficiency",
-      "Continuous improvement",
     ],
     icon: "gear",
   },
@@ -20,18 +20,18 @@ const strengths = [
     points: [
       "Requirements analysis",
       "Systems thinking",
-      "Trade-off studies",
+      "Stakeholder collaboration",
       "Stakeholder alignment",
     ],
     icon: "nodes",
   },
   {
-    title: "Digital Engineering",
+    title: "Manufacturing Support",
     points: [
-      "CAD modeling",
+      "SolidWorks + Fusion 360",
       "Reverse engineering",
-      "3D scanning",
-      "Technical communication",
+      "CAD modeling",
+      "Technical documentation",
     ],
     icon: "cube",
   },
@@ -98,16 +98,29 @@ const timeline = [
 ] as const;
 
 const skills = [
-  "Inventory Management",
-  "Continuous Improvement",
-  "Technical Communication",
+  "Process Improvement",
+  "Manufacturing Support",
   "Requirements Analysis",
   "Systems Thinking",
+  "Workflow Analysis",
+  "Root Cause Analysis",
+  "Technical Documentation",
+  "Stakeholder Collaboration",
+  "Technical Communication",
+  "SolidWorks",
+  "Fusion 360",
   "CAD",
   "Reverse Engineering",
   "3D Scanning",
-  "Workflow Analysis",
   "Problem Solving",
+] as const;
+
+const engineeringProjects = [
+  "Retail Process Improvement Study (In Progress)",
+  "Manufacturing Workflow Analysis (Planned)",
+  "Reverse Engineering Workflow",
+  "Requirements Analysis Case Study",
+  "Assembly Line Balancing Simulation (Planned)",
 ] as const;
 
 const experience = [
@@ -147,6 +160,8 @@ const experience = [
 ] as const;
 
 const education = [
+  "Bauman Moscow State Technical University - Bachelor's in Systems Engineering (NCEES evaluated as equivalent to a U.S. bachelor's degree in engineering)",
+  "Relevant coursework: Systems Analysis, Automation, Robotics, Machine Design, Computer-Integrated Manufacturing, CAD, Production Processes",
   "Georgia Institute of Technology - Applications in Engineering Mechanics Certificate",
   "Georgia Institute of Technology - Mechanics of Materials I",
   "Georgia Institute of Technology - Introduction to Engineering Mechanics Certificate",
@@ -280,12 +295,12 @@ export default function Home() {
         <div className="hero-copy">
           <SectionLabel>Cross-functional engineering portfolio</SectionLabel>
           <h1>Systems Engineering and Process Improvement Professional</h1>
-          <h2>FE Exam passed with experience across technical solution support, operations coordination, and digital engineering workflows</h2>
+          <h2>FE Exam passed with experience across systems engineering, manufacturing support, technical solution delivery, and operations coordination</h2>
           <p className="lead">
             Elvira brings cross-functional experience translating requirements,
             supporting customers, and aligning technical solutions with
-            operational realities across engineering, manufacturing, and
-            field-service environments.
+            operational realities across engineering, manufacturing, product
+            development, and field-service environments.
           </p>
           <div className="hero-divider" />
           <p className="body-copy">
@@ -322,7 +337,7 @@ export default function Home() {
           </div>
           <div className="hero-badge badge-bottom">
             <Icon kind="cube" />
-            Technical Solutions + CAD Workflows
+            Manufacturing Support + CAD Workflows
           </div>
         </div>
       </section>
@@ -330,9 +345,9 @@ export default function Home() {
       <section className="cred-strip" aria-label="Highlights">
         <div>Castle Rock, Colorado</div>
         <div>FE Exam Passed</div>
-        <div>CAD + Reverse Engineering</div>
-        <div>Technical Sales Engineering</div>
-        <div>Operations Coordination</div>
+        <div>NCEES-Equivalent Engineering Degree</div>
+        <div>Manufacturing Support</div>
+        <div>Technical Demos + Training</div>
       </section>
 
       <section className="strengths-section">
@@ -415,9 +430,10 @@ export default function Home() {
           </p>
           <p>
             Her experience spans customer advising, technical sales
-            engineering, scheduling coordination, and multidisciplinary
-            communication. That mix shows up in how she approaches process
-            gaps, stakeholder needs, and continuous improvement opportunities.
+            engineering, scheduling coordination, technical demonstrations,
+            and multidisciplinary communication. That mix shows up in how she
+            approaches process gaps, stakeholder needs, and continuous
+            improvement opportunities.
           </p>
           <p>
             Passing the FE Exam reinforces that practical experience with a
@@ -482,13 +498,13 @@ export default function Home() {
 
         <article className="info-card">
           <SectionLabel>Capabilities</SectionLabel>
-          <h2>Technical and Professional Strengths</h2>
+          <h2>Core Engineering Competencies</h2>
           <div className="skill-pills">
             {skills.map((skill) => (
               <span className="skill-pill" key={skill}>
                 {skill}
               </span>
-            ))}
+              ))}
           </div>
           <div className="language-block">
             <p>English - Native or bilingual</p>
@@ -496,6 +512,16 @@ export default function Home() {
             <p>Kazakh - Limited working</p>
           </div>
         </article>
+      </section>
+
+      <section className="section-block">
+        <SectionLabel>Engineering projects</SectionLabel>
+        <h2>Current Studies and Portfolio Work</h2>
+        <ul className="simple-list">
+          {engineeringProjects.map((project) => (
+            <li key={project}>{project}</li>
+          ))}
+        </ul>
       </section>
 
       <footer className="footer anchor-section" id="contact">
