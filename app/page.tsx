@@ -5,6 +5,7 @@ const sitePath = "";
 const siteUrl = "https://elvira-n.com";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
+const contactFormAction = "https://formsubmit.co/nurgalieva.e@gmail.com";
 
 const outcomeAreas = [
   {
@@ -775,15 +776,45 @@ export default function Home() {
 
       <footer className="footer anchor-section" id="contact">
         <div className="footer-col">
-          <h3>Let&apos;s connect</h3>
-          <a href="mailto:nurgalieva.e@gmail.com">
-            <Icon kind="mail" className="footer-icon" />
-            nurgalieva.e@gmail.com
-          </a>
-          <a href="tel:+17197268511">
-            <Icon kind="phone" className="footer-icon" />
-            719-726-8511
-          </a>
+          <h3>Contact</h3>
+          <p className="footer-copy">
+            Reach out through the form below for engineering opportunities,
+            collaboration, or project conversations.
+          </p>
+          <form
+            action={contactFormAction}
+            className="contact-form"
+            method="POST"
+          >
+            <input name="_captcha" type="hidden" value="false" />
+            <input name="_next" type="hidden" value={`${siteUrl}/#contact`} />
+            <input name="_subject" type="hidden" value="New portfolio inquiry" />
+            <label className="contact-field">
+              <span>Name</span>
+              <input name="name" placeholder="Your name" required type="text" />
+            </label>
+            <label className="contact-field">
+              <span>Email</span>
+              <input
+                name="email"
+                placeholder="you@example.com"
+                required
+                type="email"
+              />
+            </label>
+            <label className="contact-field">
+              <span>Message</span>
+              <textarea
+                name="message"
+                placeholder="Tell me a little about the role or project."
+                required
+                rows={5}
+              />
+            </label>
+            <button className="button button-primary contact-submit" type="submit">
+              Send Message
+            </button>
+          </form>
           <a
             href="https://www.linkedin.com/in/elvira-n"
             target="_blank"
