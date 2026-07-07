@@ -754,6 +754,11 @@ img {
   min-width: 0;
 }
 
+.footer-copy {
+  align-items: flex-start;
+  line-height: 1.65;
+}
+
 .footer-col + .footer-col {
   padding-left: 16px;
   border-left: 1px solid rgba(255, 255, 255, 0.12);
@@ -770,6 +775,56 @@ img {
   color: white;
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(125, 241, 234, 0.28);
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0 20px;
+}
+
+.contact-field {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-field span {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(125, 241, 234, 0.22);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: rgba(125, 241, 234, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-submit {
+  justify-content: center;
 }
 
 @media (max-width: 1120px) {
