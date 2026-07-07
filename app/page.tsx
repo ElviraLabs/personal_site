@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
+const sitePath = "";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 
