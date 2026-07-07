@@ -1,37 +1,57 @@
 import Image from "next/image";
+import Script from "next/script";
 
 const sitePath = "";
+const siteUrl = "https://elvira-n.com";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 
-const strengths = [
+const outcomeAreas = [
   {
-    title: "Industrial Engineering",
+    title: "Material Flow Optimization",
     points: [
-      "Process improvement",
-      "Workflow analysis",
-      "Root cause analysis",
-      "Operational efficiency",
+      "Inventory visibility",
+      "Workflow clarity",
     ],
     icon: "gear",
   },
   {
-    title: "Systems Engineering",
+    title: "Manufacturing Process Improvement",
     points: [
-      "Requirements analysis",
-      "Systems thinking",
-      "Stakeholder collaboration",
-      "Stakeholder alignment",
+      "Root cause analysis",
+      "Standardized process design",
     ],
     icon: "nodes",
   },
   {
-    title: "Manufacturing Support",
+    title: "Reverse Engineering",
     points: [
-      "SolidWorks + Fusion 360",
-      "Reverse engineering",
-      "CAD modeling",
-      "Technical documentation",
+      "3D scanning inputs",
+      "CAD reconstruction",
+    ],
+    icon: "cube",
+  },
+  {
+    title: "Digital Manufacturing",
+    points: [
+      "Technical workflows",
+      "Manufacturing support",
+    ],
+    icon: "gear",
+  },
+  {
+    title: "Continuous Improvement",
+    points: [
+      "Structured problem solving",
+      "Systems thinking",
+    ],
+    icon: "nodes",
+  },
+  {
+    title: "CAD & 3D Scanning",
+    points: [
+      "SolidWorks, Fusion 360",
+      "Reverse engineering tools",
     ],
     icon: "cube",
   },
@@ -43,23 +63,23 @@ const featuredWork = [
     org: "Operations Study",
     summary:
       "Concept study focused on improving material flow, replenishment visibility, and decision points in a busy retail environment.",
-    href: "#experience",
+    href: "#projects",
     tag: "Material Flow + Process Design",
   },
   {
-    title: "Reverse Engineering & CAD Workflow",
+    title: "Reverse Engineering",
     org: "Thor3D",
     summary:
-      "Engineering workflow case study built around scanning, CAD modeling, technical requirements, and downstream manufacturing support.",
-    href: "#project-details",
+      "Reverse engineered mechanical components through structured 3D scanning and CAD reconstruction workflows that support technical review and manufacturing documentation.",
+    href: "#projects",
     tag: "CAD + Reverse Engineering",
   },
   {
-    title: "Manufacturing Process Improvement Concepts",
+    title: "Manufacturing Process Improvement",
     org: "Manufacturing Systems Study",
     summary:
-      "Portfolio work exploring process gaps, root-cause thinking, and system-level improvements for manufacturing support environments.",
-    href: "#project-details",
+      "Engineering concept work focused on process gaps, flow constraints, and system-level improvements for manufacturing support environments.",
+    href: "#projects",
     tag: "Process Improvement",
   },
   {
@@ -67,7 +87,7 @@ const featuredWork = [
     org: "Retail Systems Study",
     summary:
       "Study centered on layout clarity, inventory visibility, and practical improvements that support faster decisions and smoother execution.",
-    href: "#project-details",
+    href: "#projects",
     tag: "Inventory Visibility",
   },
 ] as const;
@@ -76,130 +96,200 @@ const projectDetails = [
   {
     title: "Retail Material Flow Optimization",
     problem:
-      "Retail teams lose time when materials, replenishment signals, and stocking priorities are not clearly visible in the workflow.",
-    currentState:
-      "Material movement depends heavily on manual awareness, local judgment, and reactive restocking rather than clearly structured flow rules.",
-    rootCause:
-      "The system relies on fragmented visibility across shelves, inventory condition, and customer demand at the point of execution.",
-    tools:
-      "Workflow analysis, process mapping, observation, root cause analysis",
-    solution:
-      "Design a cleaner material flow approach with clearer stocking signals, more visible replenishment triggers, and simpler handoff points.",
-    impact:
-      "Improved replenishment responsiveness, fewer stocking delays, and stronger day-to-day operational rhythm.",
-    skills:
-      "Systems thinking, process improvement, material flow analysis, operational problem solving",
+      "Inventory accuracy decreases because overhead storage and replenishment activity are difficult to manage efficiently in a busy retail setting.",
+    observedIssues: [
+      "Excess walking between stocking points",
+      "Waiting time for lift equipment access",
+      "Overstocking in visible locations",
+      "Safety hazards from awkward retrieval patterns",
+      "Product damage from inconsistent handling",
+    ],
+    methods: [
+      "Process mapping",
+      "Root cause analysis",
+      "Material flow analysis",
+      "Ergonomic evaluation",
+    ],
+    solution: [
+      "Fixed modular shelf organizers",
+      "Visual inventory indicators",
+      "Standardized replenishment process",
+    ],
+    impact: [
+      "Reduced walking and wasted motion",
+      "Improved inventory accuracy",
+      "Reduced product damage",
+      "Improved safety and execution consistency",
+    ],
+    skills: [
+      "Material flow analysis",
+      "Process optimization",
+      "Systems thinking",
+      "Operational problem solving",
+    ],
   },
   {
-    title: "Reverse Engineering & CAD Workflow",
+    title: "Reverse Engineering",
     problem:
       "Engineering teams need accurate reverse engineering workflows when existing parts, geometry, or design intent are not fully documented.",
-    currentState:
-      "Teams often work from incomplete part data and must bridge scanning, modeling, and technical review before a usable engineering output exists.",
-    rootCause:
-      "Gaps in source geometry, legacy documentation, and alignment between customer need and modeling workflow create rework risk.",
-    tools:
-      "SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, 3D scanning workflows",
-    solution:
-      "Use structured requirements analysis and CAD reconstruction steps to turn scans and customer constraints into usable technical models.",
-    impact:
-      "Better model quality, clearer technical evaluation, and smoother solution selection for engineering and manufacturing users.",
-    skills:
-      "CAD modeling, reverse engineering, requirements analysis, technical communication",
+    observedIssues: [
+      "Incomplete part data",
+      "Legacy geometry without current models",
+      "Rework risk between scan output and final CAD model",
+    ],
+    methods: [
+      "Requirements analysis",
+      "3D scanning workflow review",
+      "CAD reconstruction",
+      "Technical validation",
+    ],
+    solution: [
+      "Structured scanning-to-CAD workflow",
+      "Consistent model reconstruction process",
+      "Clear technical review before downstream use",
+    ],
+    impact: [
+      "Accelerated CAD reconstruction",
+      "Clearer manufacturing documentation",
+      "Stronger technical decision support for customers",
+    ],
+    skills: [
+      "Reverse engineering",
+      "CAD modeling",
+      "Technical documentation",
+      "Requirements analysis",
+    ],
   },
   {
-    title: "Manufacturing Process Improvement Concepts",
+    title: "Manufacturing Process Improvement",
     problem:
       "Manufacturing support environments often carry process friction that slows execution without a clear view of the highest-leverage improvement points.",
-    currentState:
-      "Workflows may function, but handoffs, documentation, and local bottlenecks reduce efficiency and make improvement opportunities harder to prioritize.",
-    rootCause:
-      "Process variation, incomplete visibility into workflow constraints, and limited standardization weaken system performance.",
-    tools:
-      "Process analysis, systems thinking, root cause analysis, workflow mapping",
-    solution:
-      "Develop process-improvement concepts that focus on flow clarity, standardized work cues, and better alignment between people, process, and task sequencing.",
-    impact:
-      "Stronger consistency, reduced avoidable friction, and a clearer path toward continuous improvement.",
-    skills:
-      "Manufacturing support, process improvement, systems analysis, stakeholder alignment",
+    observedIssues: [
+      "Handoffs that depend on local knowledge",
+      "Documentation gaps",
+      "Workflow bottlenecks that are not consistently measured",
+    ],
+    methods: [
+      "Process analysis",
+      "Workflow mapping",
+      "Root cause analysis",
+      "Continuous improvement framing",
+    ],
+    solution: [
+      "Define clearer handoff points",
+      "Standardize work cues",
+      "Improve alignment between sequencing, people, and process",
+    ],
+    impact: [
+      "Reduced avoidable friction",
+      "Stronger consistency",
+      "Clearer path to continuous improvement",
+    ],
+    skills: [
+      "Manufacturing engineering thinking",
+      "Process improvement",
+      "Systems analysis",
+      "Stakeholder alignment",
+    ],
   },
   {
     title: "Shelf Organization / Inventory Visibility Design Study",
     problem:
       "When inventory visibility is weak, teams spend extra effort locating items, judging stock condition, and deciding what should be replenished first.",
-    currentState:
-      "Shelf condition and stock awareness depend too much on individual memory and repeated visual checking.",
-    rootCause:
-      "The environment lacks clear visual structure and simple information cues that support quick operational decisions.",
-    tools:
-      "Visual workflow analysis, inventory observation, process design thinking",
-    solution:
-      "Create a shelf and visibility study that emphasizes clearer organization, easier product recognition, and stronger replenishment awareness.",
-    impact:
-      "Faster identification of stock gaps, improved inventory visibility, and more efficient floor execution.",
-    skills:
-      "Inventory systems thinking, visual management, workflow design, operational analysis",
-  },
-] as const;
-
-const timeline = [
-  {
-    year: "2024-Present",
-    title: "Sales Associate",
-    detail: "The Home Depot | Customer advising, requirements clarification, inventory awareness, and day-to-day operational execution.",
-  },
-  {
-    year: "2018-2022",
-    title: "Sales Engineer",
-    detail: "Thor3D | Technical solution support, reverse engineering, CAD workflows, and stakeholder-facing demonstrations.",
-  },
-  {
-    year: "2017-2018",
-    title: "Dispatch Coordinator",
-    detail: "MultiMedia Communications Ltd | Scheduling, field coordination, materials tracking, and project reporting.",
-  },
-  {
-    year: "2022",
-    title: "Engineering Mechanics Certificates",
-    detail: "Georgia Tech | Applied mechanics and mechanics fundamentals.",
-  },
-  {
-    year: "2015-2016",
-    title: "Postgraduate Business Enterprise",
-    detail: "Southern Institute of Technology | Business and management foundation.",
-  },
-  {
-    year: "2008-2012",
-    title: "BA in Psychology",
-    detail: "Higher School of Psychology | Human behavior and communication lens.",
+    observedIssues: [
+      "Repeated visual checking",
+      "Dependence on memory for stock condition",
+      "Slow replenishment prioritization",
+    ],
+    methods: [
+      "Visual workflow analysis",
+      "Inventory observation",
+      "Process design thinking",
+      "Root cause analysis",
+    ],
+    solution: [
+      "Clearer shelf organization",
+      "Improved product visibility cues",
+      "Simpler replenishment triggers",
+    ],
+    impact: [
+      "Faster identification of stock gaps",
+      "Improved inventory visibility",
+      "More efficient floor execution",
+    ],
+    skills: [
+      "Visual management",
+      "Workflow design",
+      "Inventory visibility analysis",
+      "Operational analysis",
+    ],
   },
 ] as const;
 
 const skills = [
-  "Process Improvement",
-  "Manufacturing Support",
-  "Requirements Analysis",
-  "Systems Thinking",
-  "Workflow Analysis",
+  "Manufacturing Engineer",
+  "Industrial Engineer",
+  "Systems Engineer",
+  "Process Engineer",
+  "Manufacturing Process Improvement",
+  "Continuous Improvement",
+  "Material Flow",
+  "Lean Manufacturing",
+  "Process Optimization",
   "Root Cause Analysis",
   "Technical Documentation",
-  "Stakeholder Collaboration",
-  "Technical Communication",
-  "SolidWorks",
-  "Fusion 360",
-  "CAD",
+  "CAD Engineer",
   "Reverse Engineering",
   "3D Scanning",
-  "Problem Solving",
 ] as const;
 
-const engineeringProjects = [
-  "Retail Process Improvement Study (In Progress)",
-  "Manufacturing Workflow Analysis (Planned)",
-  "Reverse Engineering Workflow",
-  "Requirements Analysis Case Study",
-  "Assembly Line Balancing Simulation (Planned)",
+const skillGroups = [
+  {
+    title: "Engineering",
+    items: [
+      "Systems Engineering",
+      "Manufacturing Engineering",
+      "Industrial Engineering",
+      "Process Improvement",
+      "Continuous Improvement",
+      "Lean Manufacturing",
+      "Root Cause Analysis",
+    ],
+  },
+  {
+    title: "Design & Analysis",
+    items: [
+      "CAD",
+      "SOLIDWORKS",
+      "Fusion 360",
+      "Rhino",
+      "Blender",
+      "3D Scanning",
+      "Reverse Engineering",
+      "GD&T",
+      "Technical Documentation",
+    ],
+  },
+  {
+    title: "Software & Tools",
+    items: [
+      "Excel",
+      "Git",
+      "GitHub",
+      "Workflow Mapping",
+      "Material Flow Analysis",
+      "Process Mapping",
+    ],
+  },
+  {
+    title: "Industries",
+    items: [
+      "Manufacturing",
+      "Retail Operations",
+      "Product Development Support",
+      "Field Operations Coordination",
+    ],
+  },
 ] as const;
 
 const experience = [
@@ -209,9 +299,9 @@ const experience = [
     period: "April 2024 - Present",
     location: "Castle Rock, Colorado",
     bullets: [
-      "Advise customers in a high-volume retail environment by identifying project needs, clarifying requirements, and recommending practical products and solutions.",
-      "Translate customer questions into informed recommendations based on function, cost, availability, and installation context.",
-      "Support store operations through inventory awareness, merchandising discipline, and dependable replenishment execution.",
+      "Analyzed customer requirements in a high-volume retail environment to recommend practical products, improve decision speed, and support smoother project execution.",
+      "Translated customer questions into informed technical recommendations based on function, cost, availability, and installation context.",
+      "Supported operational efficiency through inventory visibility, merchandising discipline, and dependable replenishment execution.",
     ],
   },
   {
@@ -220,9 +310,9 @@ const experience = [
     period: "August 2018 - February 2022",
     location: "Moscow",
     bullets: [
-      "Conducted requirements analysis to understand customer goals, technical constraints, and workflow challenges across engineering and manufacturing use cases.",
-      "Recommended 3D scanning, CAD, and reverse engineering solutions aligned to customer workflows, technical needs, and implementation realities.",
-      "Built CAD models and technical demonstrations using SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, and Blender to support solution evaluation and stakeholder buy-in.",
+      "Conducted structured requirements analysis to understand customer goals, technical constraints, and workflow challenges across engineering and manufacturing use cases.",
+      "Reverse engineered complex mechanical components using 3D scanning and CAD workflows to accelerate model reconstruction and manufacturing documentation.",
+      "Developed CAD models and delivered technical demonstrations using SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, and Blender to support solution evaluation and customer adoption.",
     ],
   },
   {
@@ -232,8 +322,8 @@ const experience = [
     location: "Christchurch",
     bullets: [
       "Coordinated schedules and crew deployment for residential fiber-laying projects across active field operations.",
-      "Tracked materials, supplier timing, and project progress to keep work moving and reduce avoidable delays.",
-      "Maintained communication across field technicians, subcontractors, and project managers to support smoother execution.",
+      "Tracked materials, supplier timing, and project progress to keep field work moving and reduce avoidable delays.",
+      "Maintained communication across field technicians, subcontractors, and project managers to support smoother execution and clearer reporting.",
     ],
   },
 ] as const;
@@ -338,8 +428,44 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Elvira Nurgalieva",
+    jobTitle: "Systems Engineer",
+    url: siteUrl,
+    sameAs: [
+      "https://www.linkedin.com/in/elvira-n",
+      "https://github.com/ElviraLabs",
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Independent Engineering Portfolio",
+    },
+    knowsAbout: [
+      "Manufacturing Engineering",
+      "Industrial Engineering",
+      "Systems Engineering",
+      "Process Improvement",
+      "Material Flow",
+      "Reverse Engineering",
+      "CAD",
+      "Technical Documentation",
+      "Continuous Improvement",
+    ],
+    subjectOf: [
+      siteUrl,
+      `${siteUrl}/resume/Elvira-Nurgalieva-Profile.pdf`,
+    ],
+  };
+
   return (
     <main className="portfolio-shell">
+      <Script
+        id="person-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header className="topbar">
         <div className="brand">
           <div className="brand-name">Elvira Nurgalieva</div>
@@ -349,6 +475,7 @@ export default function Home() {
         <nav className="nav-links" aria-label="Primary">
           <a href="#home">Home</a>
           <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
@@ -388,6 +515,9 @@ export default function Home() {
             and process.
           </p>
           <div className="cta-row">
+            <a className="button button-primary" href="#projects">
+              View Projects
+            </a>
             <a className="button button-secondary" href={resumeHref}>
               Download Resume
             </a>
@@ -419,12 +549,12 @@ export default function Home() {
         <div>Castle Rock, Colorado</div>
         <div>FE Exam Passed</div>
         <div>NCEES-Equivalent Engineering Degree</div>
-        <div>Manufacturing Support</div>
-        <div>Technical Demos + Training</div>
+        <div>Material Flow</div>
+        <div>Continuous Improvement</div>
       </section>
 
       <section className="strengths-section">
-        {strengths.map((item) => (
+        {outcomeAreas.map((item) => (
           <article className="strength-card" key={item.title}>
             <div className="strength-icon">
               <Icon kind={item.icon} />
@@ -475,19 +605,18 @@ export default function Home() {
 
       <section className="section-block anchor-section" id="project-details">
         <SectionLabel>Project breakdown</SectionLabel>
-        <h2>How the Work Is Approached</h2>
+        <h2>Engineering Problem-Solving Format</h2>
         <div className="experience-grid">
           {projectDetails.map((project) => (
             <article className="experience-card" key={project.title}>
               <h3>{project.title}</h3>
               <ul>
                 <li><strong>Problem:</strong> {project.problem}</li>
-                <li><strong>Current state:</strong> {project.currentState}</li>
-                <li><strong>Root cause analysis:</strong> {project.rootCause}</li>
-                <li><strong>Tools used:</strong> {project.tools}</li>
-                <li><strong>Proposed solution:</strong> {project.solution}</li>
-                <li><strong>Expected impact:</strong> {project.impact}</li>
-                <li><strong>Engineering skills demonstrated:</strong> {project.skills}</li>
+                <li><strong>Observed issues:</strong> {project.observedIssues.join(", ")}</li>
+                <li><strong>Engineering methods:</strong> {project.methods.join(", ")}</li>
+                <li><strong>Proposed solution:</strong> {project.solution.join(", ")}</li>
+                <li><strong>Expected benefits:</strong> {project.impact.join(", ")}</li>
+                <li><strong>Engineering skills demonstrated:</strong> {project.skills.join(", ")}</li>
               </ul>
             </article>
           ))}
@@ -496,38 +625,74 @@ export default function Home() {
 
       <section className="section-block split-block anchor-section" id="resume">
         <div>
-          <SectionLabel>Professional journey</SectionLabel>
-          <h2>Experience Across Engineering and Operations</h2>
+          <SectionLabel>Resume overview</SectionLabel>
+          <h2>Engineering Credentials and Experience</h2>
           <div className="timeline">
-            {timeline.map((item) => (
-              <article className="timeline-item" key={`${item.year}-${item.title}`}>
-                <div className="timeline-marker" />
-                <div>
-                  <p className="timeline-year">{item.year}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.detail}</p>
-                </div>
-              </article>
-            ))}
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Credential</p>
+                <h3>FE Passed</h3>
+                <p>Fundamentals of Engineering passed in Industrial and Systems Engineering.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Licensure</p>
+                <h3>Colorado EI</h3>
+                <p>Pending issuance, to be updated with EI number when available.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Industries</p>
+                <h3>Manufacturing, Retail, Product Support</h3>
+                <p>Experience across manufacturing support, retail operations, product development support, and field coordination.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Software</p>
+                <h3>CAD and Engineering Tools</h3>
+                <p>SolidWorks, Fusion 360, Rhino, Blender, Excel, Git, and GitHub.</p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Resume</p>
+                <h3>Download Current Resume</h3>
+                <p>
+                  <a className="text-link" href={resumeHref}>
+                    Download Resume
+                    <Icon kind="arrow" className="inline-icon" />
+                  </a>
+                </p>
+              </div>
+            </article>
           </div>
         </div>
 
         <aside className="about-panel anchor-section" id="about">
-          <SectionLabel>Professional profile</SectionLabel>
-          <h2>About Elvira</h2>
+          <SectionLabel>Engineering philosophy</SectionLabel>
+          <h2>How Elvira Approaches Engineering Work</h2>
           <p>
-            Elvira is transitioning back into engineering with a strong
-            systems mindset, analytical problem solving, and practical
-            experience across operations, CAD workflows, and technical support.
+            Elvira approaches engineering through systems thinking, curiosity,
+            structured problem solving, and continuous improvement.
           </p>
           <p>
-            She is especially interested in manufacturing systems, process
-            improvement, and roles where engineering judgment can improve flow,
-            visibility, and execution.
+            Her work style centers on understanding the current state, finding
+            the real root cause, and designing improvements that make process,
+            flow, and execution more reliable.
           </p>
           <p>
-            She is open to relocation, travel, and international living for
-            the right engineering opportunity.
+            Career objective: FE passed and returning to engineering, seeking
+            Manufacturing, Industrial, and Systems Engineering opportunities
+            where she can contribute to process optimization, material flow,
+            technical documentation, and continuous improvement.
           </p>
           <a
             className="button button-secondary"
@@ -566,7 +731,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-block dual-grid">
+      <section className="section-block dual-grid anchor-section" id="skills">
         <article className="info-card">
           <SectionLabel>Education</SectionLabel>
           <h2>Academic Background</h2>
@@ -586,31 +751,26 @@ export default function Home() {
         </article>
 
         <article className="info-card">
-          <SectionLabel>Capabilities</SectionLabel>
-          <h2>Core Engineering Competencies</h2>
-          <div className="skill-pills">
-            {skills.map((skill) => (
-              <span className="skill-pill" key={skill}>
-                {skill}
-              </span>
-              ))}
-          </div>
-          <div className="language-block">
-            <p>English - Native or bilingual</p>
-            <p>Russian - Native or bilingual</p>
-            <p>Kazakh - Limited working</p>
+          <SectionLabel>Skills</SectionLabel>
+          <h2>Engineering and Software Skills</h2>
+          <div className="timeline">
+            {skillGroups.map((group) => (
+              <article className="timeline-item" key={group.title}>
+                <div className="timeline-marker" />
+                <div>
+                  <p className="timeline-year">{group.title}</p>
+                  <div className="skill-pills">
+                    {group.items.map((item) => (
+                      <span className="skill-pill" key={item}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </article>
-      </section>
-
-      <section className="section-block">
-        <SectionLabel>Engineering projects</SectionLabel>
-        <h2>Current Studies and Portfolio Work</h2>
-        <ul className="simple-list">
-          {engineeringProjects.map((project) => (
-            <li key={project}>{project}</li>
-          ))}
-        </ul>
       </section>
 
       <footer className="footer anchor-section" id="contact">
@@ -642,6 +802,7 @@ export default function Home() {
         <div className="footer-col">
           <h3>Quick links</h3>
           <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>

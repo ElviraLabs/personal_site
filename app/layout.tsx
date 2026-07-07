@@ -16,18 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
+  title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
   description:
-    "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
+    "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: `${sitePath}/favicon.svg`,
     shortcut: `${sitePath}/favicon.svg`,
   },
   openGraph: {
-    title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
+    title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
     description:
-      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
+      "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
     type: "website",
     url: siteUrl,
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvira Nurgalieva | Systems Engineering & Process Improvement",
+    title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
     description:
-      "Portfolio site for Elvira Nurgalieva featuring systems engineering, process improvement, technical solution support, CAD, and reverse engineering experience.",
+      "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
     images: [`${sitePath}/screenshot.jpeg`],
   },
 };
