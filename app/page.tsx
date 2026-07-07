@@ -39,28 +39,107 @@ const strengths = [
 
 const featuredWork = [
   {
-    title: "Customer Requirements Analysis",
-    org: "The Home Depot",
+    title: "Retail Material Flow Optimization",
+    org: "Operations Study",
     summary:
-      "Advises customers in a fast-paced environment by translating project needs into practical product, cost, and application decisions.",
+      "Concept study focused on improving material flow, replenishment visibility, and decision points in a busy retail environment.",
     href: "#experience",
-    tag: "Customer-Facing Technical Support",
+    tag: "Material Flow + Process Design",
   },
   {
-    title: "Digital Engineering Solution Support",
+    title: "Reverse Engineering & CAD Workflow",
     org: "Thor3D",
     summary:
-      "Supported engineering and manufacturing teams with 3D scanning, CAD, and reverse engineering workflows matched to real technical constraints.",
-    href: "#experience",
+      "Engineering workflow case study built around scanning, CAD modeling, technical requirements, and downstream manufacturing support.",
+    href: "#project-details",
     tag: "CAD + Reverse Engineering",
   },
   {
-    title: "Field Operations Coordination",
-    org: "MultiMedia Communications Ltd",
+    title: "Manufacturing Process Improvement Concepts",
+    org: "Manufacturing Systems Study",
     summary:
-      "Coordinated crews, schedules, materials, and reporting to keep residential fiber projects moving with fewer delays and clearer communication.",
-    href: "#experience",
-    tag: "Operations Execution",
+      "Portfolio work exploring process gaps, root-cause thinking, and system-level improvements for manufacturing support environments.",
+    href: "#project-details",
+    tag: "Process Improvement",
+  },
+  {
+    title: "Shelf Organization / Inventory Visibility Design Study",
+    org: "Retail Systems Study",
+    summary:
+      "Study centered on layout clarity, inventory visibility, and practical improvements that support faster decisions and smoother execution.",
+    href: "#project-details",
+    tag: "Inventory Visibility",
+  },
+] as const;
+
+const projectDetails = [
+  {
+    title: "Retail Material Flow Optimization",
+    problem:
+      "Retail teams lose time when materials, replenishment signals, and stocking priorities are not clearly visible in the workflow.",
+    currentState:
+      "Material movement depends heavily on manual awareness, local judgment, and reactive restocking rather than clearly structured flow rules.",
+    rootCause:
+      "The system relies on fragmented visibility across shelves, inventory condition, and customer demand at the point of execution.",
+    tools:
+      "Workflow analysis, process mapping, observation, root cause analysis",
+    solution:
+      "Design a cleaner material flow approach with clearer stocking signals, more visible replenishment triggers, and simpler handoff points.",
+    impact:
+      "Improved replenishment responsiveness, fewer stocking delays, and stronger day-to-day operational rhythm.",
+    skills:
+      "Systems thinking, process improvement, material flow analysis, operational problem solving",
+  },
+  {
+    title: "Reverse Engineering & CAD Workflow",
+    problem:
+      "Engineering teams need accurate reverse engineering workflows when existing parts, geometry, or design intent are not fully documented.",
+    currentState:
+      "Teams often work from incomplete part data and must bridge scanning, modeling, and technical review before a usable engineering output exists.",
+    rootCause:
+      "Gaps in source geometry, legacy documentation, and alignment between customer need and modeling workflow create rework risk.",
+    tools:
+      "SolidWorks, Fusion 360, Geomagic Design X, Rhinoceros, 3D scanning workflows",
+    solution:
+      "Use structured requirements analysis and CAD reconstruction steps to turn scans and customer constraints into usable technical models.",
+    impact:
+      "Better model quality, clearer technical evaluation, and smoother solution selection for engineering and manufacturing users.",
+    skills:
+      "CAD modeling, reverse engineering, requirements analysis, technical communication",
+  },
+  {
+    title: "Manufacturing Process Improvement Concepts",
+    problem:
+      "Manufacturing support environments often carry process friction that slows execution without a clear view of the highest-leverage improvement points.",
+    currentState:
+      "Workflows may function, but handoffs, documentation, and local bottlenecks reduce efficiency and make improvement opportunities harder to prioritize.",
+    rootCause:
+      "Process variation, incomplete visibility into workflow constraints, and limited standardization weaken system performance.",
+    tools:
+      "Process analysis, systems thinking, root cause analysis, workflow mapping",
+    solution:
+      "Develop process-improvement concepts that focus on flow clarity, standardized work cues, and better alignment between people, process, and task sequencing.",
+    impact:
+      "Stronger consistency, reduced avoidable friction, and a clearer path toward continuous improvement.",
+    skills:
+      "Manufacturing support, process improvement, systems analysis, stakeholder alignment",
+  },
+  {
+    title: "Shelf Organization / Inventory Visibility Design Study",
+    problem:
+      "When inventory visibility is weak, teams spend extra effort locating items, judging stock condition, and deciding what should be replenished first.",
+    currentState:
+      "Shelf condition and stock awareness depend too much on individual memory and repeated visual checking.",
+    rootCause:
+      "The environment lacks clear visual structure and simple information cues that support quick operational decisions.",
+    tools:
+      "Visual workflow analysis, inventory observation, process design thinking",
+    solution:
+      "Create a shelf and visibility study that emphasizes clearer organization, easier product recognition, and stronger replenishment awareness.",
+    impact:
+      "Faster identification of stock gaps, improved inventory visibility, and more efficient floor execution.",
+    skills:
+      "Inventory systems thinking, visual management, workflow design, operational analysis",
   },
 ] as const;
 
@@ -294,29 +373,23 @@ export default function Home() {
       <section className="hero anchor-section" id="home">
         <div className="hero-copy">
           <SectionLabel>Cross-functional engineering portfolio</SectionLabel>
-          <h1>Systems Engineering and Process Improvement Professional</h1>
-          <h2>FE Exam passed with experience across systems engineering, manufacturing support, technical solution delivery, and operations coordination</h2>
+          <h1>Elvira Nurgalieva</h1>
+          <h2>Systems Engineer | FE Passed | Manufacturing &amp; Process Improvement</h2>
           <p className="lead">
-            Elvira brings cross-functional experience translating requirements,
-            supporting customers, and aligning technical solutions with
-            operational realities across engineering, manufacturing, product
-            development, and field-service environments.
+            Engineering professional with a Systems Engineering background,
+            CAD/reverse engineering experience, and a growing portfolio in
+            material flow, process improvement, and manufacturing systems.
           </p>
           <div className="hero-divider" />
           <p className="body-copy">
-            Her background spans customer-facing operations, reverse
-            engineering, CAD-based solution work, project coordination, and
-            stakeholder communication. Combined with foundations in
-            engineering, business, and psychology, that experience supports a
-            practical systems view that balances people, process, and
-            technology.
+            Her background spans engineering support, operations execution,
+            customer-facing technical work, and CAD-based solution development,
+            giving her a practical systems perspective grounded in both people
+            and process.
           </p>
           <div className="cta-row">
-            <a className="button button-primary" href="#projects">
-              View Highlights
-            </a>
             <a className="button button-secondary" href={resumeHref}>
-              Resume PDF
+              Download Resume
             </a>
           </div>
         </div>
@@ -371,11 +444,11 @@ export default function Home() {
       <section className="section-block anchor-section" id="projects">
         <div className="section-heading">
           <div>
-            <SectionLabel>Selected impact</SectionLabel>
-            <h2>Experience Highlights</h2>
+            <SectionLabel>Selected projects</SectionLabel>
+            <h2>Engineering Projects</h2>
           </div>
-          <a className="text-link" href="#experience">
-            Full experience
+          <a className="text-link" href="#project-details">
+            Project details
             <Icon kind="arrow" className="inline-icon" />
           </a>
         </div>
@@ -395,6 +468,27 @@ export default function Home() {
                   <Icon kind="arrow" className="inline-icon" />
                 </a>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-block anchor-section" id="project-details">
+        <SectionLabel>Project breakdown</SectionLabel>
+        <h2>How the Work Is Approached</h2>
+        <div className="experience-grid">
+          {projectDetails.map((project) => (
+            <article className="experience-card" key={project.title}>
+              <h3>{project.title}</h3>
+              <ul>
+                <li><strong>Problem:</strong> {project.problem}</li>
+                <li><strong>Current state:</strong> {project.currentState}</li>
+                <li><strong>Root cause analysis:</strong> {project.rootCause}</li>
+                <li><strong>Tools used:</strong> {project.tools}</li>
+                <li><strong>Proposed solution:</strong> {project.solution}</li>
+                <li><strong>Expected impact:</strong> {project.impact}</li>
+                <li><strong>Engineering skills demonstrated:</strong> {project.skills}</li>
+              </ul>
             </article>
           ))}
         </div>
@@ -420,25 +514,16 @@ export default function Home() {
 
         <aside className="about-panel anchor-section" id="about">
           <SectionLabel>Professional profile</SectionLabel>
-          <h2>Engineering Perspective with Operational Depth</h2>
+          <h2>About Elvira</h2>
           <p>
-            Elvira works at the intersection of operations, engineering
-            technology, and human-centered problem solving. She is especially
-            effective in roles that require technical rigor, workflow
-            awareness, and the ability to translate between stakeholders,
-            systems, and execution.
+            Elvira is transitioning back into engineering with a strong
+            systems mindset, analytical problem solving, and practical
+            experience across operations, CAD workflows, and technical support.
           </p>
           <p>
-            Her experience spans customer advising, technical sales
-            engineering, scheduling coordination, technical demonstrations,
-            and multidisciplinary communication. That mix shows up in how she
-            approaches process gaps, stakeholder needs, and continuous
-            improvement opportunities.
-          </p>
-          <p>
-            Passing the FE Exam reinforces that practical experience with a
-            strong foundation in engineering fundamentals, analytical
-            thinking, and disciplined problem solving.
+            She is especially interested in manufacturing systems, process
+            improvement, and roles where engineering judgment can improve flow,
+            visibility, and execution.
           </p>
           <a
             className="button button-secondary"
