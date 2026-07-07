@@ -525,6 +525,10 @@ export default function Home() {
             improvement, and roles where engineering judgment can improve flow,
             visibility, and execution.
           </p>
+          <p>
+            She is open to relocation, travel, and international living for
+            the right engineering opportunity.
+          </p>
           <a
             className="button button-secondary"
             href="https://www.linkedin.com/in/elvira-n"
@@ -632,6 +636,7 @@ export default function Home() {
             <Icon kind="pin" className="footer-icon" />
             Castle Rock, Colorado, United States
           </p>
+          <p>Open to relocation, travel, and international opportunities</p>
         </div>
 
         <div className="footer-col">
