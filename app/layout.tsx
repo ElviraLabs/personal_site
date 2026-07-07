@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
-const siteUrl = `https://elviralabs.github.io${sitePath}/`;
+const sitePath = "";
+const siteUrl = "https://elvira-n.com/";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -4,7 +4,7 @@ Personal portfolio site for Elvira Nurgalieva, built with `Next.js` and deployed
 
 ## Live Site
 
-- Production: [https://elviralabs.github.io/personal_site/](https://elviralabs.github.io/personal_site/)
+- Production: [https://elvira-n.com/](https://elvira-n.com/)
 
 ## Stack
 
@@ -98,7 +98,7 @@ pnpm db:generate
 - `.github/workflows/deploy-pages.yml`
   GitHub Actions workflow that builds and deploys the site to GitHub Pages.
 - `next.config.ts`
-  Static export settings and the production `basePath` for the `/personal_site` repo URL.
+  Static export settings for the custom-domain GitHub Pages deployment.
 
 ## How This Site Works
 
@@ -107,17 +107,15 @@ This project uses the Next.js App Router, but it is configured as a static expor
 Important details:
 
 - `next.config.ts` sets `output: "export"`.
-- Production builds use `basePath` and `assetPrefix` of `/personal_site`.
 - `pnpm build` generates the static site into `out/`.
 - GitHub Actions uploads the `out/` directory to GitHub Pages.
+- The production site is served from the custom domain root, not a repository subpath.
 
-Because of the production base path, image and file URLs should usually be built from:
+Because the site is served from the root of `https://elvira-n.com/`, image and file URLs can stay root-relative:
 
 ```ts
-const sitePath = process.env.NODE_ENV === "production" ? "/personal_site" : "";
+const sitePath = "";
 ```
-
-That pattern is already used in `app/page.tsx` and `app/layout.tsx`.
 
 ## Updating Content
 
@@ -220,8 +218,8 @@ If Pages is set to deploy from a branch instead, the workflow may succeed while 
 ### Images or assets are broken in production
 
 - Confirm the asset is inside `public/`.
-- Confirm URLs use the production-aware `sitePath`.
-- Avoid hardcoding `/` root-relative paths without the repo base path.
+- Confirm the path is root-relative for the custom domain deployment.
+- If you ever reintroduce a repository subpath deploy, update both `next.config.ts` and the asset URLs together.
 
 ### The resume button downloads the wrong file
 
@@ -230,7 +228,7 @@ If Pages is set to deploy from a branch instead, the workflow may succeed while 
 
 ### Local dev works but production looks different
 
-- Check `next.config.ts` for `basePath` behavior.
+- Check `next.config.ts` for export behavior and custom-domain assumptions.
 - Run a fresh `pnpm build` before comparing output.
 
 ## Maintenance Tips
