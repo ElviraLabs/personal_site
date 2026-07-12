@@ -581,6 +581,65 @@ img {
   margin: 14px 0;
 }
 
+.case-study-card {
+  margin-top: 22px;
+  padding: 28px;
+  border: 1px solid rgba(17, 154, 149, 0.18);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(17, 154, 149, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 254, 0.96));
+}
+
+.case-study-card h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.05em;
+  color: var(--ink);
+}
+
+.case-study-subtitle {
+  margin: 10px 0 14px;
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: #24556e;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.case-study-grid > div {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: inset 0 0 0 1px rgba(17, 154, 149, 0.12);
+}
+
+.case-study-grid h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+
+.case-study-grid ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.case-study-grid li + li {
+  margin-top: 10px;
+}
+
+.compact-pills {
+  margin-top: 0;
+}
+
 .split-block {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -852,6 +911,10 @@ img {
   }
 
   .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-grid {
     grid-template-columns: 1fr;
   }
 
