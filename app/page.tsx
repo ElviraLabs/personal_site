@@ -6,6 +6,7 @@ const siteUrl = "https://elvira-n.com";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 const contactFormAction = "https://formsubmit.co/nurgalieva.e@gmail.com";
+const coloradoEiNumber = "EI.0081521";
 
 const outcomeAreas = [
   {
@@ -68,12 +69,12 @@ const featuredWork = [
     tag: "Material Flow + Process Design",
   },
   {
-    title: "Reverse Engineering",
+    title: "Reverse Engineering Case Study",
     org: "Thor3D",
     summary:
-      "Reverse engineered mechanical components through structured 3D scanning and CAD reconstruction workflows that support technical review and manufacturing documentation.",
+      "Converted scan data into engineering-ready CAD models and drawings for legacy parts, wear analysis, and downstream manufacturing documentation.",
     href: "#projects",
-    tag: "CAD + Reverse Engineering",
+    tag: "Mesh-to-CAD Workflow",
   },
   {
     title: "Manufacturing Process Improvement",
@@ -130,35 +131,40 @@ const projectDetails = [
     ],
   },
   {
-    title: "Reverse Engineering",
+    title: "Reverse Engineering Case Study",
     problem:
-      "Engineering teams need accurate reverse engineering workflows when existing parts, geometry, or design intent are not fully documented.",
+      "Engineering teams often need usable CAD and drawing packages for parts that are worn, discontinued, undocumented, or only available as physical components.",
     observedIssues: [
-      "Incomplete part data",
-      "Legacy geometry without current models",
-      "Rework risk between scan output and final CAD model",
+      "Incomplete part data and missing engineering drawings",
+      "Legacy geometry without current CAD models",
+      "Risk of inaccuracy between raw mesh output and final CAD reconstruction",
+      "Need to support wear analysis, quality checks, and customer review",
     ],
     methods: [
-      "Requirements analysis",
-      "3D scanning workflow review",
-      "CAD reconstruction",
-      "Technical validation",
+      "Requirements analysis with customer and application context",
+      "3D scanning and mesh capture",
+      "Mesh cleanup and feature extraction",
+      "CAD reconstruction in Geomagic Design X",
+      "2D drawing generation in SolidWorks and Fusion 360",
+      "Technical validation against intended use",
     ],
     solution: [
-      "Structured scanning-to-CAD workflow",
-      "Consistent model reconstruction process",
-      "Clear technical review before downstream use",
+      "Built a structured mesh-to-CAD workflow from scan capture through validated engineering models",
+      "Created accurate CAD geometry and 2D drawings for review, manufacturing documentation, and technical discussion",
+      "Adapted the workflow across different use cases including discontinued auto parts, wear analysis, and quality control",
     ],
     impact: [
-      "Accelerated CAD reconstruction",
-      "Clearer manufacturing documentation",
-      "Stronger technical decision support for customers",
+      "Accelerated CAD reconstruction from physical parts",
+      "Improved technical clarity for customer decisions and engineering review",
+      "Created cleaner documentation for manufacturing and inspection use",
+      "Demonstrated practical value of 3D scanning in engineering workflows",
     ],
     skills: [
       "Reverse engineering",
       "CAD modeling",
       "Technical documentation",
       "Requirements analysis",
+      "3D scanning workflow support",
     ],
   },
   {
@@ -226,6 +232,37 @@ const projectDetails = [
     ],
   },
 ] as const;
+
+const reverseEngineeringCaseStudy = {
+  title: "Reverse Engineering Case Study",
+  subtitle: "Mesh-to-CAD workflow for legacy parts, wear analysis, and manufacturing documentation",
+  overview:
+    "Adapted from Elvira's earlier project portfolio, this case study shows how she used 3D scanning, mesh processing, and CAD reconstruction to turn physical parts into usable engineering assets for review, analysis, and downstream documentation.",
+  challenge: [
+    "Customers needed engineering-ready models when original drawings or CAD files were unavailable.",
+    "Some parts were legacy or discontinued components, while others required wear analysis or quality verification.",
+    "Raw scan meshes alone were not enough for manufacturing documentation or design decisions.",
+  ],
+  workflow: [
+    "Capture part geometry with 3D scanning based on the application and required level of detail.",
+    "Review and clean scan data, then extract usable reference geometry from the mesh.",
+    "Reconstruct CAD surfaces and features in Geomagic Design X.",
+    "Generate 2D drawings and supporting models in SolidWorks and Fusion 360 for review and documentation.",
+  ],
+  outputs: [
+    "CAD models for mechanical components",
+    "2D drawings for technical communication",
+    "Support material for wear analysis and quality control",
+    "Demonstrations that helped customers understand workflow fit and technical value",
+  ],
+  tools: [
+    "3D scanning",
+    "Geomagic Design X",
+    "SolidWorks",
+    "Fusion 360",
+    "Mesh review and cleanup",
+  ],
+} as const;
 
 const skills = [
   "Manufacturing Engineer",
@@ -458,6 +495,13 @@ export default function Home() {
       siteUrl,
       `${siteUrl}/resume/Elvira-Nurgalieva-Profile.pdf`,
     ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "Engineer Intern",
+        name: `Colorado EI License ${coloradoEiNumber}`,
+      },
+    ],
   };
 
   return (
@@ -502,7 +546,7 @@ export default function Home() {
         <div className="hero-copy">
           <SectionLabel>Cross-functional engineering portfolio</SectionLabel>
           <h1>Elvira Nurgalieva</h1>
-          <h2>Systems Engineer | FE Passed | Manufacturing &amp; Process Improvement</h2>
+          <h2>Systems Engineer | FE Passed | Colorado EI | Manufacturing &amp; Process Improvement</h2>
           <p className="lead">
             Engineering professional with a Systems Engineering background,
             CAD/reverse engineering experience, and a growing portfolio in
@@ -537,21 +581,21 @@ export default function Home() {
           />
           <div className="hero-badge badge-top">
             <Icon kind="spark" />
-            FE Exam Passed
+            Colorado EI {coloradoEiNumber}
           </div>
           <div className="hero-badge badge-bottom">
             <Icon kind="cube" />
-            Manufacturing Support + CAD Workflows
+            FE Passed + CAD Workflows
           </div>
         </div>
       </section>
 
       <section className="cred-strip" aria-label="Highlights">
         <div>Castle Rock, Colorado</div>
+        <div>Colorado EI {coloradoEiNumber}</div>
         <div>FE Exam Passed</div>
         <div>NCEES-Equivalent Engineering Degree</div>
-        <div>Material Flow</div>
-        <div>Continuous Improvement</div>
+        <div>Reverse Engineering</div>
       </section>
 
       <section className="strengths-section">
@@ -583,6 +627,51 @@ export default function Home() {
             <Icon kind="arrow" className="inline-icon" />
           </a>
         </div>
+
+        <article className="case-study-card">
+          <div>
+            <p className="eyebrow">Featured case study</p>
+            <h3>{reverseEngineeringCaseStudy.title}</h3>
+            <p className="case-study-subtitle">{reverseEngineeringCaseStudy.subtitle}</p>
+            <p>{reverseEngineeringCaseStudy.overview}</p>
+          </div>
+          <div className="case-study-grid">
+            <div>
+              <h4>Challenge</h4>
+              <ul>
+                {reverseEngineeringCaseStudy.challenge.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>Workflow</h4>
+              <ul>
+                {reverseEngineeringCaseStudy.workflow.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>Outputs</h4>
+              <ul>
+                {reverseEngineeringCaseStudy.outputs.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>Tools</h4>
+              <div className="skill-pills compact-pills">
+                {reverseEngineeringCaseStudy.tools.map((item) => (
+                  <span className="skill-pill" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
 
         <div className="project-grid">
           {featuredWork.map((project, index) => (
@@ -641,8 +730,12 @@ export default function Home() {
               <div className="timeline-marker" />
               <div>
                 <p className="timeline-year">Licensure</p>
-                <h3>Colorado EI</h3>
-                <p>Pending issuance, to be updated with EI number when available.</p>
+                <h3>Colorado Engineer Intern License {coloradoEiNumber}</h3>
+                <p>
+                  Active Colorado EI credential. Public verification may require
+                  manual confirmation because the online lookup does not always
+                  support the EI prefix correctly.
+                </p>
               </div>
             </article>
             <article className="timeline-item">
@@ -738,10 +831,12 @@ export default function Home() {
           <h2>Academic Background</h2>
           <div className="credential-spotlight">
             <p className="eyebrow">Professional Credential</p>
-            <h3>FE Exam Passed</h3>
+            <h3>FE Passed + Colorado EI Active</h3>
             <p>
-              Validates engineering fundamentals that support systems
-              thinking, process analysis, and sound technical decision-making.
+              Fundamentals of Engineering passed, with active Colorado Engineer
+              Intern license {coloradoEiNumber}. Supports a professional
+              profile grounded in engineering fundamentals, process analysis,
+              and technical problem solving.
             </p>
           </div>
           <ul className="simple-list">
