@@ -87,7 +87,6 @@ const project = {
       type: "model",
     },
   ],
-  sourcePage: "https://elvira-n.squarespace.com/projects/mesh-to-cad",
 } as const;
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -125,14 +124,6 @@ export default function ProjectsPage() {
           <Link className="button button-primary" href="/">
             Back to Portfolio
           </Link>
-          <a
-            className="button button-secondary"
-            href={project.sourcePage}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Original Source Material
-          </a>
         </div>
       </section>
 
