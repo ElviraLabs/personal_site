@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Script from "next/script";
-import { Fragment } from "react";
 
 const sitePath = "";
 const siteUrl = "https://elvira-n.com";
@@ -74,7 +73,7 @@ const featuredWork = [
     org: "Thor3D",
     summary:
       "Converted scan data into engineering-ready CAD models and drawings for legacy parts, wear analysis, and downstream manufacturing documentation.",
-    href: "#projects",
+    href: "/projects",
     tag: "Mesh-to-CAD Workflow",
   },
   {
@@ -641,7 +640,7 @@ export default function Home() {
             <SectionLabel>Selected projects</SectionLabel>
             <h2>Engineering Projects</h2>
           </div>
-          <a className="text-link" href="#project-details">
+          <a className="text-link" href="/projects">
             Project details
             <Icon kind="arrow" className="inline-icon" />
           </a>
@@ -649,86 +648,20 @@ export default function Home() {
 
         <div className="project-grid">
           {featuredWork.map((project, index) => (
-            <Fragment key={project.title}>
-              <article className="project-card">
-                <div className={`project-art art-${index + 1}`}>
-                  <span>{project.tag}</span>
-                </div>
-                <div className="project-content">
-                  <p className="eyebrow">{project.org}</p>
-                  <h3>{project.title}</h3>
-                  <p>{project.summary}</p>
-                  <a className="text-link" href={project.href}>
-                    View details
-                    <Icon kind="arrow" className="inline-icon" />
-                  </a>
-                </div>
-              </article>
-
-              {project.title === "Reverse Engineering Case Study" ? (
-                <article className="case-study-card">
-                  <div>
-                    <p className="eyebrow">Featured case study</p>
-                    <h3>{reverseEngineeringCaseStudy.title}</h3>
-                    <p className="case-study-subtitle">{reverseEngineeringCaseStudy.subtitle}</p>
-                    <p>{reverseEngineeringCaseStudy.overview}</p>
-                  </div>
-                  <div className="case-study-grid">
-                    <div>
-                      <h4>Challenge</h4>
-                      <ul>
-                        {reverseEngineeringCaseStudy.challenge.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Workflow</h4>
-                      <ul>
-                        {reverseEngineeringCaseStudy.workflow.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Outputs</h4>
-                      <ul>
-                        {reverseEngineeringCaseStudy.outputs.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Tools</h4>
-                      <div className="skill-pills compact-pills">
-                        {reverseEngineeringCaseStudy.tools.map((item) => (
-                          <span className="skill-pill" key={item}>
-                            {item}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="case-study-materials">
-                      <h4>Media and models</h4>
-                      <div className="case-study-links">
-                        {reverseEngineeringCaseStudy.materials.map((item) => (
-                          <a
-                            className="case-study-link"
-                            href={item.href}
-                            key={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {item.label}
-                            <Icon kind="arrow" className="inline-icon" />
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ) : null}
-            </Fragment>
+            <article className="project-card" key={project.title}>
+              <div className={`project-art art-${index + 1}`}>
+                <span>{project.tag}</span>
+              </div>
+              <div className="project-content">
+                <p className="eyebrow">{project.org}</p>
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
+                <a className="text-link" href={project.href}>
+                  View details
+                  <Icon kind="arrow" className="inline-icon" />
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </section>
