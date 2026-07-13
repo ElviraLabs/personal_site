@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Script from "next/script";
+import { projects } from "../lib/project-data";
 
 const sitePath = "";
 const siteUrl = "https://elvira-n.com";
@@ -59,228 +60,13 @@ const outcomeAreas = [
   },
 ] as const;
 
-const featuredWork = [
-  {
-    title: "Retail Material Flow Optimization",
-    org: "Operations Study",
-    summary:
-      "Concept study focused on improving material flow, replenishment visibility, and decision points in a busy retail environment.",
-    href: "#projects",
-    tag: "Material Flow + Process Design",
-  },
-  {
-    title: "Reverse Engineering Case Study",
-    org: "Thor3D",
-    summary:
-      "Converted scan data into engineering-ready CAD models and drawings for legacy parts, wear analysis, and downstream manufacturing documentation.",
-    href: "/projects",
-    tag: "Mesh-to-CAD Workflow",
-  },
-  {
-    title: "Manufacturing Process Improvement",
-    org: "Manufacturing Systems Study",
-    summary:
-      "Engineering concept work focused on process gaps, flow constraints, and system-level improvements for manufacturing support environments.",
-    href: "#projects",
-    tag: "Process Improvement",
-  },
-  {
-    title: "Shelf Organization / Inventory Visibility Design Study",
-    org: "Retail Systems Study",
-    summary:
-      "Study centered on layout clarity, inventory visibility, and practical improvements that support faster decisions and smoother execution.",
-    href: "#projects",
-    tag: "Inventory Visibility",
-  },
-] as const;
-
-const projectDetails = [
-  {
-    title: "Retail Material Flow Optimization",
-    problem:
-      "Inventory accuracy decreases because overhead storage and replenishment activity are difficult to manage efficiently in a busy retail setting.",
-    observedIssues: [
-      "Excess walking between stocking points",
-      "Waiting time for lift equipment access",
-      "Overstocking in visible locations",
-      "Safety hazards from awkward retrieval patterns",
-      "Product damage from inconsistent handling",
-    ],
-    methods: [
-      "Process mapping",
-      "Root cause analysis",
-      "Material flow analysis",
-      "Ergonomic evaluation",
-    ],
-    solution: [
-      "Fixed modular shelf organizers",
-      "Visual inventory indicators",
-      "Standardized replenishment process",
-    ],
-    impact: [
-      "Reduced walking and wasted motion",
-      "Improved inventory accuracy",
-      "Reduced product damage",
-      "Improved safety and execution consistency",
-    ],
-    skills: [
-      "Material flow analysis",
-      "Process optimization",
-      "Systems thinking",
-      "Operational problem solving",
-    ],
-  },
-  {
-    title: "Reverse Engineering Case Study",
-    problem:
-      "Engineering teams often need usable CAD and drawing packages for parts that are worn, discontinued, undocumented, or only available as physical components.",
-    observedIssues: [
-      "Incomplete part data and missing engineering drawings",
-      "Legacy geometry without current CAD models",
-      "Risk of inaccuracy between raw mesh output and final CAD reconstruction",
-      "Need to support wear analysis, quality checks, and customer review",
-    ],
-    methods: [
-      "Requirements analysis with customer and application context",
-      "3D scanning and mesh capture",
-      "Mesh cleanup and feature extraction",
-      "CAD reconstruction in Geomagic Design X",
-      "2D drawing generation in SolidWorks and Fusion 360",
-      "Technical validation against intended use",
-    ],
-    solution: [
-      "Built a structured mesh-to-CAD workflow from scan capture through validated engineering models",
-      "Created accurate CAD geometry and 2D drawings for review, manufacturing documentation, and technical discussion",
-      "Adapted the workflow across different use cases including discontinued auto parts, wear analysis, and quality control",
-    ],
-    impact: [
-      "Accelerated CAD reconstruction from physical parts",
-      "Improved technical clarity for customer decisions and engineering review",
-      "Created cleaner documentation for manufacturing and inspection use",
-      "Demonstrated practical value of 3D scanning in engineering workflows",
-    ],
-    skills: [
-      "Reverse engineering",
-      "CAD modeling",
-      "Technical documentation",
-      "Requirements analysis",
-      "3D scanning workflow support",
-    ],
-  },
-  {
-    title: "Manufacturing Process Improvement",
-    problem:
-      "Manufacturing support environments often carry process friction that slows execution without a clear view of the highest-leverage improvement points.",
-    observedIssues: [
-      "Handoffs that depend on local knowledge",
-      "Documentation gaps",
-      "Workflow bottlenecks that are not consistently measured",
-    ],
-    methods: [
-      "Process analysis",
-      "Workflow mapping",
-      "Root cause analysis",
-      "Continuous improvement framing",
-    ],
-    solution: [
-      "Define clearer handoff points",
-      "Standardize work cues",
-      "Improve alignment between sequencing, people, and process",
-    ],
-    impact: [
-      "Reduced avoidable friction",
-      "Stronger consistency",
-      "Clearer path to continuous improvement",
-    ],
-    skills: [
-      "Manufacturing engineering thinking",
-      "Process improvement",
-      "Systems analysis",
-      "Stakeholder alignment",
-    ],
-  },
-  {
-    title: "Shelf Organization / Inventory Visibility Design Study",
-    problem:
-      "When inventory visibility is weak, teams spend extra effort locating items, judging stock condition, and deciding what should be replenished first.",
-    observedIssues: [
-      "Repeated visual checking",
-      "Dependence on memory for stock condition",
-      "Slow replenishment prioritization",
-    ],
-    methods: [
-      "Visual workflow analysis",
-      "Inventory observation",
-      "Process design thinking",
-      "Root cause analysis",
-    ],
-    solution: [
-      "Clearer shelf organization",
-      "Improved product visibility cues",
-      "Simpler replenishment triggers",
-    ],
-    impact: [
-      "Faster identification of stock gaps",
-      "Improved inventory visibility",
-      "More efficient floor execution",
-    ],
-    skills: [
-      "Visual management",
-      "Workflow design",
-      "Inventory visibility analysis",
-      "Operational analysis",
-    ],
-  },
-] as const;
-
-const reverseEngineeringCaseStudy = {
-  title: "Reverse Engineering Case Study",
-  subtitle: "Mesh-to-CAD workflow for legacy parts, wear analysis, and manufacturing documentation",
-  overview:
-    "Adapted from Elvira's earlier project portfolio, this case study shows how she used 3D scanning, mesh processing, and CAD reconstruction to turn physical parts into usable engineering assets for review, analysis, and downstream documentation.",
-  challenge: [
-    "Customers needed engineering-ready models when original drawings or CAD files were unavailable.",
-    "Some parts were legacy or discontinued components, while others required wear analysis or quality verification.",
-    "Raw scan meshes alone were not enough for manufacturing documentation or design decisions.",
-  ],
-  workflow: [
-    "Capture part geometry with 3D scanning based on the application and required level of detail.",
-    "Review and clean scan data, then extract usable reference geometry from the mesh.",
-    "Reconstruct CAD surfaces and features in Geomagic Design X.",
-    "Generate 2D drawings and supporting models in SolidWorks and Fusion 360 for review and documentation.",
-  ],
-  outputs: [
-    "CAD models for mechanical components",
-    "2D drawings for technical communication",
-    "Support material for wear analysis and quality control",
-    "Demonstrations that helped customers understand workflow fit and technical value",
-  ],
-  tools: [
-    "3D scanning",
-    "Geomagic Design X",
-    "SolidWorks",
-    "Fusion 360",
-    "Mesh review and cleanup",
-  ],
-  materials: [
-    {
-      label: "Watch workflow video",
-      href: "https://youtu.be/SyI5jJKvhpM",
-    },
-    {
-      label: "View 3D mesh model",
-      href: "https://sketchfab.com/3d-models/mesh-stl-7c3873106dd44cb296540c8d590d8412",
-    },
-    {
-      label: "View CAD reconstruction model",
-      href: "https://sketchfab.com/3d-models/cad-452300c4751446b1b912ab1d9de24f3d",
-    },
-    {
-      label: "Open original project page",
-      href: "https://elvira-n.squarespace.com/projects/mesh-to-cad",
-    },
-  ],
-} as const;
+const featuredWork = projects.map((project) => ({
+  href: `/projects/${project.slug}`,
+  org: project.org,
+  summary: project.summary,
+  tag: project.tag,
+  title: project.title,
+}));
 
 const skills = [
   "Manufacturing Engineer",
@@ -666,39 +452,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-block anchor-section" id="project-details">
-        <SectionLabel>Project breakdown</SectionLabel>
-        <h2>Engineering Problem-Solving Format</h2>
-        <div className="experience-grid">
-          {projectDetails.map((project) => (
-            <article className="experience-card" key={project.title}>
-              <h3>{project.title}</h3>
-              <ul>
-                <li><strong>Problem:</strong> {project.problem}</li>
-                <li><strong>Observed issues:</strong> {project.observedIssues.join(", ")}</li>
-                <li><strong>Engineering methods:</strong> {project.methods.join(", ")}</li>
-                <li><strong>Proposed solution:</strong> {project.solution.join(", ")}</li>
-                <li><strong>Expected benefits:</strong> {project.impact.join(", ")}</li>
-                <li><strong>Engineering skills demonstrated:</strong> {project.skills.join(", ")}</li>
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section-block split-block anchor-section" id="resume">
         <div>
           <SectionLabel>Resume overview</SectionLabel>
           <h2>Engineering Credentials and Experience</h2>
           <div className="timeline">
-            <article className="timeline-item">
-              <div className="timeline-marker" />
-              <div>
-                <p className="timeline-year">Credential</p>
-                <h3>FE Passed</h3>
-                <p>Fundamentals of Engineering passed in Industrial and Systems Engineering.</p>
-              </div>
-            </article>
             <article className="timeline-item">
               <div className="timeline-marker" />
               <div>
@@ -709,6 +467,14 @@ export default function Home() {
                   manual confirmation because the online lookup does not always
                   support the EI prefix correctly.
                 </p>
+              </div>
+            </article>
+            <article className="timeline-item">
+              <div className="timeline-marker" />
+              <div>
+                <p className="timeline-year">Credential</p>
+                <h3>FE Passed</h3>
+                <p>Fundamentals of Engineering passed in Industrial and Systems Engineering.</p>
               </div>
             </article>
             <article className="timeline-item">
