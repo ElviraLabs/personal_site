@@ -83,6 +83,8 @@ const skills = [
   "CAD Engineer",
   "Reverse Engineering",
   "3D Scanning",
+  "Python (Learning)",
+  "AI-Assisted Analysis",
 ] as const;
 
 const skillGroups = [
@@ -118,6 +120,8 @@ const skillGroups = [
       "Excel",
       "Git",
       "GitHub",
+      "Python (Learning)",
+      "AI for analysis and workflow assistance",
       "Workflow Mapping",
       "Material Flow Analysis",
       "Process Mapping",
