@@ -8,6 +8,9 @@ const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 const contactFormAction = "https://formsubmit.co/nurgalieva.e@gmail.com";
 const coloradoEiNumber = "EI.0081521";
+const feBadgeHref = "https://www.credly.com/badges/5a980cad-6487-4bef-ace9-ac9388d0ad77";
+const feBadgeImage =
+  "https://images.credly.com/images/88aef29e-f999-46e1-9103-8c6f41b046fe/linkedin_thumb_image.png";
 
 const outcomeAreas = [
   {
@@ -581,6 +584,22 @@ export default function Home() {
               profile grounded in engineering fundamentals, process analysis,
               and technical problem solving.
             </p>
+            <a
+              className="credential-badge"
+              href={feBadgeHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                alt="Credly badge for FE Exam"
+                className="credential-badge-image"
+                src={feBadgeImage}
+              />
+              <span className="credential-badge-copy">
+                <strong>View verified FE badge</strong>
+                <span>National Council of Examiners for Engineering and Surveying</span>
+              </span>
+            </a>
           </div>
           <ul className="simple-list">
             {education.map((item) => (

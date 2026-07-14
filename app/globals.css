@@ -883,6 +883,40 @@ img {
   line-height: 1.68;
 }
 
+.credential-badge {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid rgba(17, 154, 149, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.credential-badge-image {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.credential-badge-copy {
+  display: grid;
+  gap: 4px;
+  color: #274764;
+}
+
+.credential-badge-copy strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.credential-badge-copy span {
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
 .simple-list li {
   margin-top: 10px;
 }
