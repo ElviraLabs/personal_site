@@ -2,7 +2,7 @@ export type ProjectMaterial = {
   embed?: string;
   href: string;
   label: string;
-  type: "link" | "model" | "video";
+  type: "image" | "link" | "model" | "video";
 };
 
 export type ProjectEntry = {
@@ -224,54 +224,66 @@ export const projects: ProjectEntry[] = [
     org: "Retail Systems Study",
     title: "Shelf Organization / Inventory Visibility Design Study",
     subtitle:
-      "Layout clarity, product visibility, and replenishment cues for faster floor decisions",
+      "Visual management and replenishment-priority design study for faster inventory decisions",
     summary:
-      "Study centered on layout clarity, inventory visibility, and practical improvements that support faster decisions and smoother execution.",
+      "Engineering study focused on shelf logic, inventory visibility, and visual control methods that support faster replenishment decisions, less searching, and more consistent floor execution.",
     tag: "Inventory Visibility",
     problem:
-      "When inventory visibility is weak, teams spend extra effort locating items, judging stock condition, and deciding what should be replenished first.",
+      "When shelf organization and inventory visibility are inconsistent, teams spend excess time identifying stock gaps, verifying product condition, and deciding what should be replenished first.",
     challenge: [
-      "Teams need to identify stock gaps quickly without repeated rechecking.",
-      "Visual clutter and inconsistent shelf logic slow replenishment decisions.",
-      "Practical floor execution improves when visibility cues are simple and repeatable.",
+      "Floor teams need to identify stock gaps quickly without repeated checking or relying on memory.",
+      "Visual clutter and inconsistent shelf logic slow replenishment decisions and create avoidable motion.",
+      "The layout must support faster execution while staying practical for daily use in a live retail setting.",
     ],
     currentState: [
-      "Shelf condition must be judged through repeated visual checking.",
-      "Teams often rely on memory to interpret stock condition and urgency.",
-      "Replenishment prioritization is slower when triggers are unclear.",
+      "Shelf condition is often interpreted through repeated visual checks instead of clear visual signals.",
+      "Teams rely too heavily on memory and judgment to assess stock condition and urgency.",
+      "Replenishment prioritization slows down when product status and triggers are not immediately visible.",
     ],
     observedIssues: [
-      "Repeated visual checking",
-      "Dependence on memory for stock condition",
+      "Repeated visual checking before action",
+      "Dependence on memory for stock condition and urgency",
       "Slow replenishment prioritization",
+      "Inconsistent visual cues across storage locations",
     ],
     methods: [
       "Visual workflow analysis",
       "Inventory observation",
+      "Current-state process review",
       "Process design thinking",
       "Root cause analysis",
     ],
     solution: [
-      "Clearer shelf organization",
-      "Improved product visibility cues",
-      "Simpler replenishment triggers",
+      "Standardize shelf organization to make stock condition easier to interpret",
+      "Introduce clearer visual cues for product visibility and replenishment status",
+      "Define simpler replenishment triggers that reduce ambiguity in daily execution",
     ],
     impact: [
-      "Faster identification of stock gaps",
-      "Improved inventory visibility",
-      "More efficient floor execution",
+      "Faster identification of stock gaps and replenishment priorities",
+      "Improved inventory visibility at the point of use",
+      "More efficient floor execution with less searching and rechecking",
+      "Stronger consistency in daily replenishment decisions",
     ],
     skills: [
       "Visual management",
       "Workflow design",
       "Inventory visibility analysis",
       "Operational analysis",
+      "Current-state assessment",
     ],
     tools: [
       "Inventory observation",
       "Visual workflow analysis",
+      "Current-state mapping",
       "Process design thinking",
       "Root cause analysis",
+    ],
+    materials: [
+      {
+        label: "Lean Six Sigma & Kaizen shelving redesign board",
+        href: "/project-materials/shelf-kaizen-redesign.png",
+        type: "image",
+      },
     ],
   },
 ];
