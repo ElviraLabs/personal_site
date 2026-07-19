@@ -160,13 +160,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <SectionLabel>Media and models</SectionLabel>
           <h2>Project Materials</h2>
           <p className="body-copy">
-            Supporting materials for this case study, including the workflow
-            video and interactive 3D models.
+            Supporting materials that help show the design concept, analysis,
+            and engineering direction behind this case study.
           </p>
 
           <div className="media-grid">
             {project.materials.map((item) => (
-              <article className="media-card" key={item.href}>
+              <article
+                className={`media-card ${item.type === "image" ? "media-card-featured" : ""}`}
+                key={item.href}
+              >
                 {item.type === "image" ? (
                   <div className="media-frame media-frame-image">
                     <Image
@@ -202,14 +205,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         : "3D Model"}
                   </p>
                   <h3>{item.label}</h3>
-                  <a
-                    className="text-link"
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open source
-                  </a>
                 </div>
               </article>
             ))}
