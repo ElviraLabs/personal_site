@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "../../../lib/project-data";
@@ -166,7 +167,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="media-grid">
             {project.materials.map((item) => (
               <article className="media-card" key={item.href}>
-                {item.embed ? (
+                {item.type === "image" ? (
+                  <div className="media-frame media-frame-image">
+                    <Image
+                      alt={item.label}
+                      className="project-material-image"
+                      fill
+                      sizes="(max-width: 1120px) 100vw, 50vw"
+                      src={item.href}
+                    />
+                  </div>
+                ) : item.embed ? (
                   <div className="media-frame">
                     <iframe
                       allow={
@@ -183,7 +194,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   </div>
                 ) : null}
                 <div className="media-card-copy">
-                  <p className="eyebrow">{item.type === "video" ? "Video" : "3D Model"}</p>
+                  <p className="eyebrow">
+                    {item.type === "video"
+                      ? "Video"
+                      : item.type === "image"
+                        ? "Project visual"
+                        : "3D Model"}
+                  </p>
                   <h3>{item.label}</h3>
                   <a
                     className="text-link"

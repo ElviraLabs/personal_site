@@ -764,6 +764,14 @@ img {
   border: 0;
 }
 
+.media-frame-image {
+  aspect-ratio: 16 / 10;
+}
+
+.project-material-image {
+  object-fit: cover;
+}
+
 .media-card-copy {
   display: grid;
   gap: 10px;
