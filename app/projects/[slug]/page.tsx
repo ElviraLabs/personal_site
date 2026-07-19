@@ -171,7 +171,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 key={item.href}
               >
                 {item.type === "image" ? (
-                  <div className="media-frame media-frame-image">
+                  <a
+                    className="media-frame media-frame-image media-frame-link"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open enlarged image for ${item.label}`}
+                  >
                     <Image
                       alt={item.label}
                       className="project-material-image"
@@ -179,7 +185,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       sizes="(max-width: 1120px) 100vw, 50vw"
                       src={item.href}
                     />
-                  </div>
+                  </a>
                 ) : item.embed ? (
                   <div className="media-frame">
                     <iframe
