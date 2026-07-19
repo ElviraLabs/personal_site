@@ -750,6 +750,10 @@ img {
   gap: 16px;
 }
 
+.media-card-featured {
+  grid-column: 1 / -1;
+}
+
 .media-frame {
   position: relative;
   overflow: hidden;
@@ -765,11 +769,12 @@ img {
 }
 
 .media-frame-image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
 }
 
 .project-material-image {
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
 }
 
 .media-card-copy {
