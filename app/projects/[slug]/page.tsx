@@ -58,6 +58,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <nav className="nav-links" aria-label="Project navigation">
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/professional-development">Development</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
 
@@ -88,17 +89,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <p>{project.problem}</p>
             </article>
             <article className="project-detail-card">
-              <h2>Current State</h2>
+              <h2>Background</h2>
               <ul className="simple-list">
-                {project.currentState.map((item) => (
+                {project.background.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
             </article>
             <article className="project-detail-card">
-              <h2>Observed Issues</h2>
+              <h2>Analysis</h2>
               <ul className="simple-list">
-                {project.observedIssues.map((item) => (
+                {project.analysis.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -120,9 +121,25 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </ul>
             </article>
             <article className="project-detail-card">
-              <h2>Expected Impact</h2>
+              <h2>Alternatives Considered</h2>
+              <ul className="simple-list">
+                {project.alternatives.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="project-detail-card">
+              <h2>Expected Benefits</h2>
               <ul className="simple-list">
                 {project.impact.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="project-detail-card">
+              <h2>Future Improvements</h2>
+              <ul className="simple-list">
+                {project.futureImprovements.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

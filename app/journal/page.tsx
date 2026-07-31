@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { journalTopicIdeas } from "../../lib/development-data";
 import { journalEntries } from "../../lib/journal-data";
 
 const sitePath = "";
@@ -28,6 +29,7 @@ export default function JournalPage() {
         <nav className="nav-links" aria-label="Journal navigation">
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/professional-development">Development</Link>
           <Link href="/#resume">Resume</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
@@ -84,6 +86,28 @@ export default function JournalPage() {
             </p>
           </div>
         </aside>
+      </section>
+
+      <section className="section-block">
+        <div className="section-heading">
+          <div>
+            <SectionLabel>Weekly practice</SectionLabel>
+            <h2>Where the Journal Can Grow Next</h2>
+          </div>
+          <Link className="text-link" href="/professional-development">
+            See learning roadmap
+          </Link>
+        </div>
+        <div className="topic-grid">
+          {journalTopicIdeas.map((topic) => (
+            <article className="topic-card" key={topic}>
+              <h3>{topic}</h3>
+              <p>
+                A future 300 to 600 word reflection connecting engineering study, manufacturing systems thinking, and practical improvement work.
+              </p>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );

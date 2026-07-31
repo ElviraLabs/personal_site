@@ -6,8 +6,12 @@ export type ProjectMaterial = {
 };
 
 export type ProjectEntry = {
+  alternatives: string[];
+  analysis: string[];
+  background: string[];
   currentState: string[];
   challenge: string[];
+  futureImprovements: string[];
   impact: string[];
   materials?: ProjectMaterial[];
   methods: string[];
@@ -41,6 +45,11 @@ export const projects: ProjectEntry[] = [
       "Overhead storage introduces extra motion, waiting time, and awkward retrieval patterns.",
       "Replenishment decisions are harder when inventory condition is not obvious at a glance.",
     ],
+    background: [
+      "Retail replenishment work must balance customer-facing service with safe, efficient material handling.",
+      "Overhead storage and fragmented stock locations create a system where visibility and motion directly affect execution quality.",
+      "The study focused on how layout and replenishment logic could reduce wasted effort without adding unnecessary complexity.",
+    ],
     currentState: [
       "Inventory is spread across visible shelves and overhead storage locations.",
       "Replenishment often depends on repeated walking and visual checks.",
@@ -53,11 +62,21 @@ export const projects: ProjectEntry[] = [
       "Safety hazards from awkward retrieval patterns",
       "Product damage from inconsistent handling",
     ],
+    analysis: [
+      "Current-state review showed that inventory visibility and replenishment timing were tightly linked to walking distance and equipment access.",
+      "The most avoidable delays came from repeated checking, inconsistent stock cues, and a lack of simple triggers for replenishment decisions.",
+      "Root cause analysis pointed to shelf configuration and visual management as higher-leverage improvement areas than simply increasing effort.",
+    ],
     methods: [
       "Process mapping",
       "Root cause analysis",
       "Material flow analysis",
       "Ergonomic evaluation",
+    ],
+    alternatives: [
+      "Increase manual shelf checks without changing layout",
+      "Rely on ad hoc replenishment based on individual judgment",
+      "Expand visible overstock areas instead of improving flow logic",
     ],
     solution: [
       "Fixed modular shelf organizers",
@@ -69,6 +88,11 @@ export const projects: ProjectEntry[] = [
       "Improved inventory accuracy",
       "Reduced product damage",
       "Improved safety and execution consistency",
+    ],
+    futureImprovements: [
+      "Pilot the concept in one aisle and measure replenishment time before broader rollout.",
+      "Add basic KPI tracking for walking distance, stockout frequency, and product damage.",
+      "Refine organizer dimensions based on product family and replenishment frequency.",
     ],
     skills: [
       "Material flow analysis",
@@ -99,6 +123,11 @@ export const projects: ProjectEntry[] = [
       "The project had to support more than one use case, including discontinued automotive parts, wear analysis, and quality review.",
       "Scan meshes alone were not sufficient for manufacturing documentation or engineering decision-making.",
     ],
+    background: [
+      "Physical legacy parts often contain the only available source geometry when original engineering files are missing or outdated.",
+      "Engineering teams still need reliable models for inspection, reconstruction, wear analysis, and manufacturing documentation.",
+      "The case focused on building a clearer bridge from raw scan output to validated engineering assets.",
+    ],
     currentState: [
       "Physical parts existed, but digital engineering assets were incomplete or missing.",
       "Geometry had to be captured from real-world parts with enough detail for reconstruction.",
@@ -110,6 +139,11 @@ export const projects: ProjectEntry[] = [
       "Risk of inaccuracy between raw mesh output and final CAD reconstruction",
       "Need to support wear analysis, quality checks, and customer review",
     ],
+    analysis: [
+      "The core engineering challenge was not scanning alone, but converting mesh data into usable, validated geometry tied to a specific technical purpose.",
+      "Analysis centered on identifying reference features, cleaning noisy areas, and deciding which geometry should be reconstructed parametrically versus preserved from scan data.",
+      "The workflow also had to reduce ambiguity for downstream users who needed engineering-ready documentation rather than raw digital artifacts.",
+    ],
     methods: [
       "Requirements analysis with customer and application context",
       "3D scanning and mesh capture",
@@ -117,6 +151,11 @@ export const projects: ProjectEntry[] = [
       "CAD reconstruction in Geomagic Design X",
       "2D drawing generation in SolidWorks and Fusion 360",
       "Technical validation against intended use",
+    ],
+    alternatives: [
+      "Use raw scan meshes without CAD reconstruction",
+      "Model the part from manual measurements alone",
+      "Create visual references only without full drawing documentation",
     ],
     solution: [
       "Built a structured mesh-to-CAD workflow from scan capture through validated engineering models",
@@ -128,6 +167,11 @@ export const projects: ProjectEntry[] = [
       "Improved technical clarity for customer decisions and engineering review",
       "Created cleaner documentation for manufacturing and inspection use",
       "Demonstrated practical value of 3D scanning in engineering workflows",
+    ],
+    futureImprovements: [
+      "Standardize validation checkpoints by use case so reconstruction tolerances match the downstream need.",
+      "Build reusable templates for drawing creation and feature classification.",
+      "Add comparison metrics between mesh and final CAD geometry for faster quality review.",
     ],
     skills: [
       "Reverse engineering",
@@ -180,6 +224,11 @@ export const projects: ProjectEntry[] = [
       "Teams need clearer visibility into where work slows down and why.",
       "Improvement efforts need structure so they align people, sequence, and documentation.",
     ],
+    background: [
+      "Manufacturing support work often depends on coordination, documentation quality, and reliable handoffs rather than a single machine or station.",
+      "When those support systems drift, execution slows without a clear picture of where the highest-leverage problem actually sits.",
+      "This concept study framed the environment as an interconnected system instead of isolated tasks.",
+    ],
     currentState: [
       "Workflows rely on handoffs, local knowledge, and uneven documentation.",
       "Bottlenecks are visible operationally but not always measured consistently.",
@@ -190,11 +239,21 @@ export const projects: ProjectEntry[] = [
       "Documentation gaps",
       "Workflow bottlenecks that are not consistently measured",
     ],
+    analysis: [
+      "The review showed that process friction came less from individual effort and more from unclear handoffs, uneven standards, and missing feedback loops.",
+      "A systems view made it easier to separate symptoms from structural issues in workflow design and documentation.",
+      "The highest-value opportunities centered on standardization, visibility, and clearer sequencing between people and process.",
+    ],
     methods: [
       "Process analysis",
       "Workflow mapping",
       "Root cause analysis",
       "Continuous improvement framing",
+    ],
+    alternatives: [
+      "Address delays case by case without changing the underlying workflow",
+      "Rely on informal tribal knowledge to manage exceptions",
+      "Add more reporting without redesigning the handoff structure",
     ],
     solution: [
       "Define clearer handoff points",
@@ -205,6 +264,11 @@ export const projects: ProjectEntry[] = [
       "Reduced avoidable friction",
       "Stronger consistency",
       "Clearer path to continuous improvement",
+    ],
+    futureImprovements: [
+      "Translate the framework into a pilot standard-work package for one support workflow.",
+      "Define simple baseline metrics to validate which changes reduce friction most effectively.",
+      "Expand the model into a broader continuous improvement roadmap after initial results.",
     ],
     skills: [
       "Manufacturing engineering thinking",
@@ -235,6 +299,11 @@ export const projects: ProjectEntry[] = [
       "Visual clutter and inconsistent shelf logic slow replenishment decisions and create avoidable motion.",
       "The layout must support faster execution while staying practical for daily use in a live retail setting.",
     ],
+    background: [
+      "Shelf organization shapes how quickly teams can interpret inventory condition and decide what action to take next.",
+      "When the system depends on memory, repeated checking, or inconsistent visual cues, execution becomes slower and less reliable.",
+      "This study treated shelf layout as an engineering problem in visibility, flow, and decision support.",
+    ],
     currentState: [
       "Shelf condition is often interpreted through repeated visual checks instead of clear visual signals.",
       "Teams rely too heavily on memory and judgment to assess stock condition and urgency.",
@@ -246,12 +315,22 @@ export const projects: ProjectEntry[] = [
       "Slow replenishment prioritization",
       "Inconsistent visual cues across storage locations",
     ],
+    analysis: [
+      "The main source of inefficiency was not physical stocking alone, but the cognitive load required to interpret shelf condition accurately.",
+      "A better visual system could reduce ambiguity, shorten decision time, and support more consistent replenishment behavior across different users.",
+      "The concept emphasized visibility at the point of use rather than downstream correction after stock issues appeared.",
+    ],
     methods: [
       "Visual workflow analysis",
       "Inventory observation",
       "Current-state process review",
       "Process design thinking",
       "Root cause analysis",
+    ],
+    alternatives: [
+      "Keep existing shelf logic and rely on employee familiarity",
+      "Add more verbal coordination without improving visual structure",
+      "Increase stocking frequency without clarifying replenishment signals",
     ],
     solution: [
       "Standardize shelf organization to make stock condition easier to interpret",
@@ -263,6 +342,11 @@ export const projects: ProjectEntry[] = [
       "Improved inventory visibility at the point of use",
       "More efficient floor execution with less searching and rechecking",
       "Stronger consistency in daily replenishment decisions",
+    ],
+    futureImprovements: [
+      "Test the visual system with one product family and measure search time before and after.",
+      "Add photo-based standards for shelf condition and replenishment triggers.",
+      "Extend the concept into a broader inventory visibility playbook for similar retail zones.",
     ],
     skills: [
       "Visual management",
