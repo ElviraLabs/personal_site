@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Script from "next/script";
+import {
+  certifications,
+  learningFocuses,
+  learningRoadmap,
+} from "../lib/development-data";
 import { journalEntries } from "../lib/journal-data";
 import { projects } from "../lib/project-data";
 
@@ -72,6 +77,8 @@ const featuredWork = projects.map((project) => ({
   title: project.title,
 }));
 const featuredReflection = journalEntries[0];
+const featuredLearningFocuses = learningFocuses.slice(0, 3);
+const roadmapPreview = learningRoadmap.slice(0, 5);
 
 const skills = [
   "Manufacturing Engineer",
@@ -333,6 +340,7 @@ export default function Home() {
         <nav className="nav-links" aria-label="Primary">
           <a href="#home">Home</a>
           <a href="#projects">Projects</a>
+          <a href="/professional-development">Development</a>
           <a href="/journal">Journal</a>
           <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
@@ -428,6 +436,64 @@ export default function Home() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section className="section-block development-preview-section">
+        <div className="section-heading">
+          <div>
+            <SectionLabel>Professional development</SectionLabel>
+            <h2>Continuous Learning in Public</h2>
+          </div>
+          <a className="text-link" href="/professional-development">
+            View development page
+            <Icon kind="arrow" className="inline-icon" />
+          </a>
+        </div>
+
+        <div className="development-preview-grid">
+          <article className="development-preview-card">
+            <p className="eyebrow">Current focus</p>
+            <h3>What Elvira is actively building</h3>
+            <ul className="simple-list">
+              {featuredLearningFocuses.map((focus) => (
+                <li key={focus.title}>
+                  {focus.title} - {focus.progress}% progress
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="development-preview-card">
+            <p className="eyebrow">Momentum</p>
+            <h3>Credentials and roadmap</h3>
+            <ul className="simple-list">
+              {certifications.completed.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+              {roadmapPreview.slice(2).map((item) => (
+                <li key={item.label}>{item.label}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="development-preview-card">
+            <p className="eyebrow">Why it matters</p>
+            <h3>What recruiters can see quickly</h3>
+            <p>
+              The site now shows not only completed work, but the direction of
+              current study in Lean, Python, manufacturing analytics, and
+              continuous improvement.
+            </p>
+            <div className="cta-row">
+              <a className="button button-secondary" href="/professional-development">
+                Professional Development
+              </a>
+              <a className="button button-primary" href="/journal">
+                Engineering Journal
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section className="section-block anchor-section" id="projects">
@@ -734,6 +800,7 @@ export default function Home() {
         <div className="footer-col">
           <h3>Quick links</h3>
           <a href="#projects">Projects</a>
+          <a href="/professional-development">Development</a>
           <a href="/journal">Journal</a>
           <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>

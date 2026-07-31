@@ -582,10 +582,34 @@ img {
 }
 
 .journal-preview-card,
-.reflection-layout {
+.reflection-layout,
+.development-preview-grid,
+.focus-grid,
+.mini-project-grid,
+.topic-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
   gap: 22px;
+}
+
+.journal-preview-card,
+.reflection-layout {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.development-preview-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.focus-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mini-project-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.topic-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .journal-preview-card {
@@ -594,7 +618,11 @@ img {
 
 .journal-preview-copy,
 .journal-insight-card,
-.reflection-article {
+.reflection-article,
+.development-preview-card,
+.focus-card,
+.mini-project-card,
+.topic-card {
   padding: 28px;
   border: 1px solid rgba(17, 154, 149, 0.14);
   border-radius: 24px;
@@ -606,7 +634,11 @@ img {
 .journal-preview-copy h3,
 .journal-insight-card h3,
 .reflection-article h2,
-.reflection-sidebar h3 {
+.reflection-sidebar h3,
+.development-preview-card h3,
+.focus-card h3,
+.mini-project-card h3,
+.topic-card h3 {
   margin: 0;
   letter-spacing: -0.04em;
   color: var(--ink);
@@ -683,6 +715,157 @@ img {
   font-size: 1.14rem;
   line-height: 1.7;
   color: #173451;
+}
+
+.development-preview-card p:last-child,
+.mini-project-card p:last-child,
+.topic-card p:last-child {
+  margin-bottom: 0;
+}
+
+.progress-block {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.progress-track {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(17, 154, 149, 0.14);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal), #65e4db);
+}
+
+.progress-value {
+  font-weight: 700;
+  color: #24556e;
+}
+
+.roadmap-section {
+  overflow: hidden;
+}
+
+.roadmap {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.roadmap-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.roadmap-step::after {
+  content: "";
+  position: absolute;
+  top: 56px;
+  bottom: -18px;
+  left: 31px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(17, 154, 149, 0.5), rgba(17, 154, 149, 0.08));
+}
+
+.roadmap-step:last-child::after {
+  display: none;
+}
+
+.roadmap-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: linear-gradient(140deg, #0b2745, #0f8b8b);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 16px 32px rgba(7, 27, 51, 0.14);
+}
+
+.roadmap-copy {
+  padding: 12px 0 18px;
+}
+
+.roadmap-copy h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.development-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.development-column {
+  padding: 20px;
+  border: 1px solid rgba(17, 154, 149, 0.14);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.status-table {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(17, 154, 149, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.status-row span {
+  font-weight: 600;
+  color: #173451;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 108px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.status-in-progress {
+  background: rgba(17, 154, 149, 0.12);
+  color: var(--teal-deep);
+}
+
+.status-planned {
+  background: rgba(15, 39, 68, 0.08);
+  color: var(--ink);
+}
+
+.status-completed {
+  background: rgba(66, 197, 137, 0.14);
+  color: #1d6f4d;
 }
 
 .case-study-card {
@@ -1213,7 +1396,12 @@ img {
   .project-detail-grid,
   .media-grid,
   .journal-preview-card,
-  .reflection-layout {
+  .reflection-layout,
+  .development-preview-grid,
+  .focus-grid,
+  .mini-project-grid,
+  .topic-grid,
+  .development-columns {
     grid-template-columns: 1fr;
   }
 
