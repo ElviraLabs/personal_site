@@ -26,6 +26,7 @@ export default function ProjectsPage() {
 
         <nav className="nav-links" aria-label="Project navigation">
           <Link href="/">Home</Link>
+          <Link href="/journal">Journal</Link>
           <Link href="/#resume">Resume</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
