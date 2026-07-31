@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Script from "next/script";
+import { journalEntries } from "../lib/journal-data";
 import { projects } from "../lib/project-data";
 
 const sitePath = "";
@@ -70,6 +71,7 @@ const featuredWork = projects.map((project) => ({
   tag: project.tag,
   title: project.title,
 }));
+const featuredReflection = journalEntries[0];
 
 const skills = [
   "Manufacturing Engineer",
@@ -331,6 +333,7 @@ export default function Home() {
         <nav className="nav-links" aria-label="Primary">
           <a href="#home">Home</a>
           <a href="#projects">Projects</a>
+          <a href="/journal">Journal</a>
           <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
           <a href="#about">About</a>
@@ -571,6 +574,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-block anchor-section" id="journal">
+        <div className="section-heading">
+          <div>
+            <SectionLabel>Engineering journal</SectionLabel>
+            <h2>Professional Reflections</h2>
+          </div>
+          <a className="text-link" href="/journal">
+            Read reflection
+            <Icon kind="arrow" className="inline-icon" />
+          </a>
+        </div>
+
+        <article className="journal-preview-card">
+          <div className="journal-preview-copy">
+            <p className="eyebrow">{featuredReflection.dateLabel}</p>
+            <h3>{featuredReflection.title}</h3>
+            <p className="journal-preview-summary">{featuredReflection.summary}</p>
+            <div className="reflection-body">
+              {featuredReflection.paragraphs.slice(0, 2).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <a className="button button-secondary" href="/journal">
+              View Full Reflection
+            </a>
+          </div>
+
+          <div className="journal-preview-side">
+            <div className="journal-insight-card">
+              <SectionLabel>Why this helps</SectionLabel>
+              <h3>What recruiters can infer</h3>
+              <ul className="simple-list reflection-list">
+                {featuredReflection.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <section className="section-block dual-grid anchor-section" id="skills">
         <article className="info-card">
           <SectionLabel>Education</SectionLabel>
@@ -690,6 +734,7 @@ export default function Home() {
         <div className="footer-col">
           <h3>Quick links</h3>
           <a href="#projects">Projects</a>
+          <a href="/journal">Journal</a>
           <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
           <a href="#about">About</a>

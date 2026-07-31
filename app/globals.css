@@ -581,6 +581,110 @@ img {
   margin: 14px 0;
 }
 
+.journal-preview-card,
+.reflection-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+}
+
+.journal-preview-card {
+  align-items: start;
+}
+
+.journal-preview-copy,
+.journal-insight-card,
+.reflection-article {
+  padding: 28px;
+  border: 1px solid rgba(17, 154, 149, 0.14);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(17, 154, 149, 0.08), transparent 26%),
+    rgba(255, 255, 255, 0.95);
+}
+
+.journal-preview-copy h3,
+.journal-insight-card h3,
+.reflection-article h2,
+.reflection-sidebar h3 {
+  margin: 0;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.journal-preview-copy h3,
+.reflection-article h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+}
+
+.journal-preview-summary,
+.reflection-summary {
+  margin: 14px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.72;
+  color: #21415f;
+}
+
+.journal-preview-copy .button {
+  margin-top: 24px;
+}
+
+.journal-preview-side,
+.reflection-sidebar {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.reflection-list {
+  margin-top: 18px;
+}
+
+.reflection-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-bottom: 18px;
+}
+
+.reflection-meta span {
+  padding: 8px 12px;
+  border: 1px solid rgba(17, 154, 149, 0.18);
+  border-radius: 999px;
+  background: rgba(17, 154, 149, 0.07);
+  color: #24556e;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.reflection-body {
+  margin-top: 18px;
+}
+
+.reflection-body p,
+.reflection-sidebar-copy {
+  max-width: none;
+  margin: 0;
+  font-size: 1.03rem;
+  line-height: 1.78;
+  color: var(--muted);
+}
+
+.reflection-body p + p {
+  margin-top: 18px;
+}
+
+.reflection-quote {
+  margin: 24px 0 0;
+  padding: 22px 24px;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 18px 18px 0;
+  background: rgba(17, 154, 149, 0.06);
+  font-size: 1.14rem;
+  line-height: 1.7;
+  color: #173451;
+}
+
 .case-study-card {
   grid-column: 1 / -1;
   margin-top: 22px;
@@ -1107,7 +1211,9 @@ img {
 
   .project-detail-layout,
   .project-detail-grid,
-  .media-grid {
+  .media-grid,
+  .journal-preview-card,
+  .reflection-layout {
     grid-template-columns: 1fr;
   }
 
