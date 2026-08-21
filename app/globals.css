@@ -1360,6 +1360,62 @@ img {
   justify-content: center;
 }
 
+.thank-you-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.thank-you-card {
+  width: min(100%, 680px);
+  padding: clamp(36px, 7vw, 72px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(17, 154, 149, 0.16), transparent 28%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(244, 251, 252, 0.9));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.thank-you-mark {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 24px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+  box-shadow: 0 14px 28px rgba(17, 154, 149, 0.25);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.thank-you-card h1 {
+  margin: 0;
+  letter-spacing: -0.055em;
+  font-size: clamp(2.35rem, 6vw, 4.25rem);
+  line-height: 1;
+}
+
+.thank-you-card > p:not(.section-label) {
+  max-width: 43ch;
+  margin: 22px auto 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.thank-you-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
 @media (max-width: 1120px) {
   .topbar,
   .hero,
