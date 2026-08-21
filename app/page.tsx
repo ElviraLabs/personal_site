@@ -754,7 +754,7 @@ export default function Home() {
             method="POST"
           >
             <input name="_captcha" type="hidden" value="false" />
-            <input name="_next" type="hidden" value={`${siteUrl}/thank-you`} />
+            <input name="_next" type="hidden" value={`${siteUrl}/thank-you/`} />
             <input name="_subject" type="hidden" value="New portfolio inquiry" />
             <label className="contact-field">
               <span>Name</span>
