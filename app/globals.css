@@ -213,6 +213,15 @@ img {
   color: var(--teal-deep);
 }
 
+.hero-specialties {
+  max-width: 44rem;
+  margin: 14px 0 0;
+  color: #21415f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .lead,
 .body-copy,
 .project-content p,

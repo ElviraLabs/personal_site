@@ -81,10 +81,14 @@ const featuredLearningFocuses = learningFocuses.slice(0, 3);
 const roadmapPreview = learningRoadmap.slice(0, 5);
 
 const skills = [
-  "Manufacturing Engineer",
   "Industrial Engineer",
-  "Systems Engineer",
+  "Manufacturing Engineer",
   "Process Engineer",
+  "Continuous Improvement Engineer",
+  "Quality Engineering",
+  "Operations Engineering",
+  "Manufacturing Systems",
+  "Production Planning",
   "Manufacturing Process Improvement",
   "Continuous Improvement",
   "Material Flow",
@@ -103,13 +107,13 @@ const skillGroups = [
   {
     title: "Engineering",
     items: [
-      "Systems Engineering",
-      "Manufacturing Engineering",
       "Industrial Engineering",
+      "Manufacturing Engineering",
       "Process Improvement",
       "Continuous Improvement",
       "Lean Manufacturing",
       "Root Cause Analysis",
+      "Systems Thinking",
     ],
   },
   {
@@ -290,7 +294,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Elvira Nurgalieva",
-    jobTitle: "Systems Engineer",
+    jobTitle: "Industrial & Manufacturing Engineer",
     url: siteUrl,
     sameAs: [
       "https://www.linkedin.com/in/elvira-n",
@@ -303,7 +307,8 @@ export default function Home() {
     knowsAbout: [
       "Manufacturing Engineering",
       "Industrial Engineering",
-      "Systems Engineering",
+      "Manufacturing Systems",
+      "Systems Thinking",
       "Process Improvement",
       "Material Flow",
       "Reverse Engineering",
@@ -334,7 +339,7 @@ export default function Home() {
       <header className="topbar">
         <div className="brand">
           <div className="brand-name">Elvira Nurgalieva</div>
-          <div className="brand-role">Systems Engineering | Operations | Digital Engineering</div>
+          <div className="brand-role">Industrial & Manufacturing Engineering | Process Improvement</div>
         </div>
 
         <nav className="nav-links" aria-label="Primary">
@@ -366,20 +371,24 @@ export default function Home() {
 
       <section className="hero anchor-section" id="home">
         <div className="hero-copy">
-          <SectionLabel>Cross-functional engineering portfolio</SectionLabel>
+          <SectionLabel>Industrial & manufacturing engineering portfolio</SectionLabel>
           <h1>Elvira Nurgalieva</h1>
-          <h2>Systems Engineer | FE Passed | Colorado EI | Manufacturing &amp; Process Improvement</h2>
+          <h2>Industrial &amp; Manufacturing Engineer</h2>
+          <p className="hero-specialties">
+            Colorado Engineer Intern (EI) · Process Improvement · Manufacturing
+            Systems · Quality &amp; Operations
+          </p>
           <p className="lead">
-            Engineering professional with a Systems Engineering background,
-            CAD/reverse engineering experience, and a growing portfolio in
-            material flow, process improvement, and manufacturing systems.
+            Industrial and manufacturing engineering professional with CAD and
+            reverse-engineering experience, plus a growing portfolio in material
+            flow, process improvement, quality, and manufacturing systems.
           </p>
           <div className="hero-divider" />
           <p className="body-copy">
             Her background spans engineering support, operations execution,
             customer-facing technical work, and CAD-based solution development,
-            giving her a practical systems perspective grounded in both people
-            and process.
+            applying systems thinking to make manufacturing processes, flow, and
+            execution more reliable.
           </p>
           <div className="cta-row">
             <a className="button button-primary" href="#projects">
@@ -550,7 +559,7 @@ export default function Home() {
               <div>
                 <p className="timeline-year">Credential</p>
                 <h3>FE Passed</h3>
-                <p>Fundamentals of Engineering passed in Industrial and Systems Engineering.</p>
+                <p>Fundamentals of Engineering passed in Industrial Engineering.</p>
               </div>
             </article>
             <article className="timeline-item">
@@ -599,9 +608,9 @@ export default function Home() {
           </p>
           <p>
             Career objective: FE passed and returning to engineering, seeking
-            Manufacturing, Industrial, and Systems Engineering opportunities
-            where she can contribute to process optimization, material flow,
-            technical documentation, and continuous improvement.
+            Industrial, Manufacturing, Process, and Continuous Improvement
+            Engineering opportunities where she can contribute to process
+            optimization, material flow, technical documentation, and quality.
           </p>
           <a
             className="button button-secondary"

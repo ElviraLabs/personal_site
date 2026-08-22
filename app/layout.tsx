@@ -16,35 +16,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
+  title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
   description:
-    "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
+    "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: `${sitePath}/favicon.svg`,
     shortcut: `${sitePath}/favicon.svg`,
   },
   openGraph: {
-    title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
+    title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
     description:
-      "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
+      "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
     type: "website",
     url: siteUrl,
     images: [
       {
-        url: `${sitePath}/screenshot.jpeg`,
+        url: `${sitePath}/og.png`,
         width: 1200,
-        height: 750,
-        alt: "Preview of Elvira Nurgalieva's portfolio site",
+        height: 630,
+        alt: "Elvira Nurgalieva, Industrial & Manufacturing Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvira Nurgalieva | Systems Engineer | Manufacturing Engineering Portfolio",
+    title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
     description:
-      "Systems Engineer with an FE pass, specializing in manufacturing process improvement, CAD, reverse engineering, material flow optimization, and continuous improvement.",
-    images: [`${sitePath}/screenshot.jpeg`],
+      "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
+    images: [`${sitePath}/og.png`],
   },
 };
 
