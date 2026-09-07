@@ -1,0 +1,177 @@
+ELVIRA NURGALIEVA - AI RESUME / JOB APPLICATION PROFILE
+Last consolidated: 2026-08-15
+
+PURPOSE
+Use this as a structured source for completing job-application and resume forms.
+Use the facts below exactly. Do not invent metrics, certifications, job duties, degree dates,
+employer addresses, manager names, GPA, salary history, or proficiency claims not included here.
+Tailor wording to the job description without changing factual experience. Clearly identify
+developing skills and planned credentials as developing; do not present them as completed.
+
+IDENTITY AND CONTACT
+Legal/professional name: Elvira Nurgalieva
+Professional suffix: EI
+Colorado EI license number: EI.0081521
+Current location: Castle Rock, Colorado, United States
+Mailing address: 4981 Garton Road, Unit A, Castle Rock, CO 80104
+Phone: 719-726-8511
+Email: nurgalieva.e@gmail.com
+LinkedIn: https://www.linkedin.com/in/elvira-n
+Portfolio: https://elvira-n.com
+Work authorization: U.S. Permanent Resident; no sponsorship required
+Relocation/travel: Open to relocation, travel, and international opportunities
+
+CURRENT PROFESSIONAL HEADLINE
+Colorado Engineer Intern (EI) | Systems Engineering | Process Design & Improvement | AI-Enabled Workflows
+
+SHORT PROFESSIONAL SUMMARY
+Colorado Engineer Intern and systems engineering professional with experience in requirements
+analysis, workflow evaluation, technical problem solving, process improvement, stakeholder
+training, and cross-functional implementation support. Background spans engineering technology,
+reverse engineering/CAD, operations coordination, and high-volume retail operations. Brings
+Lean/DMAIC and root-cause knowledge, process-mapping experience, AI literacy and
+prompt-engineering practice, Excel-based analysis, and developing Python and Power BI skills.
+
+TARGET ROLES
+Process Engineer; Manufacturing Engineer; Industrial Engineer; Systems Engineer; Process Design
+and Improvement; Manufacturing Process Improvement; Continuous Improvement; Material Flow.
+
+CREDENTIALS
+Colorado Engineer Intern (EI), active
+Colorado EI license number: EI.0081521
+Fundamentals of Engineering (FE), Industrial Engineering: Passed
+
+CORE QUALIFICATIONS
+Process design and improvement; requirements and workflow analysis; root-cause analysis; 5
+Whys; fishbone analysis; Lean/DMAIC concepts; standard work; process mapping; workflow redesign;
+technical documentation; trade-off analysis; stakeholder communication; technical training;
+cross-functional project coordination; change adoption; Excel-based analysis; KPI concepts; AI
+productivity tools; prompt engineering; systems thinking.
+
+TECHNICAL TOOLS
+Microsoft Excel, Word, PowerPoint, Outlook, Google Workspace, SolidWorks, Fusion 360, Geomagic
+Design X, Rhinoceros (Rhino), Blender, Git, GitHub.
+
+DEVELOPING SKILLS - DO NOT PRESENT AS EXPERT OR COMPLETED CREDENTIALS
+Python for engineering/data analysis and workflow automation; Power BI; SQL/Python analytics;
+BPMN notation/software proficiency; formal Lean Six Sigma Green Belt certification.
+Current portfolio study progress as of 2026-08-15: Lean Six Sigma Green Belt 35%; Python for
+Engineering Analytics 45%; Manufacturing Engineering 40%.
+
+PROFESSIONAL EXPERIENCE
+
+1) Sales Associate - Technical Products & Operations
+Employer: The Home Depot
+Location: Castle Rock, Colorado, United States
+Dates: April 2024 - Present
+Responsibilities and achievements:
+- Operate in a high-volume environment requiring rapid prioritization, accurate information,
+  cross-department coordination, and resolution of customer and operational issues under
+  established safety and operating procedures.
+- Clarify customer and contractor requirements, interpret product specifications, identify
+  constraints, and coordinate practical solutions when standard approaches do not fit the need.
+- Observe replenishment, inventory, handoff, and information-flow processes; identify recurring
+  bottlenecks, unnecessary motion, rework, and opportunities for clearer standard work.
+- Apply Gemba observation, process mapping, 5 Whys, fishbone analysis, and future-state thinking
+  in an independent Kaizen study of shelving and replenishment flow.
+
+2) Sales Engineer - 3D Scanning & Reverse Engineering
+Employer: Thor3D
+Location: Moscow, Russia
+Dates: August 2018 - February 2022
+Responsibilities and achievements:
+- Led structured technical discovery with engineering and manufacturing customers to clarify
+  objectives, constraints, workflow pain points, software compatibility, accuracy needs, and
+  implementation requirements.
+- Mapped and evaluated customer workflows spanning equipment, software, data processing, reverse
+  engineering, CAD, inspection, and user methods; identified bottlenecks, failure points, and
+  opportunities to improve repeatability and data quality.
+- Diagnosed technical and workflow issues, isolated likely root causes, documented findings, and
+  coordinated corrective guidance with technical stakeholders.
+- Performed trade-off and feasibility analyses balancing functionality, accuracy, cost,
+  implementation effort, operational risk, and user adoption.
+- Translated operational needs into technical specifications, recommendations, implementation
+  plans, and training materials; presented findings to technical and non-technical stakeholders.
+- Created CAD and scan-derived models using SolidWorks, Fusion 360, Geomagic Design X,
+  Rhinoceros, and Blender; supported adoption of digital engineering workflows.
+
+3) Dispatch Coordinator
+Employer: MultiMedia Communications Ltd
+Location: Christchurch, New Zealand
+Dates: December 2017 - July 2018
+Responsibilities and achievements:
+- Coordinated technicians, subcontractors, suppliers, schedules, materials, and project
+  documentation for telecommunications infrastructure installations.
+- Monitored execution, resolved scheduling and resource conflicts, maintained operational
+  records, and escalated issues affecting service commitments and project delivery.
+- Facilitated communication among field teams, suppliers, subcontractors, and project managers to
+  maintain workflow and support timely problem resolution.
+
+ADDITIONAL HANDS-ON EXPERIENCE
+General Laborer
+Employer: Wakelin Excavation
+Location: Christchurch, New Zealand
+Dates: December 2016 - December 2017
+Responsibilities and achievements:
+- Supported construction and drainage work involving trenching, pipe installation, concrete work,
+  inspection, maintenance, and site preparation while following drawings, work instructions,
+  safety requirements, and supervisor direction.
+- Operated hand and power tools and assisted with heavy-equipment activities; collaborated with
+  field crews to troubleshoot practical site issues and complete work to schedule, quality, and
+  safety expectations.
+
+SELECTED PROJECTS AND TECHNICAL DEVELOPMENT
+
+Lean Six Sigma / Kaizen Process Redesign
+- Current-state mapping, waste identification, 5 Whys, fishbone analysis, future-state workflow
+  design, standard-work recommendations, and sustainment considerations for a recurring retail
+  material-flow problem.
+
+Reverse Engineering Workflow & Quality-Risk Analysis
+- Mapped capture-to-CAD flow, technical handoffs, verification points, user dependencies, and
+  data-quality risks to improve workflow repeatability.
+
+AI & Automation Development
+- Actively uses generative-AI productivity tools and prompt engineering to structure analysis,
+  compare alternatives, improve technical documentation, and accelerate learning.
+- Developing Python and Power BI for engineering data analysis and workflow automation.
+
+PORTFOLIO PROJECT CONTEXT
+- Retail Material Flow Optimization: concept study focused on material flow, replenishment
+  visibility, and decision points in a high-volume retail environment.
+- Manufacturing Process Improvement: engineering concept work focused on process gaps, flow
+  constraints, and system-level improvements for manufacturing support environments.
+- Shelf Organization / Inventory Visibility Design Study: study of shelf logic, inventory
+  visibility, and visual controls to support faster replenishment decisions, less searching, and
+  consistent floor execution.
+- Reverse Engineering Case Study: converted 3D scan data into engineering-ready CAD models and
+  drawings for legacy parts, wear analysis, and downstream manufacturing documentation.
+
+EDUCATION
+Bauman Moscow State Technical University
+Degree: Engineering Degree, Systems Engineering
+Credential evaluation: NCEES evaluated as equivalent to a U.S. engineering bachelor's degree.
+Relevant coursework: Systems Analysis, Automation, Robotics, Machine Design,
+Computer-Integrated Manufacturing, CAD, Production Processes.
+
+Southern Institute of Technology
+Credential: Postgraduate Diploma, Business Enterprise / Management
+
+Georgia Institute of Technology
+Study: Engineering Mechanics coursework and certificates, including Applications in Engineering
+Mechanics, Mechanics of Materials I, and Introduction to Engineering Mechanics.
+
+Higher School of Psychology
+Degree: Bachelor of Arts (B.A.), Psychology
+
+APPLICATION ANSWERS / GUARDRAILS
+- For sponsorship questions: "No sponsorship required; U.S. Permanent Resident."
+- For licensure questions: "Colorado Engineer Intern (EI), license EI.0081521; FE Industrial
+  Engineering passed."
+- Do not claim Professional Engineer (PE) licensure.
+- Do not claim Lean Six Sigma Green Belt certification, expert Python/Power BI/SQL capability, or
+  BPMN proficiency. These are current development areas.
+- Do not create numerical performance results, project budgets, team sizes, or completion dates
+  not stated above.
+- For reference checks, salary history, demographic questions, disability/veteran status, and
+  voluntary self-identification, leave blank or ask the candidate; do not infer answers.
