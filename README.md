@@ -1,246 +1,281 @@
 # Elvira Nurgalieva Portfolio
 
-Personal portfolio site for Elvira Nurgalieva, built with `Next.js` and deployed with GitHub Pages.
+This repository powers [elvira-n.com](https://elvira-n.com/), Elvira Nurgalieva's Industrial & Manufacturing Engineering portfolio.
 
-## Live Site
+> **Before editing, building, or deploying:** read [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md) completely. It is the authoritative project guide for the brand, content-accuracy rules, architecture, deployments, and existing worktree precautions.
 
-- Production: [https://elvira-n.com/](https://elvira-n.com/)
+## Fast setup checklist
 
-## Stack
+Use these steps on **each** laptop. Keep a separate clone on macOS and Windows; use GitHub to move committed work between them.
 
-- `Next.js 16`
-- `React 19`
-- `TypeScript`
-- `Tailwind CSS v4`
-- `pnpm`
-- GitHub Pages via GitHub Actions
+1. Install Git and Node.js 22 or newer.
+2. Enable pnpm 11.7.0.
+3. Set up GitHub SSH access (needed to push changes).
+4. Clone this repository outside iCloud Drive, OneDrive, Dropbox, or another sync folder.
+5. Install dependencies, then run the site locally.
 
-## Requirements
+This project uses Next.js, TypeScript, and pnpm. It is a static website; no database or environment variables are required for normal local development.
 
-- `Node.js >= 22.13.0`
-- `pnpm 11`
+## Use Codex with this project
 
-If you use `nvm`:
+On either laptop, open the **repository root** (`PersonalSite`), not only the `app/` folder, in Codex. That lets Codex access both `PROJECT_HANDOFF.md` and the deployment configuration.
 
-```bash
-nvm install 22
-nvm use 22
-corepack enable
-```
-
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone git@github.com:ElviraLabs/personal_site.git
-cd personal_site
-```
-
-Install dependencies:
-
-```bash
-pnpm install
-```
-
-Start the development server:
-
-```bash
-pnpm dev
-```
-
-Open:
+For every new Codex task, begin with this prompt, then replace the bracketed request:
 
 ```text
-http://localhost:3000
+Work in this PersonalSite repository. Before scanning, editing, building, or deploying, read PROJECT_HANDOFF.md completely and treat it as the primary project context. Then inspect git status and preserve all unrelated or user-owned changes. [Describe the specific change I want.] Do not commit, push, or deploy unless I explicitly ask.
 ```
 
-## Common Commands
+For example:
 
-Run local development:
+```text
+Work in this PersonalSite repository. Before scanning, editing, building, or deploying, read PROJECT_HANDOFF.md completely and treat it as the primary project context. Then inspect git status and preserve all unrelated or user-owned changes. Update the Projects section with this approved copy: [...]. Run lint and build, but do not commit, push, or deploy.
+```
+
+Codex should use the handoff to:
+
+- keep **Industrial & Manufacturing Engineer** as the primary positioning and avoid overstated credentials or experience;
+- choose the correct release path—GitHub Pages for `elvira-n.com`, or the separate Sites workflow for the `chatgpt.site` deployment;
+- preserve the contact-form redirect and static-hosting configuration;
+- check `git status --short` before changing files and stage only reviewed files; and
+- update `PROJECT_HANDOFF.md` when it changes architecture, content rules, domains, sources of truth, or deployment behavior.
+
+If you want Codex to publish a change, say which destination you mean: **GitHub Pages / elvira-n.com**, **Sites / chatgpt.site**, or **both**. “Push” normally means a GitHub commit and push; it does not update the separate Sites deployment.
+
+## 1. Install prerequisites
+
+### macOS
+
+1. Install the current **LTS** version of Node.js from [nodejs.org](https://nodejs.org/). Node `22.13.0` or newer is required.
+2. Open **Terminal** and install Apple’s Git command-line tools if Git is not already available:
+
+   ```bash
+   xcode-select --install
+   ```
+
+3. Confirm the tools are available and activate the pnpm version used by continuous integration:
+
+   ```bash
+   node --version
+   npm --version
+   git --version
+   corepack enable
+   corepack prepare pnpm@11.7.0 --activate
+   pnpm --version
+   ```
+
+### Windows 11 / Windows 10
+
+1. Install the current **LTS** Node.js release from [nodejs.org](https://nodejs.org/) and [Git for Windows](https://git-scm.com/download/win). Accept their default options.
+2. Open **PowerShell** and verify the tools. Then activate pnpm 11.7.0:
+
+   ```powershell
+   node --version
+   npm --version
+   git --version
+   corepack enable
+   corepack prepare pnpm@11.7.0 --activate
+   pnpm --version
+   ```
+
+If `corepack` is not found, install the required pnpm release through npm instead:
+
+```powershell
+npm install --global pnpm@11.7.0
+pnpm --version
+```
+
+Use either native Windows **or** WSL for this project on a given laptop, not both against the same folder. Native PowerShell with the Node and Git installers is the simplest option.
+
+## 2. Connect GitHub on each laptop
+
+The repository remote uses SSH:
+
+```text
+git@github.com:ElviraLabs/personal_site.git
+```
+
+Configure your Git identity once (use the email associated with your GitHub account):
 
 ```bash
+git config --global user.name "Elvira Nurgalieva"
+git config --global user.email "your-github-email@example.com"
+```
+
+Create an SSH key if that laptop does not already have one:
+
+```bash
+ssh-keygen -t ed25519 -C "your-github-email@example.com"
+```
+
+Accept the default location. Add a passphrase if desired.
+
+Copy the public key and add it in GitHub: **Profile picture → Settings → SSH and GPG keys → New SSH key**.
+
+**macOS:**
+
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+**Windows PowerShell:**
+
+```powershell
+Get-Content "$HOME\.ssh\id_ed25519.pub" | Set-Clipboard
+```
+
+After adding the key, test the connection:
+
+```bash
+ssh -T git@github.com
+```
+
+GitHub should identify your account. If the laptop already has an SSH key with a different filename, use that key’s matching `.pub` file instead.
+
+## 3. Clone and run the site
+
+Choose a normal development location—not a cloud-synced desktop/documents folder—such as `Projects`.
+
+### macOS Terminal
+
+```bash
+mkdir -p ~/Projects
+cd ~/Projects
+git clone git@github.com:ElviraLabs/personal_site.git PersonalSite
+cd PersonalSite
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Create a production build:
+### Windows PowerShell
 
-```bash
-pnpm build
+```powershell
+New-Item -ItemType Directory -Force "$HOME\Projects"
+Set-Location "$HOME\Projects"
+git clone git@github.com:ElviraLabs/personal_site.git PersonalSite
+Set-Location PersonalSite
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Run linting:
+Open [http://localhost:3000](http://localhost:3000). Stop the local server with `Ctrl+C`.
+
+## Daily workflow across both laptops
+
+Before beginning work, open the repository and synchronize only when the working tree is clean:
 
 ```bash
+git status --short
+git switch main
+git pull --ff-only origin main
+```
+
+If `git status --short` lists files you did not intend to change, stop before pulling, switching branches, or staging files. The repository can contain user-owned work that must be preserved.
+
+For a normal content/code update:
+
+```bash
+pnpm dev                 # edit and preview locally
 pnpm lint
-```
-
-Generate Drizzle files if database work is added:
-
-```bash
-pnpm db:generate
-```
-
-## Project Structure
-
-- `app/`
-  Next.js app router files, page content, and global styles.
-- `app/page.tsx`
-  Main portfolio content, section data, and page structure.
-- `app/globals.css`
-  Site-wide styling, layout, responsive behavior, and component treatments.
-- `app/layout.tsx`
-  Shared layout and metadata used by the generated site.
-- `public/`
-  Static assets such as the headshot, resume PDF, screenshot, and icons.
-- `public/resume/Elvira-Nurgalieva-Profile.pdf`
-  File downloaded by the resume buttons.
-- `.github/workflows/deploy-pages.yml`
-  GitHub Actions workflow that builds and deploys the site to GitHub Pages.
-- `next.config.ts`
-  Static export settings for the custom-domain GitHub Pages deployment.
-
-## How This Site Works
-
-This project uses the Next.js App Router, but it is configured as a static export for GitHub Pages.
-
-Important details:
-
-- `next.config.ts` sets `output: "export"`.
-- `pnpm build` generates the static site into `out/`.
-- GitHub Actions uploads the `out/` directory to GitHub Pages.
-- The production site is served from the custom domain root, not a repository subpath.
-
-Because the site is served from the root of `https://elvira-n.com/`, image and file URLs can stay root-relative:
-
-```ts
-const sitePath = "";
-```
-
-## Updating Content
-
-Most content lives directly in `app/page.tsx`.
-
-Typical updates:
-
-- Hero copy and section content:
-  edit the arrays and JSX in `app/page.tsx`
-- Headshot:
-  replace `public/elvira-headshot.png`
-- Resume download:
-  replace `public/resume/Elvira-Nurgalieva-Profile.pdf`
-- Social preview image:
-  replace `public/screenshot.jpeg`
-- Page title and description:
-  update `app/layout.tsx`
-
-## Styling Notes
-
-- Global styles live in `app/globals.css`.
-- The layout is mostly custom CSS, not Tailwind utility-heavy markup.
-- Responsive behavior is handled in the media queries near the bottom of `app/globals.css`.
-- If a section looks wrong on tablet or mobile, check the `@media (max-width: 1120px)` and `@media (max-width: 720px)` blocks first.
-
-## Local Verification Before Shipping
-
-Before pushing:
-
-```bash
-pnpm lint
-pnpm build
-```
-
-Things to verify manually:
-
-- hero image placement on desktop, tablet, and mobile
-- project cards and section spacing
-- resume download link
-- LinkedIn and contact links
-- content still reads well after line wrapping
-
-## Deploying to GitHub Pages
-
-This repo is already wired to deploy automatically from `main`.
-
-### Normal deploy flow
-
-1. Make your changes.
-2. Verify locally:
-
-```bash
-pnpm lint
-pnpm build
-```
-
-3. Commit:
-
-```bash
-git add .
-git commit -m "Describe the update"
-```
-
-4. Push:
-
-```bash
+pnpm build               # produces the static out/ site
+git diff --check
+git add path/to/changed-file
+git diff --staged
+git commit -m "Describe the change"
 git push origin main
 ```
 
-### What happens after push
+Avoid `git add .` for this project. Stage only the files you reviewed. Use a focused `codex/<short-description>` branch when work needs review or should not immediately be released from `main`.
 
-The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` will:
+When switching laptops, finish by committing and pushing the intentional changes on the first laptop; then run the synchronization commands above on the other one.
 
-1. check out the repo
-2. install `pnpm`
-3. install dependencies with `pnpm install --frozen-lockfile`
-4. run `pnpm build`
-5. upload the generated `out/` directory
-6. deploy that artifact to GitHub Pages
+## What happens when you push
 
-### GitHub repository settings required
+Pushing a validated commit to `main` runs [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml):
 
-In GitHub:
+1. GitHub installs Node 22 and pnpm 11.7.0.
+2. It runs `pnpm install --frozen-lockfile` and `pnpm build`.
+3. It deploys the `out/` static export to GitHub Pages.
+4. The primary website updates at [https://elvira-n.com/](https://elvira-n.com/).
 
-1. Open `Settings`.
-2. Open `Pages`.
-3. Ensure the source is set to `GitHub Actions`.
+Check the GitHub repository’s **Actions** tab if the change does not appear after a few minutes. GitHub Pages is static hosting, so do not add server-only APIs, database calls, or image optimization without changing the hosting design.
 
-If Pages is set to deploy from a branch instead, the workflow may succeed while the site still serves older files.
+### The separate Sites deployment
+
+The public [Sites version](https://elvira-nurgalieva-portfolio-2026.team-dason-2899.chatgpt.site/) is a separate release surface. A GitHub push does **not** update it. Deploying it requires the Codex Sites workflow documented in `PROJECT_HANDOFF.md`; do not manually force Git histories together.
+
+## Project map
+
+| Path | What to edit there |
+| --- | --- |
+| `app/page.tsx` | Main home-page content, including the contact form. |
+| `app/projects/` and `lib/project-data.ts` | Project index, details, and project copy. |
+| `app/journal/` and `lib/journal-data.ts` | Journal page and article content. |
+| `app/professional-development/` and `lib/development-data.ts` | Learning and development content. |
+| `app/thank-you/page.tsx` | Post-contact confirmation page. |
+| `app/layout.tsx` | Metadata, canonical URL, Open Graph/Twitter data, and structured data. |
+| `app/globals.css` | All styling and responsive breakpoints. |
+| `public/` | Static images and downloadable public files. |
+| `public/og.png` | 1200×630 social-preview graphic. Update it with metadata when the public brand changes. |
+| `next.config.ts` | Static-export and trailing-slash configuration. Do not remove these settings. |
+
+## Contact form
+
+The contact form posts to FormSubmit and redirects to `/thank-you/`. Preserve the full redirect URL with its trailing slash:
+
+```text
+https://elvira-n.com/thank-you/
+```
+
+Do not submit a live test form unless you intend to send an external email. Local work does not require a FormSubmit account or secret.
+
+## Brand and content guardrails
+
+The public primary title is **Industrial & Manufacturing Engineer**. Keep systems thinking as a method/competency, not the main job title.
+
+Always preserve the factual claim rules in `PROJECT_HANDOFF.md`, especially:
+
+- Colorado EI: `EI.0081521`; FE Industrial Engineering passed.
+- Lean Six Sigma Green Belt, Python, Power BI, SQL, and BPMN are learning/development areas unless the source is deliberately updated with completed credentials.
+- Never claim PE licensure, invented metrics, or unverified work experience.
 
 ## Troubleshooting
 
-### The live site does not show the latest changes
+### `pnpm` is not recognized
 
-- Wait a minute or two for GitHub Pages to finish deploying.
-- Hard refresh the browser.
-- Confirm the latest push reached `main`.
-- Check the `Actions` tab for a failed Pages workflow.
+Run `corepack enable` followed by `corepack prepare pnpm@11.7.0 --activate`. If Corepack is unavailable, use:
 
-### Images or assets are broken in production
+```bash
+npm install --global pnpm@11.7.0
+```
 
-- Confirm the asset is inside `public/`.
-- Confirm the path is root-relative for the custom domain deployment.
-- If you ever reintroduce a repository subpath deploy, update both `next.config.ts` and the asset URLs together.
+Then close and reopen the terminal.
 
-### The resume button downloads the wrong file
+### Port 3000 is already in use
 
-- Replace `public/resume/Elvira-Nurgalieva-Profile.pdf`.
-- Rebuild and push again.
+Stop the other local server, or choose a different port:
 
-### Local dev works but production looks different
+```bash
+pnpm dev -- --port 3001
+```
 
-- Check `next.config.ts` for export behavior and custom-domain assumptions.
-- Run a fresh `pnpm build` before comparing output.
+### Git asks for a password or rejects the push
 
-## Maintenance Tips
+Run `ssh -T git@github.com` and confirm the current laptop’s public key was added to the correct GitHub account. The remote is SSH, not HTTPS.
 
-- Keep copy changes centralized in `app/page.tsx`.
-- Prefer replacing existing assets over renaming paths unless you also update all references.
-- If you add new sections, verify spacing and mobile behavior right away.
-- If you add more projects, consider moving repeated content data into separate files later.
+### The live site is unchanged
 
-## Current Key Assets
+Confirm the commit reached `main`, check GitHub Actions for the **Deploy GitHub Pages** workflow, wait briefly for Pages/CDN propagation, and hard-refresh the browser.
 
-- Headshot: `public/elvira-headshot.png`
-- Resume PDF: `public/resume/Elvira-Nurgalieva-Profile.pdf`
-- Social/share image: `public/screenshot.jpeg`
-- Favicon: `public/favicon.svg`
+## Useful commands
+
+```bash
+pnpm dev                              # local development
+pnpm lint                             # lint source
+pnpm build                            # static production export in out/
+git status --short                    # see local changes
+git pull --ff-only origin main        # safely update a clean checkout
+git log --oneline -5                  # recent history
+```
+
+For architecture, public-site deployment, content safety, and Sites deployment instructions, return to [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md).
