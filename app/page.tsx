@@ -762,9 +762,18 @@ export default function Home() {
             className="contact-form"
             method="POST"
           >
-            <input name="_captcha" type="hidden" value="false" />
             <input name="_next" type="hidden" value={`${siteUrl}/thank-you/`} />
             <input name="_subject" type="hidden" value="New portfolio inquiry" />
+            <div aria-hidden="true" className="contact-honeypot">
+              <label htmlFor="contact-website">Website</label>
+              <input
+                autoComplete="off"
+                id="contact-website"
+                name="_honey"
+                tabIndex={-1}
+                type="text"
+              />
+            </div>
             <label className="contact-field">
               <span>Name</span>
               <input name="name" placeholder="Your name" required type="text" />

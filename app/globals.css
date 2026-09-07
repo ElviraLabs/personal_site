@@ -1325,6 +1325,16 @@ img {
   margin: 16px 0 20px;
 }
 
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .contact-field {
   display: grid;
   gap: 8px;
