@@ -91,7 +91,6 @@ export default function JournalPage() {
       <section className="section-block">
         <div className="section-heading">
           <div>
-            <SectionLabel>Weekly practice</SectionLabel>
             <h2>Where the Journal Can Grow Next</h2>
           </div>
           <Link className="text-link" href="/professional-development">
