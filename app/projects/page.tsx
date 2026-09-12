@@ -3,7 +3,7 @@ import Link from "next/link";
 import { projects } from "../../lib/project-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912b`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
 
 export const metadata: Metadata = {
   title: "Projects | Elvira Nurgalieva",

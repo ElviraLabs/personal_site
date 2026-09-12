@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "../../../lib/project-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912b`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
 
 type ProjectPageProps = {
   params: Promise<{
