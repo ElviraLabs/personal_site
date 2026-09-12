@@ -3,7 +3,7 @@ import Link from "next/link";
 import { journalEntries } from "../../lib/journal-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912b`;
 const featuredReflection = journalEntries[0];
 
 export const metadata: Metadata = {
