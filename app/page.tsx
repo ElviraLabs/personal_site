@@ -10,7 +10,7 @@ import { projects } from "../lib/project-data";
 
 const sitePath = "";
 const siteUrl = "https://elvira-n.com";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912b`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 const contactFormAction = "https://formsubmit.co/nurgalieva.e@gmail.com";
 const coloradoEiNumber = "EI.0081521";
