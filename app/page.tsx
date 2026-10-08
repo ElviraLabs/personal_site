@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Script from "next/script";
+import ContactForm from "./contact-form";
 import {
   certifications,
   learningFocuses,
@@ -12,7 +13,6 @@ const sitePath = "";
 const siteUrl = "https://elvira-n.com";
 const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
-const contactFormAction = "https://formsubmit.co/nurgalieva.e@gmail.com";
 const coloradoEiNumber = "EI.0081521";
 const feBadgeHref = "https://www.credly.com/badges/5a980cad-6487-4bef-ace9-ac9388d0ad77";
 const feBadgeImage =
@@ -757,49 +757,7 @@ export default function Home() {
             Reach out through the form below for engineering opportunities,
             collaboration, or project conversations.
           </p>
-          <form
-            action={contactFormAction}
-            className="contact-form"
-            method="POST"
-          >
-            <input name="_next" type="hidden" value={`${siteUrl}/thank-you/`} />
-            <input name="_subject" type="hidden" value="New portfolio inquiry" />
-            <div aria-hidden="true" className="contact-honeypot">
-              <label htmlFor="contact-website">Website</label>
-              <input
-                autoComplete="off"
-                id="contact-website"
-                name="_honey"
-                tabIndex={-1}
-                type="text"
-              />
-            </div>
-            <label className="contact-field">
-              <span>Name</span>
-              <input name="name" placeholder="Your name" required type="text" />
-            </label>
-            <label className="contact-field">
-              <span>Email</span>
-              <input
-                name="email"
-                placeholder="you@example.com"
-                required
-                type="email"
-              />
-            </label>
-            <label className="contact-field">
-              <span>Message</span>
-              <textarea
-                name="message"
-                placeholder="Tell me a little about the role or project."
-                required
-                rows={5}
-              />
-            </label>
-            <button className="button button-primary contact-submit" type="submit">
-              Send Message
-            </button>
-          </form>
+          <ContactForm />
           <a
             href="https://www.linkedin.com/in/elvira-n"
             target="_blank"

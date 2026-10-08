@@ -96,7 +96,9 @@ There is also a Vite/vinext/Cloudflare build path used by Sites. It produces `di
 
 ## Contact form and thank-you behavior
 
-The homepage form in `app/page.tsx` posts directly to FormSubmit:
+Updated October 8, 2026: the homepage uses the client component `app/contact-form.tsx` and request helper `lib/contact-submit.ts`. With JavaScript enabled, it posts to FormSubmit's AJAX endpoint and replaces the form with “Thank you! Your message has been sent.” It verifies both HTTP status and the provider's success flag, prevents duplicate clicks, preserves text on errors, and times out after 20 seconds. Keep the existing honeypot. Do not add a `_captcha: false` override.
+
+The native POST remains as a no-JavaScript fallback:
 
 ```text
 POST https://formsubmit.co/nurgalieva.e@gmail.com
@@ -104,11 +106,10 @@ POST https://formsubmit.co/nurgalieva.e@gmail.com
 
 Its hidden form controls must remain aligned with the current behavior:
 
-- `_captcha`: `false`
 - `_subject`: `New portfolio inquiry`
 - `_next`: `https://elvira-n.com/thank-you/`
 
-The `/thank-you/` page is a static Next route, not a server callback. FormSubmit sends the message and then redirects the visitor to `_next`. Preserve the full canonical URL and its **trailing slash**: static export plus GitHub Pages otherwise risks a redirect or a route mismatch. Test the deployed flow with a real form submission only when the user authorizes sending an external email; otherwise verify the form action, hidden fields, build output, and the live thank-you URL.
+The `/thank-you/` page is a static Next route, not a server callback. `_next` is the intended native-POST fallback redirect, but an October 8 live test returned FormSubmit's branded confirmation despite a correct `_next` value. The AJAX path avoids that redirect dependency. Preserve the full fallback URL and its **trailing slash** for static hosting. Test the deployed flow with a real submission only when the user authorizes sending an external email; otherwise use mocked request tests and inspect the live form without submitting.
 
 ## SEO, metadata, and visual conventions
 
