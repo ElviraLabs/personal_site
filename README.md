@@ -221,7 +221,7 @@ The public [Sites version](https://elvira-nurgalieva-portfolio-2026.team-dason-2
 
 ## Contact form
 
-The contact form uses FormSubmit's AJAX endpoint and displays a thank-you message in place without leaving the site. It checks HTTP and provider success, prevents duplicate clicks, and preserves entered text on errors or a 20-second timeout. Keep the honeypot. The standard POST and `/thank-you/` redirect remain a no-JavaScript fallback. Preserve the full fallback URL with its trailing slash:
+The contact form uses FormSubmit's AJAX endpoint, then navigates to the separate `/thank-you/` page only after confirmed success. It checks HTTP and provider success, prevents duplicate clicks, and preserves entered text on errors or a 20-second timeout. Keep the honeypot. The standard POST and `/thank-you/` redirect remain a no-JavaScript fallback. Preserve the full fallback URL with its trailing slash:
 
 ```text
 https://elvira-n.com/thank-you/

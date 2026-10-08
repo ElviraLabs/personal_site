@@ -1,16 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { contactFormAction, submitContact } from "../lib/contact-submit";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const sending = useRef(false);
-  const confirmation = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    if (status === "sent") confirmation.current?.focus();
-  }, [status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -23,17 +18,17 @@ export default function ContactForm() {
       await submitContact(data);
       form.reset();
       setStatus("sent");
+      window.location.assign("/thank-you/");
     } catch {
       setStatus("error");
-    } finally {
       sending.current = false;
     }
   }
 
   if (status === "sent") {
     return (
-      <p className="contact-confirmation" role="status" tabIndex={-1} ref={confirmation}>
-        Thank you! Your message has been sent.
+      <p role="status">
+        Message sent. <a href="/thank-you/">Continue to the thank-you page.</a>
       </p>
     );
   }

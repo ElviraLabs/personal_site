@@ -96,7 +96,7 @@ There is also a Vite/vinext/Cloudflare build path used by Sites. It produces `di
 
 ## Contact form and thank-you behavior
 
-Updated October 8, 2026: the homepage uses the client component `app/contact-form.tsx` and request helper `lib/contact-submit.ts`. With JavaScript enabled, it posts to FormSubmit's AJAX endpoint and replaces the form with “Thank you! Your message has been sent.” It verifies both HTTP status and the provider's success flag, prevents duplicate clicks, preserves text on errors, and times out after 20 seconds. Keep the existing honeypot. Do not add a `_captcha: false` override.
+Updated October 8, 2026: the homepage uses the client component `app/contact-form.tsx` and request helper `lib/contact-submit.ts`. With JavaScript enabled, it posts to FormSubmit's AJAX endpoint, then navigates to `/thank-you/` after confirmed success. This separate page prominently displays “Thank you!” and “Your message has been sent.” It verifies both HTTP status and the provider's success flag, prevents duplicate clicks (including while navigating), preserves text on errors, and times out after 20 seconds. Keep the existing honeypot. Do not add a `_captcha: false` override.
 
 The native POST remains as a no-JavaScript fallback:
 

@@ -1384,20 +1384,6 @@ img {
   cursor: wait;
 }
 
-.contact-confirmation {
-  margin: 20px 0;
-  padding: 18px;
-  border: 1px solid rgba(125, 241, 234, 0.5);
-  border-radius: 16px;
-  color: white;
-  line-height: 1.6;
-}
-
-.contact-confirmation:focus-visible {
-  outline: 2px solid #7df1ea;
-  outline-offset: 4px;
-}
-
 .contact-error {
   color: #ffd8cf;
   line-height: 1.5;
