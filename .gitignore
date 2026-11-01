@@ -39,3 +39,7 @@ next-env.d.ts
 /dist/
 /.wrangler/
 /work/
+
+# private working files (never publish)
+Elvira_Nurgalieva_AI_Resume_Profile.txt
+/tmp/

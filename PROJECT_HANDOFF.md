@@ -149,7 +149,7 @@ Do not present these as completed credentials, certifications, expert proficienc
 - Preserve actual work history and dates from the resume/profile source; tailor wording to a target role without changing facts.
 - For applications, do not infer demographic, disability, veteran, salary, reference, or voluntary self-identification answers.
 
-The local `Elvira_Nurgalieva_AI_Resume_Profile.txt` is an untracked, user-owned application-profile reference. It includes sensitive contact/address information and should not be published, committed, or copied to the public site unless the user explicitly asks.
+The local `Elvira_Nurgalieva_AI_Resume_Profile.txt` is a user-owned application-profile reference. It was removed from the public repository on November 1, 2026 and is now listed in `.gitignore`, as is `tmp/`. It includes sensitive contact/address information and should not be published, committed, or copied to the public site unless the user explicitly asks.
 
 ## Deployment procedures
 
