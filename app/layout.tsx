@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: `${sitePath}/og.png`,
         width: 1200,
         height: 630,
-        alt: "Elvira Nurgalieva, Industrial & Manufacturing Engineer",
+        alt: "Elvira Nurgalieva, Engineer Intern (EI) – Industrial & Manufacturing Engineering",
       },
     ],
   },
