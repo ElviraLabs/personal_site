@@ -18,7 +18,7 @@ Engineer Intern (EI) · Industrial & Manufacturing Engineering
 Process Improvement · Reverse Engineering & 3D Scanning · Quality & Operations
 ```
 
-Updated November 1, 2026: the title was changed from "Industrial & Manufacturing Engineer" to "Engineer Intern (EI) · Industrial & Manufacturing Engineering" so it does not overstate the role. Homepage and About copy are first person. The site intentionally shows no email address (spam); contact is via the form and LinkedIn. Job-search location: south Denver metro and Colorado Springs (not relocating). `public/og.png` still shows the older "Industrial & Manufacturing Engineer" text and can be regenerated later.
+Updated November 1, 2026: the title was changed from "Industrial & Manufacturing Engineer" to "Engineer Intern (EI) · Industrial & Manufacturing Engineering" so it does not overstate the role. Homepage and About copy are first person. The site intentionally shows no email address (spam); contact is via the form and LinkedIn. Job-search location: south Denver metro and Colorado Springs (not relocating). `public/og.png` was rebuilt the same day around Elvira's head-and-gears logo and tagline ("Where engineering precision meets human needs") with the new title.
 
 **Systems thinking is a methodology, not the primary occupational title.** Do not lead with generic “Systems Engineer”; in the U.S. it can imply IT, networking, cloud, software, or defense systems work. The actual education credential, *Engineering Degree, Systems Engineering*, remains accurate and may be stated in Education.
 
@@ -84,7 +84,7 @@ There is also a Vite/vinext/Cloudflare build path used by Sites. It produces `di
 | `lib/development-data.ts` | Professional-development entries and status content. |
 | `lib/journal-data.ts` | Journal content data. |
 | `public/elvira-headshot.png` | Homepage portrait. |
-| `public/og.png` | Current 1200×630 social-preview card; it matches the industrial/manufacturing brand. |
+| `public/og.png` | 1200×630 social-preview card (November 2026): logo mark, tagline, name, EI title, EI/FE badges. |
 | `public/resume/` | Public resume. Site links point to `Elvira-Nurgalieva-Resume.pdf` (November 2026, no email/phone by design). `Elvira-Nurgalieva-Profile.pdf` is kept with identical content so older shared links still work. |
 | `public/project-materials/` | Project imagery/materials. |
 | `next.config.ts` | Static-export, trailing-slash, and image behavior for GitHub Pages. |
