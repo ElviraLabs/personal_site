@@ -26,7 +26,7 @@ export const learningFocuses: LearningFocus[] = [
     title: "Lean Six Sigma Green Belt",
     progress: 35,
     details: [
-      "Expected: 2026",
+      "Target: Q1 2027",
       "DMAIC",
       "Process capability",
       "Root cause analysis",
@@ -77,7 +77,7 @@ export const learningRoadmap = [
   { label: "Colorado EI", status: "completed" },
   { label: "Lean Six Sigma Green Belt", status: "current" },
   { label: "Python", status: "current" },
-  { label: "Tableau", status: "planned" },
+  { label: "Power BI", status: "current" },
   { label: "ASQ CSSGB", status: "planned" },
   { label: "Minitab", status: "planned" },
   { label: "PE License", status: "planned" },
@@ -123,7 +123,7 @@ export const skillStatuses: SkillStatus[] = [
   { name: "Python", status: "In Progress" },
   { name: "AI Engineering Analytics", status: "In Progress" },
   { name: "Manufacturing Analytics", status: "In Progress" },
-  { name: "Tableau", status: "Planned" },
+  { name: "Power BI", status: "In Progress" },
   { name: "Minitab", status: "Planned" },
 ];
 

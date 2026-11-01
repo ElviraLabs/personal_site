@@ -3,7 +3,7 @@ import Link from "next/link";
 import { journalEntries } from "../../lib/journal-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Resume.pdf?version=20261101`;
 const featuredReflection = journalEntries[0];
 
 export const metadata: Metadata = {
@@ -68,21 +68,13 @@ export default function JournalPage() {
 
         <aside className="reflection-sidebar">
           <div className="project-sidebar-card">
-            <SectionLabel>Why it matters</SectionLabel>
-            <h3>What this communicates to employers</h3>
+            <SectionLabel>Key takeaways</SectionLabel>
+            <h3>What I took from the event</h3>
             <ul className="simple-list reflection-list">
               {featuredReflection.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
-          </div>
-
-          <div className="project-sidebar-card">
-            <SectionLabel>Professional value</SectionLabel>
-            <h3>Why keep publishing reflections</h3>
-            <p className="body-copy reflection-sidebar-copy">
-              Reflections like this help the site read less like a static portfolio and more like the working journal of an engineer who is actively learning, engaging with industry, and refining her point of view.
-            </p>
           </div>
         </aside>
       </section>

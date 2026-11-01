@@ -13,6 +13,7 @@ export type ProjectEntry = {
   challenge: string[];
   futureImprovements: string[];
   impact: string[];
+  impactLabel?: string;
   materials?: ProjectMaterial[];
   methods: string[];
   observedIssues: string[];
@@ -21,6 +22,7 @@ export type ProjectEntry = {
   skills: string[];
   slug: string;
   solution: string[];
+  solutionLabel?: string;
   subtitle: string;
   summary: string;
   tag: string;
@@ -29,6 +31,171 @@ export type ProjectEntry = {
 };
 
 export const projects: ProjectEntry[] = [
+  {
+    slug: "reverse-engineering-case-study",
+    org: "Thor3D",
+    title: "Reverse Engineering Case Study",
+    subtitle:
+      "Mesh-to-CAD workflow for legacy parts, wear analysis, and manufacturing documentation",
+    summary:
+      "Converted scan data into engineering-ready CAD models and drawings for legacy parts, wear analysis, and downstream manufacturing documentation.",
+    tag: "Mesh-to-CAD Workflow",
+    problem:
+      "Engineering teams often need usable CAD and drawing packages for parts that are worn, discontinued, undocumented, or only available as physical components.",
+    challenge: [
+      "Engineering teams needed usable models and drawings when original CAD or engineering documents were unavailable.",
+      "The project had to support more than one use case, including discontinued automotive parts, wear analysis, and quality review.",
+      "Scan meshes alone were not sufficient for manufacturing documentation or engineering decision-making.",
+    ],
+    background: [
+      "Physical legacy parts often contain the only available source geometry when original engineering files are missing or outdated.",
+      "Engineering teams still need reliable models for inspection, reconstruction, wear analysis, and manufacturing documentation.",
+      "The case focused on building a clearer bridge from raw scan output to validated engineering assets.",
+    ],
+    currentState: [
+      "Physical parts existed, but digital engineering assets were incomplete or missing.",
+      "Geometry had to be captured from real-world parts with enough detail for reconstruction.",
+      "Customers needed a clearer bridge from scan data to engineering-ready outputs.",
+    ],
+    observedIssues: [
+      "Incomplete part data and missing engineering drawings",
+      "Legacy geometry without current CAD models",
+      "Risk of inaccuracy between raw mesh output and final CAD reconstruction",
+      "Need to support wear analysis, quality checks, and customer review",
+    ],
+    analysis: [
+      "The core engineering challenge was not scanning alone, but converting mesh data into usable, validated geometry tied to a specific technical purpose.",
+      "Analysis centered on identifying reference features, cleaning noisy areas, and deciding which geometry should be reconstructed parametrically versus preserved from scan data.",
+      "The workflow also had to reduce ambiguity for downstream users who needed engineering-ready documentation rather than raw digital artifacts.",
+    ],
+    methods: [
+      "Requirements analysis with customer and application context",
+      "3D scanning and mesh capture",
+      "Mesh cleanup and feature extraction",
+      "CAD reconstruction in Geomagic Design X",
+      "2D drawing generation in SolidWorks and Fusion 360",
+      "Technical validation against intended use",
+    ],
+    alternatives: [
+      "Use raw scan meshes without CAD reconstruction",
+      "Model the part from manual measurements alone",
+      "Create visual references only without full drawing documentation",
+    ],
+    solution: [
+      "Built a structured mesh-to-CAD workflow from scan capture through validated engineering models",
+      "Created accurate CAD geometry and 2D drawings for review, manufacturing documentation, and technical discussion",
+      "Adapted the workflow across different use cases including discontinued auto parts, wear analysis, and quality control",
+    ],
+    impactLabel: "Results",
+    solutionLabel: "Solution",
+    impact: [
+      "Accelerated CAD reconstruction from physical parts",
+      "Improved technical clarity for customer decisions and engineering review",
+      "Created cleaner documentation for manufacturing and inspection use",
+      "Demonstrated practical value of 3D scanning in engineering workflows",
+    ],
+    futureImprovements: [
+      "Standardize validation checkpoints by use case so reconstruction tolerances match the downstream need.",
+      "Build reusable templates for drawing creation and feature classification.",
+      "Add comparison metrics between mesh and final CAD geometry for faster quality review.",
+    ],
+    skills: [
+      "Reverse engineering",
+      "CAD modeling",
+      "Technical documentation",
+      "Requirements analysis",
+      "3D scanning workflow support",
+    ],
+    tools: [
+      "Geomagic Design X",
+      "SolidWorks",
+      "Fusion 360",
+      "3D scanning",
+      "Mesh review and cleanup",
+    ],
+    materials: [
+      {
+        label: "Workflow Video",
+        href: "https://youtu.be/SyI5jJKvhpM",
+        embed: "https://www.youtube.com/embed/SyI5jJKvhpM",
+        type: "video",
+      },
+      {
+        label: "3D Mesh Model",
+        href: "https://sketchfab.com/3d-models/mesh-stl-7c3873106dd44cb296540c8d590d8412",
+        embed: "https://sketchfab.com/models/7c3873106dd44cb296540c8d590d8412/embed",
+        type: "model",
+      },
+      {
+        label: "CAD Reconstruction Model",
+        href: "https://sketchfab.com/3d-models/cad-452300c4751446b1b912ab1d9de24f3d",
+        embed: "https://sketchfab.com/models/452300c4751446b1b912ab1d9de24f3d/embed",
+        type: "model",
+      },
+    ],
+  },
+  {
+    slug: "aircraft-fuselage-frame-process-redesign",
+    org: "Bauman Moscow State Technical University",
+    title: "Aircraft Fuselage Frame Process Redesign",
+    subtitle:
+      "Final engineering project: replacing pressure die casting with CNC milling for tighter dimensional control",
+    summary:
+      "Redesigned how fuselage frames for Tupolev aircraft were made, replacing pressure die casting with CNC milling and checking whether the change made economic sense at production volume.",
+    tag: "Process Selection + Cost",
+    problem:
+      "Fuselage frames for Tupolev aircraft were produced by pressure die casting, which made the finished dimensions harder to control.",
+    challenge: [
+      "Improve dimensional control of a structural aircraft part without losing sight of manufacturing cost.",
+    ],
+    background: [
+      "This was my final engineering project at Bauman Moscow State Technical University.",
+      "Fuselage frames are structural aircraft parts, so the accuracy of their finished dimensions matters.",
+      "The existing manufacturing process used pressure die casting.",
+    ],
+    currentState: [
+      "Frames were produced by pressure die casting.",
+    ],
+    observedIssues: [
+      "Finished dimensions were harder to control with the casting process.",
+    ],
+    analysis: [
+      "Compared the existing pressure die-casting process with CNC milling in terms of dimensional control.",
+      "Evaluated whether switching to CNC milling made economic sense for the required production volume.",
+      "Connected the part's design, its manufacturing method, and its cost in a single process decision.",
+    ],
+    methods: [
+      "Manufacturing process comparison",
+      "Process redesign",
+      "Production-volume cost analysis",
+    ],
+    alternatives: [
+      "Keep the existing pressure die-casting process",
+    ],
+    solutionLabel: "Solution",
+    solution: [
+      "Replace pressure die casting with CNC milling to make the finished dimensions easier to control",
+    ],
+    impactLabel: "Outcome",
+    impact: [
+      "A process recommendation that tied dimensional control to manufacturing cost at the required production volume",
+    ],
+    futureImprovements: [
+      "Add a process-capability comparison (Cp/Cpk) to quantify dimensional variation between the two processes.",
+      "Add a PFMEA for the new machining process.",
+    ],
+    skills: [
+      "Manufacturing process selection",
+      "Cost analysis",
+      "Design for manufacturing",
+      "Process redesign",
+    ],
+    tools: [
+      "CNC milling process planning",
+      "Pressure die casting review",
+      "Production cost comparison",
+    ],
+  },
   {
     slug: "retail-material-flow-optimization",
     org: "Operations Study",
@@ -105,182 +272,6 @@ export const projects: ProjectEntry[] = [
       "Workflow analysis",
       "Visual management",
       "Root cause analysis",
-    ],
-  },
-  {
-    slug: "reverse-engineering-case-study",
-    org: "Thor3D",
-    title: "Reverse Engineering Case Study",
-    subtitle:
-      "Mesh-to-CAD workflow for legacy parts, wear analysis, and manufacturing documentation",
-    summary:
-      "Converted scan data into engineering-ready CAD models and drawings for legacy parts, wear analysis, and downstream manufacturing documentation.",
-    tag: "Mesh-to-CAD Workflow",
-    problem:
-      "Engineering teams often need usable CAD and drawing packages for parts that are worn, discontinued, undocumented, or only available as physical components.",
-    challenge: [
-      "Engineering teams needed usable models and drawings when original CAD or engineering documents were unavailable.",
-      "The project had to support more than one use case, including discontinued automotive parts, wear analysis, and quality review.",
-      "Scan meshes alone were not sufficient for manufacturing documentation or engineering decision-making.",
-    ],
-    background: [
-      "Physical legacy parts often contain the only available source geometry when original engineering files are missing or outdated.",
-      "Engineering teams still need reliable models for inspection, reconstruction, wear analysis, and manufacturing documentation.",
-      "The case focused on building a clearer bridge from raw scan output to validated engineering assets.",
-    ],
-    currentState: [
-      "Physical parts existed, but digital engineering assets were incomplete or missing.",
-      "Geometry had to be captured from real-world parts with enough detail for reconstruction.",
-      "Customers needed a clearer bridge from scan data to engineering-ready outputs.",
-    ],
-    observedIssues: [
-      "Incomplete part data and missing engineering drawings",
-      "Legacy geometry without current CAD models",
-      "Risk of inaccuracy between raw mesh output and final CAD reconstruction",
-      "Need to support wear analysis, quality checks, and customer review",
-    ],
-    analysis: [
-      "The core engineering challenge was not scanning alone, but converting mesh data into usable, validated geometry tied to a specific technical purpose.",
-      "Analysis centered on identifying reference features, cleaning noisy areas, and deciding which geometry should be reconstructed parametrically versus preserved from scan data.",
-      "The workflow also had to reduce ambiguity for downstream users who needed engineering-ready documentation rather than raw digital artifacts.",
-    ],
-    methods: [
-      "Requirements analysis with customer and application context",
-      "3D scanning and mesh capture",
-      "Mesh cleanup and feature extraction",
-      "CAD reconstruction in Geomagic Design X",
-      "2D drawing generation in SolidWorks and Fusion 360",
-      "Technical validation against intended use",
-    ],
-    alternatives: [
-      "Use raw scan meshes without CAD reconstruction",
-      "Model the part from manual measurements alone",
-      "Create visual references only without full drawing documentation",
-    ],
-    solution: [
-      "Built a structured mesh-to-CAD workflow from scan capture through validated engineering models",
-      "Created accurate CAD geometry and 2D drawings for review, manufacturing documentation, and technical discussion",
-      "Adapted the workflow across different use cases including discontinued auto parts, wear analysis, and quality control",
-    ],
-    impact: [
-      "Accelerated CAD reconstruction from physical parts",
-      "Improved technical clarity for customer decisions and engineering review",
-      "Created cleaner documentation for manufacturing and inspection use",
-      "Demonstrated practical value of 3D scanning in engineering workflows",
-    ],
-    futureImprovements: [
-      "Standardize validation checkpoints by use case so reconstruction tolerances match the downstream need.",
-      "Build reusable templates for drawing creation and feature classification.",
-      "Add comparison metrics between mesh and final CAD geometry for faster quality review.",
-    ],
-    skills: [
-      "Reverse engineering",
-      "CAD modeling",
-      "Technical documentation",
-      "Requirements analysis",
-      "3D scanning workflow support",
-    ],
-    tools: [
-      "Geomagic Design X",
-      "SolidWorks",
-      "Fusion 360",
-      "3D scanning",
-      "Mesh review and cleanup",
-    ],
-    materials: [
-      {
-        label: "Workflow Video",
-        href: "https://youtu.be/SyI5jJKvhpM",
-        embed: "https://www.youtube.com/embed/SyI5jJKvhpM",
-        type: "video",
-      },
-      {
-        label: "3D Mesh Model",
-        href: "https://sketchfab.com/3d-models/mesh-stl-7c3873106dd44cb296540c8d590d8412",
-        embed: "https://sketchfab.com/models/7c3873106dd44cb296540c8d590d8412/embed",
-        type: "model",
-      },
-      {
-        label: "CAD Reconstruction Model",
-        href: "https://sketchfab.com/3d-models/cad-452300c4751446b1b912ab1d9de24f3d",
-        embed: "https://sketchfab.com/models/452300c4751446b1b912ab1d9de24f3d/embed",
-        type: "model",
-      },
-    ],
-  },
-  {
-    slug: "manufacturing-process-improvement",
-    org: "Manufacturing Systems Study",
-    title: "Manufacturing Process Improvement",
-    subtitle:
-      "Process analysis and systems-level improvement concepts for manufacturing support environments",
-    summary:
-      "Engineering concept work focused on process gaps, flow constraints, and system-level improvements for manufacturing support environments.",
-    tag: "Process Improvement",
-    problem:
-      "Manufacturing support environments often carry process friction that slows execution without a clear view of the highest-leverage improvement points.",
-    challenge: [
-      "Support environments can accumulate process friction that is normalized over time.",
-      "Teams need clearer visibility into where work slows down and why.",
-      "Improvement efforts need structure so they align people, sequence, and documentation.",
-    ],
-    background: [
-      "Manufacturing support work often depends on coordination, documentation quality, and reliable handoffs rather than a single machine or station.",
-      "When those support systems drift, execution slows without a clear picture of where the highest-leverage problem actually sits.",
-      "This concept study framed the environment as an interconnected system instead of isolated tasks.",
-    ],
-    currentState: [
-      "Workflows rely on handoffs, local knowledge, and uneven documentation.",
-      "Bottlenecks are visible operationally but not always measured consistently.",
-      "Improvement opportunities compete without a clear prioritization framework.",
-    ],
-    observedIssues: [
-      "Handoffs that depend on local knowledge",
-      "Documentation gaps",
-      "Workflow bottlenecks that are not consistently measured",
-    ],
-    analysis: [
-      "The review showed that process friction came less from individual effort and more from unclear handoffs, uneven standards, and missing feedback loops.",
-      "A systems view made it easier to separate symptoms from structural issues in workflow design and documentation.",
-      "The highest-value opportunities centered on standardization, visibility, and clearer sequencing between people and process.",
-    ],
-    methods: [
-      "Process analysis",
-      "Workflow mapping",
-      "Root cause analysis",
-      "Continuous improvement framing",
-    ],
-    alternatives: [
-      "Address delays case by case without changing the underlying workflow",
-      "Rely on informal tribal knowledge to manage exceptions",
-      "Add more reporting without redesigning the handoff structure",
-    ],
-    solution: [
-      "Define clearer handoff points",
-      "Standardize work cues",
-      "Improve alignment between sequencing, people, and process",
-    ],
-    impact: [
-      "Reduced avoidable friction",
-      "Stronger consistency",
-      "Clearer path to continuous improvement",
-    ],
-    futureImprovements: [
-      "Translate the framework into a pilot standard-work package for one support workflow.",
-      "Define simple baseline metrics to validate which changes reduce friction most effectively.",
-      "Expand the model into a broader continuous improvement roadmap after initial results.",
-    ],
-    skills: [
-      "Manufacturing engineering thinking",
-      "Process improvement",
-      "Systems analysis",
-      "Stakeholder alignment",
-    ],
-    tools: [
-      "Workflow mapping",
-      "Root cause analysis",
-      "Process analysis",
-      "Continuous improvement framing",
     ],
   },
   {
