@@ -1,17 +1,13 @@
 import Image from "next/image";
 import Script from "next/script";
 import ContactForm from "./contact-form";
-import {
-  certifications,
-  learningFocuses,
-  learningRoadmap,
-} from "../lib/development-data";
+import { learningFocuses } from "../lib/development-data";
 import { journalEntries } from "../lib/journal-data";
 import { projects } from "../lib/project-data";
 
 const sitePath = "";
 const siteUrl = "https://elvira-n.com";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Resume.pdf?version=20261101`;
 const headshotSrc = `${sitePath}/elvira-headshot.png`;
 const coloradoEiNumber = "EI.0081521";
 const feBadgeHref = "https://www.credly.com/badges/5a980cad-6487-4bef-ace9-ac9388d0ad77";
@@ -20,50 +16,34 @@ const feBadgeImage =
 
 const outcomeAreas = [
   {
-    title: "Material Flow Optimization",
+    title: "Process Improvement",
     points: [
-      "Inventory visibility",
-      "Workflow clarity",
-    ],
-    icon: "gear",
-  },
-  {
-    title: "Manufacturing Process Improvement",
-    points: [
-      "Root cause analysis",
-      "Standardized process design",
+      "Process mapping and standard work",
+      "Lean and Kaizen methods",
     ],
     icon: "nodes",
   },
   {
-    title: "Reverse Engineering",
+    title: "Reverse Engineering & 3D Scanning",
     points: [
-      "3D scanning inputs",
-      "CAD reconstruction",
+      "Scan-to-CAD reconstruction",
+      "Legacy and worn parts",
     ],
     icon: "cube",
   },
   {
-    title: "Digital Manufacturing",
+    title: "Quality & Root Cause",
     points: [
-      "Technical workflows",
-      "Manufacturing support",
+      "5 Whys and fishbone analysis",
+      "Technical troubleshooting",
     ],
     icon: "gear",
   },
   {
-    title: "Continuous Improvement",
-    points: [
-      "Structured problem solving",
-      "Systems thinking",
-    ],
-    icon: "nodes",
-  },
-  {
-    title: "CAD & 3D Scanning",
+    title: "CAD",
     points: [
       "SolidWorks, Fusion 360",
-      "Reverse engineering tools",
+      "Geomagic Design X",
     ],
     icon: "cube",
   },
@@ -77,30 +57,13 @@ const featuredWork = projects.map((project) => ({
   title: project.title,
 }));
 const featuredReflection = journalEntries[0];
-const featuredLearningFocuses = learningFocuses.slice(0, 3);
-const roadmapPreview = learningRoadmap.slice(0, 5);
+const featuredLearningFocuses = learningFocuses.slice(0, 2);
 
-const skills = [
-  "Industrial Engineer",
+const focusAreas = [
   "Manufacturing Engineer",
   "Process Engineer",
-  "Continuous Improvement Engineer",
-  "Quality Engineering",
-  "Operations Engineering",
-  "Manufacturing Systems",
-  "Production Planning",
-  "Manufacturing Process Improvement",
+  "Quality Engineer",
   "Continuous Improvement",
-  "Material Flow",
-  "Lean Manufacturing",
-  "Process Optimization",
-  "Root Cause Analysis",
-  "Technical Documentation",
-  "CAD Engineer",
-  "Reverse Engineering",
-  "3D Scanning",
-  "Python (Learning)",
-  "AI-Assisted Analysis",
 ] as const;
 
 const skillGroups = [
@@ -126,7 +89,6 @@ const skillGroups = [
       "Blender",
       "3D Scanning",
       "Reverse Engineering",
-      "GD&T",
       "Technical Documentation",
     ],
   },
@@ -157,13 +119,13 @@ const skillGroups = [
 const experience = [
   {
     company: "The Home Depot",
-    role: "Sales Associate",
+    role: "Sales Associate, Paint Department",
     period: "April 2024 - Present",
     location: "Castle Rock, Colorado",
     bullets: [
-      "Analyzed customer requirements in a high-volume retail environment to recommend practical products, improve decision speed, and support smoother project execution.",
-      "Translated customer questions into informed technical recommendations based on function, cost, availability, and installation context.",
-      "Supported operational efficiency through inventory visibility, merchandising discipline, and dependable replenishment execution.",
+      "Process customer and contractor paint orders through tinting and mixing equipment to formula and quality standards in a high-volume store, following established safety and operating procedures.",
+      "Translate project requirements (surface, environment, coverage, budget) into product and process recommendations, and coordinate practical solutions when standard approaches don't fit.",
+      "Conducting an independent Kaizen study of replenishment flow using Gemba observation, process mapping, 5 Whys, and fishbone analysis.",
     ],
   },
   {
@@ -191,7 +153,7 @@ const experience = [
 ] as const;
 
 const education = [
-  "Bauman Moscow State Technical University - Bachelor's in Systems Engineering (NCEES evaluated as equivalent to a U.S. bachelor's degree in engineering)",
+  "Bauman Moscow State Technical University - Engineer's Degree (Specialist), Systems Engineering (NCEES evaluated as equivalent to a U.S. bachelor's degree in engineering)",
   "Relevant coursework: Systems Analysis, Automation, Robotics, Machine Design, Computer-Integrated Manufacturing, CAD, Production Processes",
   "Georgia Institute of Technology - Applications in Engineering Mechanics Certificate",
   "Georgia Institute of Technology - Mechanics of Materials I",
@@ -294,7 +256,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Elvira Nurgalieva",
-    jobTitle: "Industrial & Manufacturing Engineer",
+    jobTitle: "Engineer Intern (EI), Industrial & Manufacturing Engineering",
     url: siteUrl,
     sameAs: [
       "https://www.linkedin.com/in/elvira-n",
@@ -318,7 +280,7 @@ export default function Home() {
     ],
     subjectOf: [
       siteUrl,
-      `${siteUrl}/resume/Elvira-Nurgalieva-Profile.pdf`,
+      `${siteUrl}/resume/Elvira-Nurgalieva-Resume.pdf`,
     ],
     hasCredential: [
       {
@@ -373,22 +335,17 @@ export default function Home() {
         <div className="hero-copy">
           <SectionLabel>Industrial & manufacturing engineering portfolio</SectionLabel>
           <h1>Elvira Nurgalieva</h1>
-          <h2>Industrial &amp; Manufacturing Engineer</h2>
+          <h2>Engineer Intern (EI) · Industrial &amp; Manufacturing Engineering</h2>
           <p className="hero-specialties">
-            Colorado Engineer Intern (EI) · Process Improvement · Manufacturing
-            Systems · Quality &amp; Operations
+            Process Improvement · Reverse Engineering &amp; 3D Scanning ·
+            Quality &amp; Operations
           </p>
           <p className="lead">
-            Industrial and manufacturing engineering professional with CAD and
-            reverse-engineering experience, plus a growing portfolio in material
-            flow, process improvement, quality, and manufacturing systems.
-          </p>
-          <div className="hero-divider" />
-          <p className="body-copy">
-            Her background spans engineering support, operations execution,
-            customer-facing technical work, and CAD-based solution development,
-            applying systems thinking to make manufacturing processes, flow, and
-            execution more reliable.
+            I&apos;m a Colorado Engineer Intern who passed the FE Industrial &amp;
+            Systems exam, with 3.5 years in 3D scanning and reverse engineering.
+            I focus on process improvement, quality, and manufacturing systems:
+            understanding the current state, finding the real root cause, and
+            making processes more reliable.
           </p>
           <div className="cta-row">
             <a className="button button-primary" href="#projects">
@@ -462,7 +419,7 @@ export default function Home() {
         <div className="development-preview-grid">
           <article className="development-preview-card">
             <p className="eyebrow">Current focus</p>
-            <h3>What Elvira is actively building</h3>
+            <h3>What I&apos;m working on now</h3>
             <ul className="simple-list">
               {featuredLearningFocuses.map((focus) => (
                 <li key={focus.title}>
@@ -476,23 +433,11 @@ export default function Home() {
             <p className="eyebrow">Momentum</p>
             <h3>Credentials and roadmap</h3>
             <ul className="simple-list">
-              {certifications.completed.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-              {roadmapPreview.slice(2).map((item) => (
-                <li key={item.label}>{item.label}</li>
-              ))}
+              <li>FE Exam passed (Industrial &amp; Systems) ✓</li>
+              <li>Colorado Engineer Intern (EI) ✓</li>
+              <li>Lean Six Sigma Green Belt (in progress)</li>
+              <li>Python for engineering analytics (in progress)</li>
             </ul>
-          </article>
-
-          <article className="development-preview-card">
-            <p className="eyebrow">Why it matters</p>
-            <h3>What recruiters can see quickly</h3>
-            <p>
-              The site now shows not only completed work, but the direction of
-              current study in Lean, Python, manufacturing analytics, and
-              continuous improvement.
-            </p>
             <div className="cta-row">
               <a className="button button-secondary" href="/professional-development">
                 Professional Development
@@ -547,11 +492,7 @@ export default function Home() {
               <div>
                 <p className="timeline-year">Licensure</p>
                 <h3>Colorado Engineer Intern License {coloradoEiNumber}</h3>
-                <p>
-                  Active Colorado EI credential. Public verification may require
-                  manual confirmation because the online lookup does not always
-                  support the EI prefix correctly.
-                </p>
+                <p>Active Colorado Engineer Intern license, issued July 2026.</p>
               </div>
             </article>
             <article className="timeline-item">
@@ -559,7 +500,13 @@ export default function Home() {
               <div>
                 <p className="timeline-year">Credential</p>
                 <h3>FE Passed</h3>
-                <p>Fundamentals of Engineering passed in Industrial Engineering.</p>
+                <p>
+                  Fundamentals of Engineering, Industrial &amp; Systems, passed
+                  June 2026.{" "}
+                  <a className="text-link" href={feBadgeHref} target="_blank" rel="noopener noreferrer">
+                    View verified FE badge
+                  </a>
+                </p>
               </div>
             </article>
             <article className="timeline-item">
@@ -596,21 +543,21 @@ export default function Home() {
 
         <aside className="about-panel anchor-section" id="about">
           <SectionLabel>Engineering philosophy</SectionLabel>
-          <h2>How Elvira Approaches Engineering Work</h2>
+          <h2>How I Approach Engineering Work</h2>
           <p>
-            Elvira approaches engineering through systems thinking, curiosity,
+            I approach engineering through systems thinking, curiosity,
             structured problem solving, and continuous improvement.
           </p>
           <p>
-            Her work style centers on understanding the current state, finding
-            the real root cause, and designing improvements that make process,
+            My work starts with understanding the current state, finding the
+            real root cause, and designing improvements that make process,
             flow, and execution more reliable.
           </p>
           <p>
-            Career objective: FE passed and returning to engineering, seeking
-            Industrial, Manufacturing, Process, and Continuous Improvement
-            Engineering opportunities where she can contribute to process
-            optimization, material flow, technical documentation, and quality.
+            I&apos;m looking for Manufacturing, Process, Quality, and Continuous
+            Improvement Engineering roles in the south Denver metro and Colorado
+            Springs, where I can contribute to process optimization, material
+            flow, technical documentation, and quality.
           </p>
           <a
             className="button button-secondary"
@@ -678,13 +625,8 @@ export default function Home() {
 
           <div className="journal-preview-side">
             <div className="journal-insight-card">
-              <SectionLabel>Why this helps</SectionLabel>
-              <h3>What recruiters can infer</h3>
-              <ul className="simple-list reflection-list">
-                {featuredReflection.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+              <SectionLabel>Takeaway</SectionLabel>
+              <p className="body-copy">{featuredReflection.outro}</p>
             </div>
           </div>
         </article>
@@ -770,7 +712,7 @@ export default function Home() {
             <Icon kind="pin" className="footer-icon" />
             Castle Rock, Colorado, United States
           </p>
-          <p>Open to relocation, travel, and international opportunities</p>
+          <p>Seeking roles in the south Denver metro and Colorado Springs</p>
         </div>
 
         <div className="footer-col">
@@ -787,9 +729,9 @@ export default function Home() {
         <div className="footer-col">
           <h3>Focus areas</h3>
           <div className="skill-pills footer-pills">
-            {skills.slice(0, 8).map((skill) => (
-              <span className="skill-pill" key={skill}>
-                {skill}
+            {focusAreas.map((area) => (
+              <span className="skill-pill" key={area}>
+                {area}
               </span>
             ))}
           </div>

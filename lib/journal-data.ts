@@ -28,11 +28,10 @@ export const journalEntries: JournalEntry[] = [
     outro:
       "The evening reinforced something I have come to believe: the future of manufacturing will not be built only by better machines. It will be built by engineers who continuously improve both technology and the systems that enable people to do their best work.",
     bullets: [
-      "Active participation in professional organizations and manufacturing communities",
-      "A broader understanding of manufacturing trends beyond purely technical details",
-      "A systems view that connects engineering with business, economics, and community impact",
-      "A growth mindset supported by ongoing learning in Lean Six Sigma, Python, and continuous improvement",
-      "A clear and authentic reason for pursuing manufacturing engineering opportunities",
+      "U.S. manufacturing is growing again, and the main constraint is skilled people, not factories.",
+      "Modern manufacturing runs on automation, data analytics, Lean thinking, and cross-disciplinary collaboration.",
+      "Continuous learning is part of the job for engineers, technicians, and operators alike.",
+      "Better manufacturing processes create value beyond the plant: local suppliers, skilled jobs, and stronger communities.",
     ],
   },
 ];

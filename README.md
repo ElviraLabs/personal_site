@@ -34,7 +34,7 @@ Work in this PersonalSite repository. Before scanning, editing, building, or dep
 
 Codex should use the handoff to:
 
-- keep **Industrial & Manufacturing Engineer** as the primary positioning and avoid overstated credentials or experience;
+- keep **Engineer Intern (EI) · Industrial & Manufacturing Engineering** as the primary positioning and avoid overstated credentials or experience;
 - choose the correct release path—GitHub Pages for `elvira-n.com`, or the separate Sites workflow for the `chatgpt.site` deployment;
 - preserve the contact-form redirect and static-hosting configuration;
 - check `git status --short` before changing files and stage only reviewed files; and
@@ -231,7 +231,7 @@ Do not submit a live test form unless you intend to send an external email. Loca
 
 ## Brand and content guardrails
 
-The public primary title is **Industrial & Manufacturing Engineer**. Keep systems thinking as a method/competency, not the main job title.
+The public primary title is **Engineer Intern (EI) · Industrial & Manufacturing Engineering** (updated November 2026). Keep systems thinking as a method/competency, not the main job title.
 
 Always preserve the factual claim rules in `PROJECT_HANDOFF.md`, especially:
 

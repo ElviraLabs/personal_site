@@ -16,18 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
+  title: "Elvira Nurgalieva | Engineer Intern (EI) – Industrial & Manufacturing Engineering",
   description:
-    "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
+    "Colorado Engineer Intern (EI) portfolio: reverse engineering, process improvement, and manufacturing case studies. Based in Castle Rock, CO.",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: `${sitePath}/favicon.svg`,
     shortcut: `${sitePath}/favicon.svg`,
   },
   openGraph: {
-    title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
+    title: "Elvira Nurgalieva | Engineer Intern (EI) – Industrial & Manufacturing Engineering",
     description:
-      "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
+      "Colorado Engineer Intern (EI) portfolio: reverse engineering, process improvement, and manufacturing case studies. Based in Castle Rock, CO.",
     type: "website",
     url: siteUrl,
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvira Nurgalieva | Industrial & Manufacturing Engineer",
+    title: "Elvira Nurgalieva | Engineer Intern (EI) – Industrial & Manufacturing Engineering",
     description:
-      "Industrial & Manufacturing Engineer and Colorado Engineer Intern (EI), focused on process improvement, manufacturing systems, quality, operations, material flow, and continuous improvement.",
+      "Colorado Engineer Intern (EI) portfolio: reverse engineering, process improvement, and manufacturing case studies. Based in Castle Rock, CO.",
     images: [`${sitePath}/og.png`],
   },
 };

@@ -13,7 +13,7 @@ import {
 } from "../../lib/development-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Resume.pdf?version=20261101`;
 
 export const metadata: Metadata = {
   title: "Professional Development | Elvira Nurgalieva",

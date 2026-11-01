@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "../../../lib/project-data";
 
 const sitePath = "";
-const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Profile.pdf?version=20260912c`;
+const resumeHref = `${sitePath}/resume/Elvira-Nurgalieva-Resume.pdf?version=20261101`;
 
 type ProjectPageProps = {
   params: Promise<{
@@ -113,7 +113,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </ul>
             </article>
             <article className="project-detail-card">
-              <h2>Proposed Solution</h2>
+              <h2>{project.solutionLabel ?? "Proposed Solution"}</h2>
               <ul className="simple-list">
                 {project.solution.map((item) => (
                   <li key={item}>{item}</li>
@@ -129,7 +129,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </ul>
             </article>
             <article className="project-detail-card">
-              <h2>Expected Benefits</h2>
+              <h2>{project.impactLabel ?? "Expected Benefits"}</h2>
               <ul className="simple-list">
                 {project.impact.map((item) => (
                   <li key={item}>{item}</li>

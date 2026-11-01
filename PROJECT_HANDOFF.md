@@ -14,9 +14,11 @@ Use this brand hierarchy consistently:
 
 ```text
 ELVIRA NURGALIEVA
-Industrial & Manufacturing Engineer
-Colorado Engineer Intern (EI) · Process Improvement · Manufacturing Systems · Quality & Operations
+Engineer Intern (EI) · Industrial & Manufacturing Engineering
+Process Improvement · Reverse Engineering & 3D Scanning · Quality & Operations
 ```
+
+Updated November 1, 2026: the title was changed from "Industrial & Manufacturing Engineer" to "Engineer Intern (EI) · Industrial & Manufacturing Engineering" so it does not overstate the role. Homepage and About copy are first person. The site intentionally shows no email address (spam); contact is via the form and LinkedIn. Job-search location: south Denver metro and Colorado Springs (not relocating). `public/og.png` still shows the older "Industrial & Manufacturing Engineer" text and can be regenerated later.
 
 **Systems thinking is a methodology, not the primary occupational title.** Do not lead with generic “Systems Engineer”; in the U.S. it can imply IT, networking, cloud, software, or defense systems work. The actual education credential, *Engineering Degree, Systems Engineering*, remains accurate and may be stated in Education.
 
@@ -83,7 +85,7 @@ There is also a Vite/vinext/Cloudflare build path used by Sites. It produces `di
 | `lib/journal-data.ts` | Journal content data. |
 | `public/elvira-headshot.png` | Homepage portrait. |
 | `public/og.png` | Current 1200×630 social-preview card; it matches the industrial/manufacturing brand. |
-| `public/resume/` | Intended location for the public resume PDF. Confirm its contents before exposing or linking a resume. |
+| `public/resume/` | Public resume. Site links point to `Elvira-Nurgalieva-Resume.pdf` (November 2026, no email/phone by design). `Elvira-Nurgalieva-Profile.pdf` is kept with identical content so older shared links still work. |
 | `public/project-materials/` | Project imagery/materials. |
 | `next.config.ts` | Static-export, trailing-slash, and image behavior for GitHub Pages. |
 | `package.json`, `pnpm-lock.yaml` | Scripts and reproducible pnpm dependencies. |
@@ -114,7 +116,7 @@ The `/thank-you/` page is a static Next route, not a server callback. `_next` is
 ## SEO, metadata, and visual conventions
 
 - `metadataBase` and canonical metadata point to `https://elvira-n.com`.
-- Use the current job title **Industrial & Manufacturing Engineer** in title, description, Open Graph/Twitter metadata, and the Person JSON-LD `jobTitle`.
+- Use the current title **Engineer Intern (EI) – Industrial & Manufacturing Engineering** in title, description, Open Graph/Twitter metadata, and the Person JSON-LD `jobTitle`.
 - Keep the existing `Person` structured data accurate: name, EI status, professional site, LinkedIn, and qualified expertise. Never add unsupported credentials or employer claims.
 - Open Graph and Twitter preview image: `/og.png`, 1200×630. If branding text changes, update the image and metadata together.
 - Visual language: restrained navy/ink foundation, teal accent, clean technical typography, compact labels, high-contrast readable cards, and responsive layout. Do not introduce an unrelated visual style without a deliberate redesign request.
